@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIE Fighter Pilot Editor", "TIE Fighter Pilot Editor\TIE Fighter Pilot Editor.csproj", "{35A74612-1984-49F1-B0AF-F78E802DE610}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TIE Fighter Pilot Editor Setup", "TIE Fighter Pilot Editor Setup\TIE Fighter Pilot Editor Setup.vdproj", "{83902B23-1129-46C3-8B3A-7BD7EDF859BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35A74612-1984-49F1-B0AF-F78E802DE610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A74612-1984-49F1-B0AF-F78E802DE610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A74612-1984-49F1-B0AF-F78E802DE610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A74612-1984-49F1-B0AF-F78E802DE610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83902B23-1129-46C3-8B3A-7BD7EDF859BD}.Debug|Any CPU.ActiveCfg = Debug
+		{83902B23-1129-46C3-8B3A-7BD7EDF859BD}.Release|Any CPU.ActiveCfg = Release
+		{83902B23-1129-46C3-8B3A-7BD7EDF859BD}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4D7C9F2-2FC1-496D-8259-D52E4EE811AF}
+	EndGlobalSection
+EndGlobal
