@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 
 namespace TIE_Fighter_Pilot_Editor
@@ -282,7 +282,7 @@ namespace TIE_Fighter_Pilot_Editor
             battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Seventh) == SecondaryObjectives.Seventh);
             battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Eighth) == SecondaryObjectives.Eighth);
 
-            for (int i = 0;  i < clbSecondaryObjectiveB1.Items.Count - 1;  i++)
+            for (int i = 0; i < clbSecondaryObjectiveB1.Items.Count - 1; i++)
             {
                 if (battleSecondaryObjectives[i])
                 {
@@ -320,7 +320,7 @@ namespace TIE_Fighter_Pilot_Editor
             {
                 lblLaserPercent.Text = "(" + (int)((nudLaserHits.Value / nudLaserFired.Value) * 100) + "%)";
             }
-            else 
+            else
             {
                 lblLaserPercent.Text = "(0%)";
             }
@@ -580,7 +580,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Bomber
-        
+
         private void nudHistCombatPointsTBM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[2].MissionScore[0] = (uint)nudHistCombatPointsTBM1.Value;
@@ -745,8 +745,8 @@ namespace TIE_Fighter_Pilot_Editor
         private void nudHistCombatPointsAGM4_Enter(object sender, EventArgs e)
         {
             nudHistCombatPointsAGM4.Select(0, nudHistCombatPointsAGM4.Text.Length);
-        }        
-        
+        }
+
         private void cbHistCombatCompAGM1_CheckedChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[4].MissionComplete[0] = cbHistCombatCompAGM1.Checked;
@@ -1056,7 +1056,7 @@ namespace TIE_Fighter_Pilot_Editor
         {
             nudBonusObjectivesCompB2.Select(0, nudBonusObjectivesCompB2.Text.Length);
         }
-        
+
         private void gvBattle2Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             pilot.ListOfBattles.BattlesList[1].UpdateBattleTotalScore(5);
@@ -1101,8 +1101,8 @@ namespace TIE_Fighter_Pilot_Editor
         private void nudBonusObjectivesCompB3_Enter(object sender, EventArgs e)
         {
             nudBonusObjectivesCompB3.Select(0, nudBonusObjectivesCompB3.Text.Length);
-        }        
-        
+        }
+
         private void gvBattle3Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             pilot.ListOfBattles.BattlesList[2].UpdateBattleTotalScore(6);
@@ -1575,7 +1575,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvTraining.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                         gvTraining.CurrentCell.Value = 0;
                     }
@@ -1604,7 +1608,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattleVictories.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1632,7 +1640,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle1Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1657,7 +1669,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle2Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1682,7 +1698,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle3Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1707,7 +1727,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle4Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1732,7 +1756,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle5Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1757,7 +1785,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle6Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1782,7 +1814,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle7Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1807,7 +1843,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle8Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1832,7 +1872,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle9Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1857,7 +1901,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle10Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1882,7 +1930,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle11Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1907,7 +1959,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle12Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1932,7 +1988,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle13Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }

@@ -13,11 +13,15 @@ namespace TIE_Fighter_Pilot_Editor
         public static void CopyToByteArray(this int source, byte[] destination, int offset)
         {
             if (destination == null)
+            {
                 throw new ArgumentException("Destination array cannot be null");
+            }
 
             // check if there is enough space for all the 4 bytes we will copy
             if (destination.Length < offset + sizeof(int))
+            {
                 throw new ArgumentException("Not enough room in the destination array");
+            }
 
             for (int i = 0, j = sizeof(int) - 1; i < sizeof(int); i++, --j)
             {
@@ -34,11 +38,15 @@ namespace TIE_Fighter_Pilot_Editor
         public static void CopyToByteArrayLE(this int source, byte[] destination, int offset)
         {
             if (destination == null)
+            {
                 throw new ArgumentException("Destination array cannot be null");
+            }
 
             // check if there is enough space for all the 4 bytes we will copy
             if (destination.Length < offset + sizeof(int))
+            {
                 throw new ArgumentException("Not enough room in the destination array");
+            }
 
             for (int i = 0, j = 0; i < sizeof(int); i++, j++)
             {
@@ -55,11 +63,15 @@ namespace TIE_Fighter_Pilot_Editor
         public static void CopyToByteArray(this uint source, byte[] destination, int offset)
         {
             if (destination == null)
+            {
                 throw new ArgumentException("Destination array cannot be null");
+            }
 
             // check if there is enough space for all the 4 bytes we will copy
             if (destination.Length < offset + sizeof(uint))
+            {
                 throw new ArgumentException("Not enough room in the destination array");
+            }
 
             for (int i = 0, j = sizeof(uint) - 1; i < sizeof(uint); i++, --j)
             {
@@ -76,11 +88,15 @@ namespace TIE_Fighter_Pilot_Editor
         public static void CopyToByteArrayLE(this uint source, byte[] destination, int offset)
         {
             if (destination == null)
+            {
                 throw new ArgumentException("Destination array cannot be null");
+            }
 
             // check if there is enough space for all the 4 bytes we will copy
             if (destination.Length < offset + sizeof(uint))
+            {
                 throw new ArgumentException("Not enough room in the destination array");
+            }
 
             for (int i = 0, j = 0; i < sizeof(uint); i++, j++)
             {
@@ -97,11 +113,15 @@ namespace TIE_Fighter_Pilot_Editor
         public static void CopyToByteArrayLE(this ushort source, byte[] destination, int offset)
         {
             if (destination == null)
+            {
                 throw new ArgumentException("Destination array cannot be null");
+            }
 
             // check if there is enough space for all the 4 bytes we will copy
             if (destination.Length < offset + sizeof(ushort))
+            {
                 throw new ArgumentException("Not enough room in the destination array");
+            }
 
             for (int i = 0, j = 0; i < sizeof(ushort); i++, j++)
             {
