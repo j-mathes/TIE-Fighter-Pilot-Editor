@@ -41,6 +41,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gvBattleVictories = new System.Windows.Forms.DataGridView();
+            this.victoryNPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.victoriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerBattleVictoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlPilot = new System.Windows.Forms.TabControl();
             this.tabPilotStatus = new System.Windows.Forms.TabPage();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -190,6 +193,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.gvTraining = new System.Windows.Forms.DataGridView();
+            this.trainingShipTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nextTrainingLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingLevelCompletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabBattleStats = new System.Windows.Forms.TabPage();
             this.nudCraftLost = new System.Windows.Forms.NumericUpDown();
             this.nudTotalCaptures = new System.Windows.Forms.NumericUpDown();
@@ -229,6 +237,10 @@
             this.label72 = new System.Windows.Forms.Label();
             this.tabBattle2 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB2 = new System.Windows.Forms.CheckedListBox();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB2 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB2 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB2 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle2Scores = new System.Windows.Forms.DataGridView();
@@ -243,6 +255,10 @@
             this.label85 = new System.Windows.Forms.Label();
             this.tabBattle3 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB3 = new System.Windows.Forms.CheckedListBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB3 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB3 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB3 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle3Scores = new System.Windows.Forms.DataGridView();
@@ -257,6 +273,10 @@
             this.label92 = new System.Windows.Forms.Label();
             this.tabBattle4 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB4 = new System.Windows.Forms.CheckedListBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB4 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB4 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB4 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle4Scores = new System.Windows.Forms.DataGridView();
@@ -271,6 +291,10 @@
             this.label99 = new System.Windows.Forms.Label();
             this.tabBattle5 = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB5 = new System.Windows.Forms.CheckedListBox();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label142 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB5 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB5 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB5 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle5Scores = new System.Windows.Forms.DataGridView();
@@ -285,6 +309,10 @@
             this.label106 = new System.Windows.Forms.Label();
             this.tabBattle6 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB6 = new System.Windows.Forms.CheckedListBox();
+            this.label149 = new System.Windows.Forms.Label();
+            this.label156 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB6 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB6 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB6 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle6Scores = new System.Windows.Forms.DataGridView();
@@ -299,6 +327,10 @@
             this.label113 = new System.Windows.Forms.Label();
             this.tabBattle7 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB7 = new System.Windows.Forms.CheckedListBox();
+            this.label163 = new System.Windows.Forms.Label();
+            this.label164 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB7 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB7 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB7 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle7Scores = new System.Windows.Forms.DataGridView();
@@ -313,6 +345,10 @@
             this.label120 = new System.Windows.Forms.Label();
             this.tabBattle8 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB8 = new System.Windows.Forms.CheckedListBox();
+            this.label165 = new System.Windows.Forms.Label();
+            this.label166 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB8 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB8 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB8 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle8Scores = new System.Windows.Forms.DataGridView();
@@ -327,6 +363,10 @@
             this.label127 = new System.Windows.Forms.Label();
             this.tabBattle9 = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB9 = new System.Windows.Forms.CheckedListBox();
+            this.label167 = new System.Windows.Forms.Label();
+            this.label168 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB9 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB9 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB9 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle9Scores = new System.Windows.Forms.DataGridView();
@@ -341,6 +381,10 @@
             this.label134 = new System.Windows.Forms.Label();
             this.tabBattle10 = new System.Windows.Forms.TabPage();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB10 = new System.Windows.Forms.CheckedListBox();
+            this.label169 = new System.Windows.Forms.Label();
+            this.label170 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB10 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB10 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB10 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle10Scores = new System.Windows.Forms.DataGridView();
@@ -355,6 +399,10 @@
             this.label141 = new System.Windows.Forms.Label();
             this.tabBattle11 = new System.Windows.Forms.TabPage();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB11 = new System.Windows.Forms.CheckedListBox();
+            this.label171 = new System.Windows.Forms.Label();
+            this.label172 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB11 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB11 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB11 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle11Scores = new System.Windows.Forms.DataGridView();
@@ -369,6 +417,10 @@
             this.label148 = new System.Windows.Forms.Label();
             this.tabBattle12 = new System.Windows.Forms.TabPage();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB12 = new System.Windows.Forms.CheckedListBox();
+            this.label173 = new System.Windows.Forms.Label();
+            this.label174 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB12 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB12 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB12 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle12Scores = new System.Windows.Forms.DataGridView();
@@ -383,6 +435,10 @@
             this.label155 = new System.Windows.Forms.Label();
             this.tabBattle13 = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.clbBonusObjectiveB13 = new System.Windows.Forms.CheckedListBox();
+            this.label175 = new System.Windows.Forms.Label();
+            this.label176 = new System.Windows.Forms.Label();
+            this.clbSecondaryObjectiveB13 = new System.Windows.Forms.CheckedListBox();
             this.nudBonusObjectivesCompB13 = new System.Windows.Forms.NumericUpDown();
             this.nudSecondaryObjectivesCompB13 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle13Scores = new System.Windows.Forms.DataGridView();
@@ -395,65 +451,10 @@
             this.label160 = new System.Windows.Forms.Label();
             this.label161 = new System.Windows.Forms.Label();
             this.label162 = new System.Windows.Forms.Label();
-            this.clbBonusObjectiveB2 = new System.Windows.Forms.CheckedListBox();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB2 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB3 = new System.Windows.Forms.CheckedListBox();
-            this.label107 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB3 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB4 = new System.Windows.Forms.CheckedListBox();
-            this.label121 = new System.Windows.Forms.Label();
-            this.label128 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB4 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB5 = new System.Windows.Forms.CheckedListBox();
-            this.label135 = new System.Windows.Forms.Label();
-            this.label142 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB5 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB6 = new System.Windows.Forms.CheckedListBox();
-            this.label149 = new System.Windows.Forms.Label();
-            this.label156 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB6 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB7 = new System.Windows.Forms.CheckedListBox();
-            this.label163 = new System.Windows.Forms.Label();
-            this.label164 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB7 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB8 = new System.Windows.Forms.CheckedListBox();
-            this.label165 = new System.Windows.Forms.Label();
-            this.label166 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB8 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB9 = new System.Windows.Forms.CheckedListBox();
-            this.label167 = new System.Windows.Forms.Label();
-            this.label168 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB9 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB10 = new System.Windows.Forms.CheckedListBox();
-            this.label169 = new System.Windows.Forms.Label();
-            this.label170 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB10 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB11 = new System.Windows.Forms.CheckedListBox();
-            this.label171 = new System.Windows.Forms.Label();
-            this.label172 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB11 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB12 = new System.Windows.Forms.CheckedListBox();
-            this.label173 = new System.Windows.Forms.Label();
-            this.label174 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB12 = new System.Windows.Forms.CheckedListBox();
-            this.clbBonusObjectiveB13 = new System.Windows.Forms.CheckedListBox();
-            this.label175 = new System.Windows.Forms.Label();
-            this.label176 = new System.Windows.Forms.Label();
-            this.clbSecondaryObjectiveB13 = new System.Windows.Forms.CheckedListBox();
-            this.trainingShipTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nextTrainingLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingLevelCompletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.victoryNPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.victoriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerBattleVictoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattleVictories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).BeginInit();
             this.tabControlPilot.SuspendLayout();
             this.tabPilotStatus.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -504,6 +505,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTraining)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).BeginInit();
             this.tabBattleStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCraftLost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalCaptures)).BeginInit();
@@ -592,8 +594,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle13Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -692,6 +692,22 @@
             this.gvBattleVictories.TabIndex = 2;
             this.gvBattleVictories.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattleVictories_CellEndEdit);
             this.gvBattleVictories.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattleVictories_CellValidating);
+            // 
+            // victoryNPCDataGridViewTextBoxColumn
+            // 
+            this.victoryNPCDataGridViewTextBoxColumn.DataPropertyName = "VictoryNPC";
+            this.victoryNPCDataGridViewTextBoxColumn.HeaderText = "VictoryNPC";
+            this.victoryNPCDataGridViewTextBoxColumn.Name = "victoryNPCDataGridViewTextBoxColumn";
+            // 
+            // victoriesDataGridViewTextBoxColumn
+            // 
+            this.victoriesDataGridViewTextBoxColumn.DataPropertyName = "Victories";
+            this.victoriesDataGridViewTextBoxColumn.HeaderText = "Victories";
+            this.victoriesDataGridViewTextBoxColumn.Name = "victoriesDataGridViewTextBoxColumn";
+            // 
+            // playerBattleVictoriesBindingSource
+            // 
+            this.playerBattleVictoriesBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.PlayerBattleVictories);
             // 
             // tabControlPilot
             // 
@@ -817,6 +833,7 @@
             // 
             // txtPilotName
             // 
+            this.txtPilotName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPilotName.Location = new System.Drawing.Point(119, 9);
             this.txtPilotName.Name = "txtPilotName";
             this.txtPilotName.ReadOnly = true;
@@ -2390,6 +2407,34 @@
             this.gvTraining.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTraining_CellEndEdit);
             this.gvTraining.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvTraining_CellValidating);
             // 
+            // trainingShipTypeDataGridViewTextBoxColumn
+            // 
+            this.trainingShipTypeDataGridViewTextBoxColumn.DataPropertyName = "TrainingShipType";
+            this.trainingShipTypeDataGridViewTextBoxColumn.HeaderText = "TrainingShipType";
+            this.trainingShipTypeDataGridViewTextBoxColumn.Name = "trainingShipTypeDataGridViewTextBoxColumn";
+            // 
+            // nextTrainingLevelDataGridViewTextBoxColumn
+            // 
+            this.nextTrainingLevelDataGridViewTextBoxColumn.DataPropertyName = "NextTrainingLevel";
+            this.nextTrainingLevelDataGridViewTextBoxColumn.HeaderText = "NextTrainingLevel";
+            this.nextTrainingLevelDataGridViewTextBoxColumn.Name = "nextTrainingLevelDataGridViewTextBoxColumn";
+            // 
+            // trainingScoreDataGridViewTextBoxColumn
+            // 
+            this.trainingScoreDataGridViewTextBoxColumn.DataPropertyName = "TrainingScore";
+            this.trainingScoreDataGridViewTextBoxColumn.HeaderText = "TrainingScore";
+            this.trainingScoreDataGridViewTextBoxColumn.Name = "trainingScoreDataGridViewTextBoxColumn";
+            // 
+            // trainingLevelCompletedDataGridViewTextBoxColumn
+            // 
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.DataPropertyName = "TrainingLevelCompleted";
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.HeaderText = "TrainingLevelCompleted";
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.Name = "trainingLevelCompletedDataGridViewTextBoxColumn";
+            // 
+            // trainingRecordBindingSource
+            // 
+            this.trainingRecordBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.TrainingRecord);
+            // 
             // tabBattleStats
             // 
             this.tabBattleStats.BackColor = System.Drawing.SystemColors.Control;
@@ -2635,7 +2680,7 @@
             this.tabBattle1.Controls.Add(this.panel8);
             this.tabBattle1.Location = new System.Drawing.Point(4, 40);
             this.tabBattle1.Name = "tabBattle1";
-            this.tabBattle1.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle1.Size = new System.Drawing.Size(591, 371);
             this.tabBattle1.TabIndex = 0;
             this.tabBattle1.Text = "Battle 1";
             // 
@@ -2828,7 +2873,7 @@
             this.tabBattle2.Controls.Add(this.panel9);
             this.tabBattle2.Location = new System.Drawing.Point(4, 40);
             this.tabBattle2.Name = "tabBattle2";
-            this.tabBattle2.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle2.Size = new System.Drawing.Size(591, 371);
             this.tabBattle2.TabIndex = 1;
             this.tabBattle2.Text = "Battle 2";
             // 
@@ -2854,6 +2899,38 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(492, 364);
             this.panel9.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB2
+            // 
+            this.clbBonusObjectiveB2.FormattingEnabled = true;
+            this.clbBonusObjectiveB2.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB2.Name = "clbBonusObjectiveB2";
+            this.clbBonusObjectiveB2.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB2.TabIndex = 14;
+            // 
+            // label93
+            // 
+            this.label93.Location = new System.Drawing.Point(148, 119);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(119, 27);
+            this.label93.TabIndex = 13;
+            this.label93.Text = "Bonus Objectives Completed:";
+            // 
+            // label100
+            // 
+            this.label100.Location = new System.Drawing.Point(13, 119);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(119, 27);
+            this.label100.TabIndex = 12;
+            this.label100.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB2
+            // 
+            this.clbSecondaryObjectiveB2.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB2.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB2.Name = "clbSecondaryObjectiveB2";
+            this.clbSecondaryObjectiveB2.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB2.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB2
             // 
@@ -2989,7 +3066,7 @@
             this.tabBattle3.Controls.Add(this.panel10);
             this.tabBattle3.Location = new System.Drawing.Point(4, 40);
             this.tabBattle3.Name = "tabBattle3";
-            this.tabBattle3.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle3.Size = new System.Drawing.Size(591, 371);
             this.tabBattle3.TabIndex = 2;
             this.tabBattle3.Text = "Battle 3";
             // 
@@ -3015,6 +3092,38 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(492, 364);
             this.panel10.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB3
+            // 
+            this.clbBonusObjectiveB3.FormattingEnabled = true;
+            this.clbBonusObjectiveB3.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB3.Name = "clbBonusObjectiveB3";
+            this.clbBonusObjectiveB3.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB3.TabIndex = 14;
+            // 
+            // label107
+            // 
+            this.label107.Location = new System.Drawing.Point(148, 119);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(119, 27);
+            this.label107.TabIndex = 13;
+            this.label107.Text = "Bonus Objectives Completed:";
+            // 
+            // label114
+            // 
+            this.label114.Location = new System.Drawing.Point(13, 119);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(119, 27);
+            this.label114.TabIndex = 12;
+            this.label114.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB3
+            // 
+            this.clbSecondaryObjectiveB3.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB3.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB3.Name = "clbSecondaryObjectiveB3";
+            this.clbSecondaryObjectiveB3.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB3.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB3
             // 
@@ -3150,7 +3259,7 @@
             this.tabBattle4.Controls.Add(this.panel11);
             this.tabBattle4.Location = new System.Drawing.Point(4, 40);
             this.tabBattle4.Name = "tabBattle4";
-            this.tabBattle4.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle4.Size = new System.Drawing.Size(591, 371);
             this.tabBattle4.TabIndex = 3;
             this.tabBattle4.Text = "Battle 4";
             // 
@@ -3176,6 +3285,38 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(492, 364);
             this.panel11.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB4
+            // 
+            this.clbBonusObjectiveB4.FormattingEnabled = true;
+            this.clbBonusObjectiveB4.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB4.Name = "clbBonusObjectiveB4";
+            this.clbBonusObjectiveB4.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB4.TabIndex = 14;
+            // 
+            // label121
+            // 
+            this.label121.Location = new System.Drawing.Point(148, 119);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(119, 27);
+            this.label121.TabIndex = 13;
+            this.label121.Text = "Bonus Objectives Completed:";
+            // 
+            // label128
+            // 
+            this.label128.Location = new System.Drawing.Point(13, 119);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(119, 27);
+            this.label128.TabIndex = 12;
+            this.label128.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB4
+            // 
+            this.clbSecondaryObjectiveB4.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB4.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB4.Name = "clbSecondaryObjectiveB4";
+            this.clbSecondaryObjectiveB4.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB4.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB4
             // 
@@ -3311,7 +3452,7 @@
             this.tabBattle5.Controls.Add(this.panel12);
             this.tabBattle5.Location = new System.Drawing.Point(4, 40);
             this.tabBattle5.Name = "tabBattle5";
-            this.tabBattle5.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle5.Size = new System.Drawing.Size(591, 371);
             this.tabBattle5.TabIndex = 4;
             this.tabBattle5.Text = "Battle 5";
             // 
@@ -3337,6 +3478,38 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(492, 364);
             this.panel12.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB5
+            // 
+            this.clbBonusObjectiveB5.FormattingEnabled = true;
+            this.clbBonusObjectiveB5.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB5.Name = "clbBonusObjectiveB5";
+            this.clbBonusObjectiveB5.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB5.TabIndex = 14;
+            // 
+            // label135
+            // 
+            this.label135.Location = new System.Drawing.Point(148, 119);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(119, 27);
+            this.label135.TabIndex = 13;
+            this.label135.Text = "Bonus Objectives Completed:";
+            // 
+            // label142
+            // 
+            this.label142.Location = new System.Drawing.Point(13, 119);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(119, 27);
+            this.label142.TabIndex = 12;
+            this.label142.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB5
+            // 
+            this.clbSecondaryObjectiveB5.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB5.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB5.Name = "clbSecondaryObjectiveB5";
+            this.clbSecondaryObjectiveB5.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB5.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB5
             // 
@@ -3472,7 +3645,7 @@
             this.tabBattle6.Controls.Add(this.panel13);
             this.tabBattle6.Location = new System.Drawing.Point(4, 40);
             this.tabBattle6.Name = "tabBattle6";
-            this.tabBattle6.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle6.Size = new System.Drawing.Size(591, 371);
             this.tabBattle6.TabIndex = 5;
             this.tabBattle6.Text = "Battle 6";
             // 
@@ -3498,6 +3671,38 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(492, 364);
             this.panel13.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB6
+            // 
+            this.clbBonusObjectiveB6.FormattingEnabled = true;
+            this.clbBonusObjectiveB6.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB6.Name = "clbBonusObjectiveB6";
+            this.clbBonusObjectiveB6.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB6.TabIndex = 14;
+            // 
+            // label149
+            // 
+            this.label149.Location = new System.Drawing.Point(148, 119);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(119, 27);
+            this.label149.TabIndex = 13;
+            this.label149.Text = "Bonus Objectives Completed:";
+            // 
+            // label156
+            // 
+            this.label156.Location = new System.Drawing.Point(13, 119);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(119, 27);
+            this.label156.TabIndex = 12;
+            this.label156.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB6
+            // 
+            this.clbSecondaryObjectiveB6.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB6.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB6.Name = "clbSecondaryObjectiveB6";
+            this.clbSecondaryObjectiveB6.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB6.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB6
             // 
@@ -3633,7 +3838,7 @@
             this.tabBattle7.Controls.Add(this.panel14);
             this.tabBattle7.Location = new System.Drawing.Point(4, 40);
             this.tabBattle7.Name = "tabBattle7";
-            this.tabBattle7.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle7.Size = new System.Drawing.Size(591, 371);
             this.tabBattle7.TabIndex = 6;
             this.tabBattle7.Text = "Battle 7";
             // 
@@ -3659,6 +3864,38 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(492, 364);
             this.panel14.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB7
+            // 
+            this.clbBonusObjectiveB7.FormattingEnabled = true;
+            this.clbBonusObjectiveB7.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB7.Name = "clbBonusObjectiveB7";
+            this.clbBonusObjectiveB7.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB7.TabIndex = 14;
+            // 
+            // label163
+            // 
+            this.label163.Location = new System.Drawing.Point(148, 119);
+            this.label163.Name = "label163";
+            this.label163.Size = new System.Drawing.Size(119, 27);
+            this.label163.TabIndex = 13;
+            this.label163.Text = "Bonus Objectives Completed:";
+            // 
+            // label164
+            // 
+            this.label164.Location = new System.Drawing.Point(13, 119);
+            this.label164.Name = "label164";
+            this.label164.Size = new System.Drawing.Size(119, 27);
+            this.label164.TabIndex = 12;
+            this.label164.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB7
+            // 
+            this.clbSecondaryObjectiveB7.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB7.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB7.Name = "clbSecondaryObjectiveB7";
+            this.clbSecondaryObjectiveB7.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB7.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB7
             // 
@@ -3794,7 +4031,7 @@
             this.tabBattle8.Controls.Add(this.panel15);
             this.tabBattle8.Location = new System.Drawing.Point(4, 40);
             this.tabBattle8.Name = "tabBattle8";
-            this.tabBattle8.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle8.Size = new System.Drawing.Size(591, 371);
             this.tabBattle8.TabIndex = 7;
             this.tabBattle8.Text = "Battle 8";
             // 
@@ -3820,6 +4057,38 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(492, 364);
             this.panel15.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB8
+            // 
+            this.clbBonusObjectiveB8.FormattingEnabled = true;
+            this.clbBonusObjectiveB8.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB8.Name = "clbBonusObjectiveB8";
+            this.clbBonusObjectiveB8.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB8.TabIndex = 14;
+            // 
+            // label165
+            // 
+            this.label165.Location = new System.Drawing.Point(148, 119);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(119, 27);
+            this.label165.TabIndex = 13;
+            this.label165.Text = "Bonus Objectives Completed:";
+            // 
+            // label166
+            // 
+            this.label166.Location = new System.Drawing.Point(13, 119);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(119, 27);
+            this.label166.TabIndex = 12;
+            this.label166.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB8
+            // 
+            this.clbSecondaryObjectiveB8.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB8.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB8.Name = "clbSecondaryObjectiveB8";
+            this.clbSecondaryObjectiveB8.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB8.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB8
             // 
@@ -3955,7 +4224,7 @@
             this.tabBattle9.Controls.Add(this.panel16);
             this.tabBattle9.Location = new System.Drawing.Point(4, 40);
             this.tabBattle9.Name = "tabBattle9";
-            this.tabBattle9.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle9.Size = new System.Drawing.Size(591, 371);
             this.tabBattle9.TabIndex = 8;
             this.tabBattle9.Text = "Battle 9";
             // 
@@ -3981,6 +4250,38 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(492, 364);
             this.panel16.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB9
+            // 
+            this.clbBonusObjectiveB9.FormattingEnabled = true;
+            this.clbBonusObjectiveB9.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB9.Name = "clbBonusObjectiveB9";
+            this.clbBonusObjectiveB9.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB9.TabIndex = 14;
+            // 
+            // label167
+            // 
+            this.label167.Location = new System.Drawing.Point(148, 119);
+            this.label167.Name = "label167";
+            this.label167.Size = new System.Drawing.Size(119, 27);
+            this.label167.TabIndex = 13;
+            this.label167.Text = "Bonus Objectives Completed:";
+            // 
+            // label168
+            // 
+            this.label168.Location = new System.Drawing.Point(13, 119);
+            this.label168.Name = "label168";
+            this.label168.Size = new System.Drawing.Size(119, 27);
+            this.label168.TabIndex = 12;
+            this.label168.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB9
+            // 
+            this.clbSecondaryObjectiveB9.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB9.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB9.Name = "clbSecondaryObjectiveB9";
+            this.clbSecondaryObjectiveB9.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB9.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB9
             // 
@@ -4116,7 +4417,7 @@
             this.tabBattle10.Controls.Add(this.panel17);
             this.tabBattle10.Location = new System.Drawing.Point(4, 40);
             this.tabBattle10.Name = "tabBattle10";
-            this.tabBattle10.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle10.Size = new System.Drawing.Size(591, 371);
             this.tabBattle10.TabIndex = 9;
             this.tabBattle10.Text = "Battle 10";
             // 
@@ -4142,6 +4443,38 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(492, 364);
             this.panel17.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB10
+            // 
+            this.clbBonusObjectiveB10.FormattingEnabled = true;
+            this.clbBonusObjectiveB10.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB10.Name = "clbBonusObjectiveB10";
+            this.clbBonusObjectiveB10.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB10.TabIndex = 14;
+            // 
+            // label169
+            // 
+            this.label169.Location = new System.Drawing.Point(148, 119);
+            this.label169.Name = "label169";
+            this.label169.Size = new System.Drawing.Size(119, 27);
+            this.label169.TabIndex = 13;
+            this.label169.Text = "Bonus Objectives Completed:";
+            // 
+            // label170
+            // 
+            this.label170.Location = new System.Drawing.Point(13, 119);
+            this.label170.Name = "label170";
+            this.label170.Size = new System.Drawing.Size(119, 27);
+            this.label170.TabIndex = 12;
+            this.label170.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB10
+            // 
+            this.clbSecondaryObjectiveB10.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB10.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB10.Name = "clbSecondaryObjectiveB10";
+            this.clbSecondaryObjectiveB10.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB10.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB10
             // 
@@ -4277,7 +4610,7 @@
             this.tabBattle11.Controls.Add(this.panel18);
             this.tabBattle11.Location = new System.Drawing.Point(4, 40);
             this.tabBattle11.Name = "tabBattle11";
-            this.tabBattle11.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle11.Size = new System.Drawing.Size(591, 371);
             this.tabBattle11.TabIndex = 10;
             this.tabBattle11.Text = "Battle 11";
             // 
@@ -4303,6 +4636,38 @@
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(492, 364);
             this.panel18.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB11
+            // 
+            this.clbBonusObjectiveB11.FormattingEnabled = true;
+            this.clbBonusObjectiveB11.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB11.Name = "clbBonusObjectiveB11";
+            this.clbBonusObjectiveB11.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB11.TabIndex = 14;
+            // 
+            // label171
+            // 
+            this.label171.Location = new System.Drawing.Point(148, 119);
+            this.label171.Name = "label171";
+            this.label171.Size = new System.Drawing.Size(119, 27);
+            this.label171.TabIndex = 13;
+            this.label171.Text = "Bonus Objectives Completed:";
+            // 
+            // label172
+            // 
+            this.label172.Location = new System.Drawing.Point(13, 119);
+            this.label172.Name = "label172";
+            this.label172.Size = new System.Drawing.Size(119, 27);
+            this.label172.TabIndex = 12;
+            this.label172.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB11
+            // 
+            this.clbSecondaryObjectiveB11.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB11.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB11.Name = "clbSecondaryObjectiveB11";
+            this.clbSecondaryObjectiveB11.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB11.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB11
             // 
@@ -4438,7 +4803,7 @@
             this.tabBattle12.Controls.Add(this.panel19);
             this.tabBattle12.Location = new System.Drawing.Point(4, 40);
             this.tabBattle12.Name = "tabBattle12";
-            this.tabBattle12.Size = new System.Drawing.Size(498, 371);
+            this.tabBattle12.Size = new System.Drawing.Size(591, 371);
             this.tabBattle12.TabIndex = 11;
             this.tabBattle12.Text = "Battle 12";
             // 
@@ -4464,6 +4829,38 @@
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(492, 364);
             this.panel19.TabIndex = 1;
+            // 
+            // clbBonusObjectiveB12
+            // 
+            this.clbBonusObjectiveB12.FormattingEnabled = true;
+            this.clbBonusObjectiveB12.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB12.Name = "clbBonusObjectiveB12";
+            this.clbBonusObjectiveB12.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB12.TabIndex = 14;
+            // 
+            // label173
+            // 
+            this.label173.Location = new System.Drawing.Point(148, 119);
+            this.label173.Name = "label173";
+            this.label173.Size = new System.Drawing.Size(119, 27);
+            this.label173.TabIndex = 13;
+            this.label173.Text = "Bonus Objectives Completed:";
+            // 
+            // label174
+            // 
+            this.label174.Location = new System.Drawing.Point(13, 119);
+            this.label174.Name = "label174";
+            this.label174.Size = new System.Drawing.Size(119, 27);
+            this.label174.TabIndex = 12;
+            this.label174.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB12
+            // 
+            this.clbSecondaryObjectiveB12.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB12.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB12.Name = "clbSecondaryObjectiveB12";
+            this.clbSecondaryObjectiveB12.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB12.TabIndex = 11;
             // 
             // nudBonusObjectivesCompB12
             // 
@@ -4626,6 +5023,38 @@
             this.panel20.Size = new System.Drawing.Size(492, 364);
             this.panel20.TabIndex = 1;
             // 
+            // clbBonusObjectiveB13
+            // 
+            this.clbBonusObjectiveB13.FormattingEnabled = true;
+            this.clbBonusObjectiveB13.Location = new System.Drawing.Point(151, 149);
+            this.clbBonusObjectiveB13.Name = "clbBonusObjectiveB13";
+            this.clbBonusObjectiveB13.Size = new System.Drawing.Size(120, 124);
+            this.clbBonusObjectiveB13.TabIndex = 14;
+            // 
+            // label175
+            // 
+            this.label175.Location = new System.Drawing.Point(148, 119);
+            this.label175.Name = "label175";
+            this.label175.Size = new System.Drawing.Size(119, 27);
+            this.label175.TabIndex = 13;
+            this.label175.Text = "Bonus Objectives Completed:";
+            // 
+            // label176
+            // 
+            this.label176.Location = new System.Drawing.Point(13, 119);
+            this.label176.Name = "label176";
+            this.label176.Size = new System.Drawing.Size(119, 27);
+            this.label176.TabIndex = 12;
+            this.label176.Text = "Secondary Objectives Completed:";
+            // 
+            // clbSecondaryObjectiveB13
+            // 
+            this.clbSecondaryObjectiveB13.FormattingEnabled = true;
+            this.clbSecondaryObjectiveB13.Location = new System.Drawing.Point(16, 149);
+            this.clbSecondaryObjectiveB13.Name = "clbSecondaryObjectiveB13";
+            this.clbSecondaryObjectiveB13.Size = new System.Drawing.Size(120, 124);
+            this.clbSecondaryObjectiveB13.TabIndex = 11;
+            // 
             // nudBonusObjectivesCompB13
             // 
             this.nudBonusObjectivesCompB13.Location = new System.Drawing.Point(16, 340);
@@ -4754,434 +5183,6 @@
             this.label162.TabIndex = 0;
             this.label162.Text = "The Emperor\'s Will";
             // 
-            // clbBonusObjectiveB2
-            // 
-            this.clbBonusObjectiveB2.FormattingEnabled = true;
-            this.clbBonusObjectiveB2.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB2.Name = "clbBonusObjectiveB2";
-            this.clbBonusObjectiveB2.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB2.TabIndex = 14;
-            // 
-            // label93
-            // 
-            this.label93.Location = new System.Drawing.Point(148, 119);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(119, 27);
-            this.label93.TabIndex = 13;
-            this.label93.Text = "Bonus Objectives Completed:";
-            // 
-            // label100
-            // 
-            this.label100.Location = new System.Drawing.Point(13, 119);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(119, 27);
-            this.label100.TabIndex = 12;
-            this.label100.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB2
-            // 
-            this.clbSecondaryObjectiveB2.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB2.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB2.Name = "clbSecondaryObjectiveB2";
-            this.clbSecondaryObjectiveB2.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB2.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB3
-            // 
-            this.clbBonusObjectiveB3.FormattingEnabled = true;
-            this.clbBonusObjectiveB3.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB3.Name = "clbBonusObjectiveB3";
-            this.clbBonusObjectiveB3.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB3.TabIndex = 14;
-            // 
-            // label107
-            // 
-            this.label107.Location = new System.Drawing.Point(148, 119);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(119, 27);
-            this.label107.TabIndex = 13;
-            this.label107.Text = "Bonus Objectives Completed:";
-            // 
-            // label114
-            // 
-            this.label114.Location = new System.Drawing.Point(13, 119);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(119, 27);
-            this.label114.TabIndex = 12;
-            this.label114.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB3
-            // 
-            this.clbSecondaryObjectiveB3.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB3.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB3.Name = "clbSecondaryObjectiveB3";
-            this.clbSecondaryObjectiveB3.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB3.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB4
-            // 
-            this.clbBonusObjectiveB4.FormattingEnabled = true;
-            this.clbBonusObjectiveB4.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB4.Name = "clbBonusObjectiveB4";
-            this.clbBonusObjectiveB4.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB4.TabIndex = 14;
-            // 
-            // label121
-            // 
-            this.label121.Location = new System.Drawing.Point(148, 119);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(119, 27);
-            this.label121.TabIndex = 13;
-            this.label121.Text = "Bonus Objectives Completed:";
-            // 
-            // label128
-            // 
-            this.label128.Location = new System.Drawing.Point(13, 119);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(119, 27);
-            this.label128.TabIndex = 12;
-            this.label128.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB4
-            // 
-            this.clbSecondaryObjectiveB4.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB4.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB4.Name = "clbSecondaryObjectiveB4";
-            this.clbSecondaryObjectiveB4.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB4.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB5
-            // 
-            this.clbBonusObjectiveB5.FormattingEnabled = true;
-            this.clbBonusObjectiveB5.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB5.Name = "clbBonusObjectiveB5";
-            this.clbBonusObjectiveB5.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB5.TabIndex = 14;
-            // 
-            // label135
-            // 
-            this.label135.Location = new System.Drawing.Point(148, 119);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(119, 27);
-            this.label135.TabIndex = 13;
-            this.label135.Text = "Bonus Objectives Completed:";
-            // 
-            // label142
-            // 
-            this.label142.Location = new System.Drawing.Point(13, 119);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(119, 27);
-            this.label142.TabIndex = 12;
-            this.label142.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB5
-            // 
-            this.clbSecondaryObjectiveB5.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB5.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB5.Name = "clbSecondaryObjectiveB5";
-            this.clbSecondaryObjectiveB5.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB5.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB6
-            // 
-            this.clbBonusObjectiveB6.FormattingEnabled = true;
-            this.clbBonusObjectiveB6.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB6.Name = "clbBonusObjectiveB6";
-            this.clbBonusObjectiveB6.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB6.TabIndex = 14;
-            // 
-            // label149
-            // 
-            this.label149.Location = new System.Drawing.Point(148, 119);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(119, 27);
-            this.label149.TabIndex = 13;
-            this.label149.Text = "Bonus Objectives Completed:";
-            // 
-            // label156
-            // 
-            this.label156.Location = new System.Drawing.Point(13, 119);
-            this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(119, 27);
-            this.label156.TabIndex = 12;
-            this.label156.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB6
-            // 
-            this.clbSecondaryObjectiveB6.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB6.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB6.Name = "clbSecondaryObjectiveB6";
-            this.clbSecondaryObjectiveB6.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB6.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB7
-            // 
-            this.clbBonusObjectiveB7.FormattingEnabled = true;
-            this.clbBonusObjectiveB7.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB7.Name = "clbBonusObjectiveB7";
-            this.clbBonusObjectiveB7.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB7.TabIndex = 14;
-            // 
-            // label163
-            // 
-            this.label163.Location = new System.Drawing.Point(148, 119);
-            this.label163.Name = "label163";
-            this.label163.Size = new System.Drawing.Size(119, 27);
-            this.label163.TabIndex = 13;
-            this.label163.Text = "Bonus Objectives Completed:";
-            // 
-            // label164
-            // 
-            this.label164.Location = new System.Drawing.Point(13, 119);
-            this.label164.Name = "label164";
-            this.label164.Size = new System.Drawing.Size(119, 27);
-            this.label164.TabIndex = 12;
-            this.label164.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB7
-            // 
-            this.clbSecondaryObjectiveB7.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB7.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB7.Name = "clbSecondaryObjectiveB7";
-            this.clbSecondaryObjectiveB7.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB7.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB8
-            // 
-            this.clbBonusObjectiveB8.FormattingEnabled = true;
-            this.clbBonusObjectiveB8.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB8.Name = "clbBonusObjectiveB8";
-            this.clbBonusObjectiveB8.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB8.TabIndex = 14;
-            // 
-            // label165
-            // 
-            this.label165.Location = new System.Drawing.Point(148, 119);
-            this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(119, 27);
-            this.label165.TabIndex = 13;
-            this.label165.Text = "Bonus Objectives Completed:";
-            // 
-            // label166
-            // 
-            this.label166.Location = new System.Drawing.Point(13, 119);
-            this.label166.Name = "label166";
-            this.label166.Size = new System.Drawing.Size(119, 27);
-            this.label166.TabIndex = 12;
-            this.label166.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB8
-            // 
-            this.clbSecondaryObjectiveB8.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB8.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB8.Name = "clbSecondaryObjectiveB8";
-            this.clbSecondaryObjectiveB8.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB8.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB9
-            // 
-            this.clbBonusObjectiveB9.FormattingEnabled = true;
-            this.clbBonusObjectiveB9.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB9.Name = "clbBonusObjectiveB9";
-            this.clbBonusObjectiveB9.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB9.TabIndex = 14;
-            // 
-            // label167
-            // 
-            this.label167.Location = new System.Drawing.Point(148, 119);
-            this.label167.Name = "label167";
-            this.label167.Size = new System.Drawing.Size(119, 27);
-            this.label167.TabIndex = 13;
-            this.label167.Text = "Bonus Objectives Completed:";
-            // 
-            // label168
-            // 
-            this.label168.Location = new System.Drawing.Point(13, 119);
-            this.label168.Name = "label168";
-            this.label168.Size = new System.Drawing.Size(119, 27);
-            this.label168.TabIndex = 12;
-            this.label168.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB9
-            // 
-            this.clbSecondaryObjectiveB9.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB9.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB9.Name = "clbSecondaryObjectiveB9";
-            this.clbSecondaryObjectiveB9.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB9.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB10
-            // 
-            this.clbBonusObjectiveB10.FormattingEnabled = true;
-            this.clbBonusObjectiveB10.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB10.Name = "clbBonusObjectiveB10";
-            this.clbBonusObjectiveB10.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB10.TabIndex = 14;
-            // 
-            // label169
-            // 
-            this.label169.Location = new System.Drawing.Point(148, 119);
-            this.label169.Name = "label169";
-            this.label169.Size = new System.Drawing.Size(119, 27);
-            this.label169.TabIndex = 13;
-            this.label169.Text = "Bonus Objectives Completed:";
-            // 
-            // label170
-            // 
-            this.label170.Location = new System.Drawing.Point(13, 119);
-            this.label170.Name = "label170";
-            this.label170.Size = new System.Drawing.Size(119, 27);
-            this.label170.TabIndex = 12;
-            this.label170.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB10
-            // 
-            this.clbSecondaryObjectiveB10.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB10.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB10.Name = "clbSecondaryObjectiveB10";
-            this.clbSecondaryObjectiveB10.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB10.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB11
-            // 
-            this.clbBonusObjectiveB11.FormattingEnabled = true;
-            this.clbBonusObjectiveB11.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB11.Name = "clbBonusObjectiveB11";
-            this.clbBonusObjectiveB11.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB11.TabIndex = 14;
-            // 
-            // label171
-            // 
-            this.label171.Location = new System.Drawing.Point(148, 119);
-            this.label171.Name = "label171";
-            this.label171.Size = new System.Drawing.Size(119, 27);
-            this.label171.TabIndex = 13;
-            this.label171.Text = "Bonus Objectives Completed:";
-            // 
-            // label172
-            // 
-            this.label172.Location = new System.Drawing.Point(13, 119);
-            this.label172.Name = "label172";
-            this.label172.Size = new System.Drawing.Size(119, 27);
-            this.label172.TabIndex = 12;
-            this.label172.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB11
-            // 
-            this.clbSecondaryObjectiveB11.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB11.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB11.Name = "clbSecondaryObjectiveB11";
-            this.clbSecondaryObjectiveB11.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB11.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB12
-            // 
-            this.clbBonusObjectiveB12.FormattingEnabled = true;
-            this.clbBonusObjectiveB12.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB12.Name = "clbBonusObjectiveB12";
-            this.clbBonusObjectiveB12.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB12.TabIndex = 14;
-            // 
-            // label173
-            // 
-            this.label173.Location = new System.Drawing.Point(148, 119);
-            this.label173.Name = "label173";
-            this.label173.Size = new System.Drawing.Size(119, 27);
-            this.label173.TabIndex = 13;
-            this.label173.Text = "Bonus Objectives Completed:";
-            // 
-            // label174
-            // 
-            this.label174.Location = new System.Drawing.Point(13, 119);
-            this.label174.Name = "label174";
-            this.label174.Size = new System.Drawing.Size(119, 27);
-            this.label174.TabIndex = 12;
-            this.label174.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB12
-            // 
-            this.clbSecondaryObjectiveB12.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB12.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB12.Name = "clbSecondaryObjectiveB12";
-            this.clbSecondaryObjectiveB12.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB12.TabIndex = 11;
-            // 
-            // clbBonusObjectiveB13
-            // 
-            this.clbBonusObjectiveB13.FormattingEnabled = true;
-            this.clbBonusObjectiveB13.Location = new System.Drawing.Point(151, 149);
-            this.clbBonusObjectiveB13.Name = "clbBonusObjectiveB13";
-            this.clbBonusObjectiveB13.Size = new System.Drawing.Size(120, 124);
-            this.clbBonusObjectiveB13.TabIndex = 14;
-            // 
-            // label175
-            // 
-            this.label175.Location = new System.Drawing.Point(148, 119);
-            this.label175.Name = "label175";
-            this.label175.Size = new System.Drawing.Size(119, 27);
-            this.label175.TabIndex = 13;
-            this.label175.Text = "Bonus Objectives Completed:";
-            // 
-            // label176
-            // 
-            this.label176.Location = new System.Drawing.Point(13, 119);
-            this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(119, 27);
-            this.label176.TabIndex = 12;
-            this.label176.Text = "Secondary Objectives Completed:";
-            // 
-            // clbSecondaryObjectiveB13
-            // 
-            this.clbSecondaryObjectiveB13.FormattingEnabled = true;
-            this.clbSecondaryObjectiveB13.Location = new System.Drawing.Point(16, 149);
-            this.clbSecondaryObjectiveB13.Name = "clbSecondaryObjectiveB13";
-            this.clbSecondaryObjectiveB13.Size = new System.Drawing.Size(120, 124);
-            this.clbSecondaryObjectiveB13.TabIndex = 11;
-            // 
-            // trainingShipTypeDataGridViewTextBoxColumn
-            // 
-            this.trainingShipTypeDataGridViewTextBoxColumn.DataPropertyName = "TrainingShipType";
-            this.trainingShipTypeDataGridViewTextBoxColumn.HeaderText = "TrainingShipType";
-            this.trainingShipTypeDataGridViewTextBoxColumn.Name = "trainingShipTypeDataGridViewTextBoxColumn";
-            // 
-            // nextTrainingLevelDataGridViewTextBoxColumn
-            // 
-            this.nextTrainingLevelDataGridViewTextBoxColumn.DataPropertyName = "NextTrainingLevel";
-            this.nextTrainingLevelDataGridViewTextBoxColumn.HeaderText = "NextTrainingLevel";
-            this.nextTrainingLevelDataGridViewTextBoxColumn.Name = "nextTrainingLevelDataGridViewTextBoxColumn";
-            // 
-            // trainingScoreDataGridViewTextBoxColumn
-            // 
-            this.trainingScoreDataGridViewTextBoxColumn.DataPropertyName = "TrainingScore";
-            this.trainingScoreDataGridViewTextBoxColumn.HeaderText = "TrainingScore";
-            this.trainingScoreDataGridViewTextBoxColumn.Name = "trainingScoreDataGridViewTextBoxColumn";
-            // 
-            // trainingLevelCompletedDataGridViewTextBoxColumn
-            // 
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.DataPropertyName = "TrainingLevelCompleted";
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.HeaderText = "TrainingLevelCompleted";
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.Name = "trainingLevelCompletedDataGridViewTextBoxColumn";
-            // 
-            // trainingRecordBindingSource
-            // 
-            this.trainingRecordBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.TrainingRecord);
-            // 
-            // victoryNPCDataGridViewTextBoxColumn
-            // 
-            this.victoryNPCDataGridViewTextBoxColumn.DataPropertyName = "VictoryNPC";
-            this.victoryNPCDataGridViewTextBoxColumn.HeaderText = "VictoryNPC";
-            this.victoryNPCDataGridViewTextBoxColumn.Name = "victoryNPCDataGridViewTextBoxColumn";
-            // 
-            // victoriesDataGridViewTextBoxColumn
-            // 
-            this.victoriesDataGridViewTextBoxColumn.DataPropertyName = "Victories";
-            this.victoriesDataGridViewTextBoxColumn.HeaderText = "Victories";
-            this.victoriesDataGridViewTextBoxColumn.Name = "victoriesDataGridViewTextBoxColumn";
-            // 
-            // playerBattleVictoriesBindingSource
-            // 
-            this.playerBattleVictoriesBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.PlayerBattleVictories);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5203,6 +5204,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattleVictories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).EndInit();
             this.tabControlPilot.ResumeLayout(false);
             this.tabPilotStatus.ResumeLayout(false);
             this.tabPilotStatus.PerformLayout();
@@ -5263,6 +5265,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTraining)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).EndInit();
             this.tabBattleStats.ResumeLayout(false);
             this.tabBattleStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCraftLost)).EndInit();
@@ -5365,8 +5368,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle13Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
