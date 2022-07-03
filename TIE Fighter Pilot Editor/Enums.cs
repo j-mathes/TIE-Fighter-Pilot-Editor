@@ -1,4 +1,6 @@
-﻿namespace TIE_Fighter_Pilot_Editor
+﻿using System;
+
+namespace TIE_Fighter_Pilot_Editor
 {
     public enum Health
     {
@@ -63,7 +65,7 @@
         TD,         //670-671   1648-1649   TIE Defender
         TN1,        //672-673   1650-1651   TIE New 1
         TN2,        //674-675   1652-1653   TIE New 2
-        MIS,        //676-677   1654-1655   Missle Boat
+        MIS,        //676-677   1654-1655   Missile Boat
         TW,         //678-679   1656-1657   T-Wing
         Z95,        //67A-67B   1658-1659   Z-95 Headhunter
         R41,        //67C-67D   1660-1661   R-41 Starchaser
@@ -129,5 +131,31 @@
         Active,
         Pending,
         Done
+    }
+
+    [Flags]
+    public enum SecondaryObjectives
+    {
+        First   = 0b_0000_0000,  // 0
+        Second  = 0b_0000_0001,  // 1
+        Third   = 0b_0000_0010,  // 2
+        Fourth  = 0b_0000_0100,  // 4
+        Fifth   = 0b_0000_1000,  // 8
+        Sixth   = 0b_0001_0000,  // 16
+        Seventh = 0b_0010_0000,  // 32
+        Eighth  = 0b_0100_0000   // 64
+    }
+
+    [Flags]
+    public enum BonusObjectives
+    {
+        First   = 0b_0000_0000,  // 0
+        Second  = 0b_0000_0001,  // 1
+        Third   = 0b_0000_0010,  // 2
+        Fourth  = 0b_0000_0100,  // 4
+        Fifth   = 0b_0000_1000,  // 8
+        Sixth   = 0b_0001_0000,  // 16
+        Seventh = 0b_0010_0000,  // 32
+        Eighth  = 0b_0100_0000   // 64
     }
 }
