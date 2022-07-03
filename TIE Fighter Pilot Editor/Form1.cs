@@ -69,6 +69,34 @@ namespace TIE_Fighter_Pilot_Editor
             comStatusB12.DataSource = Enum.GetValues(typeof(BattleStatus));
             comStatusB13.DataSource = Enum.GetValues(typeof(BattleStatus));
 
+            clbSecondaryObjectiveB1.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB2.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB3.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB4.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB5.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB6.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB7.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB8.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB9.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB10.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB11.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB12.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            clbSecondaryObjectiveB13.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+
+            clbBonusObjectiveB1.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB2.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB3.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB4.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB5.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB6.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB7.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB8.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB9.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB10.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB11.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB12.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            clbBonusObjectiveB13.DataSource = Enum.GetValues(typeof(BonusObjectives));
+
             cbValidationToggle.Checked = validationPopUp;
 
             UpdateForm();
