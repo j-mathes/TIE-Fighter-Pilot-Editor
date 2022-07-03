@@ -136,26 +136,28 @@ namespace TIE_Fighter_Pilot_Editor
     [Flags]
     public enum SecondaryObjectives
     {
-        First   = 0b_0000_0000,  // 0
-        Second  = 0b_0000_0001,  // 1
-        Third   = 0b_0000_0010,  // 2
-        Fourth  = 0b_0000_0100,  // 4
-        Fifth   = 0b_0000_1000,  // 8
-        Sixth   = 0b_0001_0000,  // 16
-        Seventh = 0b_0010_0000,  // 32
-        Eighth  = 0b_0100_0000   // 64
+        None    = 0b_0000_0000,  // 0
+        First   = 0b_0000_0001,  // 1
+        Second  = 0b_0000_0010,  // 2
+        Third   = 0b_0000_0100,  // 4
+        Fourth  = 0b_0000_1000,  // 8
+        Fifth   = 0b_0001_0000,  // 16
+        Sixth   = 0b_0010_0000,  // 32
+        Seventh = 0b_0100_0000,  // 64
+        Eighth  = 0b_1000_0000   // 128
     }
 
     [Flags]
     public enum BonusObjectives
     {
-        First   = 0b_0000_0000,  // 0
-        Second  = 0b_0000_0001,  // 1
-        Third   = 0b_0000_0010,  // 2
-        Fourth  = 0b_0000_0100,  // 4
-        Fifth   = 0b_0000_1000,  // 8
-        Sixth   = 0b_0001_0000,  // 16
-        Seventh = 0b_0010_0000,  // 32
-        Eighth  = 0b_0100_0000   // 64
+        None    = 0b_0000_0000,  // 0
+        First   = 0b_0000_0001,  // 1
+        Second  = 0b_0000_0010,  // 2
+        Third   = 0b_0000_0100,  // 4
+        Fourth  = 0b_0000_1000,  // 8
+        Fifth   = 0b_0001_0000,  // 16
+        Sixth   = 0b_0010_0000,  // 32
+        Seventh = 0b_0100_0000,  // 64
+        Eighth  = 0b_1000_0000   // 128
     }
 }
