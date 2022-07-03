@@ -41,6 +41,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gvBattleVictories = new System.Windows.Forms.DataGridView();
+            this.victoryNPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.victoriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerBattleVictoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlPilot = new System.Windows.Forms.TabControl();
             this.tabPilotStatus = new System.Windows.Forms.TabPage();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -190,6 +193,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.gvTraining = new System.Windows.Forms.DataGridView();
+            this.trainingShipTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nextTrainingLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingLevelCompletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabBattleStats = new System.Windows.Forms.TabPage();
             this.nudCraftLost = new System.Windows.Forms.NumericUpDown();
             this.nudTotalCaptures = new System.Windows.Forms.NumericUpDown();
@@ -208,7 +216,6 @@
             this.label67 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.tabBattleStatus = new System.Windows.Forms.TabPage();
-            this.label79 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBattle1 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -392,17 +399,10 @@
             this.label160 = new System.Windows.Forms.Label();
             this.label161 = new System.Windows.Forms.Label();
             this.label162 = new System.Windows.Forms.Label();
-            this.trainingShipTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nextTrainingLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingLevelCompletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.victoryNPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.victoriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerBattleVictoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattleVictories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).BeginInit();
             this.tabControlPilot.SuspendLayout();
             this.tabPilotStatus.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -453,6 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTraining)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).BeginInit();
             this.tabBattleStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCraftLost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalCaptures)).BeginInit();
@@ -541,8 +542,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle13Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -641,6 +640,22 @@
             this.gvBattleVictories.TabIndex = 2;
             this.gvBattleVictories.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattleVictories_CellEndEdit);
             this.gvBattleVictories.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattleVictories_CellValidating);
+            // 
+            // victoryNPCDataGridViewTextBoxColumn
+            // 
+            this.victoryNPCDataGridViewTextBoxColumn.DataPropertyName = "VictoryNPC";
+            this.victoryNPCDataGridViewTextBoxColumn.HeaderText = "VictoryNPC";
+            this.victoryNPCDataGridViewTextBoxColumn.Name = "victoryNPCDataGridViewTextBoxColumn";
+            // 
+            // victoriesDataGridViewTextBoxColumn
+            // 
+            this.victoriesDataGridViewTextBoxColumn.DataPropertyName = "Victories";
+            this.victoriesDataGridViewTextBoxColumn.HeaderText = "Victories";
+            this.victoriesDataGridViewTextBoxColumn.Name = "victoriesDataGridViewTextBoxColumn";
+            // 
+            // playerBattleVictoriesBindingSource
+            // 
+            this.playerBattleVictoriesBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.PlayerBattleVictories);
             // 
             // tabControlPilot
             // 
@@ -2339,6 +2354,34 @@
             this.gvTraining.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTraining_CellEndEdit);
             this.gvTraining.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvTraining_CellValidating);
             // 
+            // trainingShipTypeDataGridViewTextBoxColumn
+            // 
+            this.trainingShipTypeDataGridViewTextBoxColumn.DataPropertyName = "TrainingShipType";
+            this.trainingShipTypeDataGridViewTextBoxColumn.HeaderText = "TrainingShipType";
+            this.trainingShipTypeDataGridViewTextBoxColumn.Name = "trainingShipTypeDataGridViewTextBoxColumn";
+            // 
+            // nextTrainingLevelDataGridViewTextBoxColumn
+            // 
+            this.nextTrainingLevelDataGridViewTextBoxColumn.DataPropertyName = "NextTrainingLevel";
+            this.nextTrainingLevelDataGridViewTextBoxColumn.HeaderText = "NextTrainingLevel";
+            this.nextTrainingLevelDataGridViewTextBoxColumn.Name = "nextTrainingLevelDataGridViewTextBoxColumn";
+            // 
+            // trainingScoreDataGridViewTextBoxColumn
+            // 
+            this.trainingScoreDataGridViewTextBoxColumn.DataPropertyName = "TrainingScore";
+            this.trainingScoreDataGridViewTextBoxColumn.HeaderText = "TrainingScore";
+            this.trainingScoreDataGridViewTextBoxColumn.Name = "trainingScoreDataGridViewTextBoxColumn";
+            // 
+            // trainingLevelCompletedDataGridViewTextBoxColumn
+            // 
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.DataPropertyName = "TrainingLevelCompleted";
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.HeaderText = "TrainingLevelCompleted";
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.Name = "trainingLevelCompletedDataGridViewTextBoxColumn";
+            // 
+            // trainingRecordBindingSource
+            // 
+            this.trainingRecordBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.TrainingRecord);
+            // 
             // tabBattleStats
             // 
             this.tabBattleStats.BackColor = System.Drawing.SystemColors.Control;
@@ -2549,23 +2592,12 @@
             // 
             this.tabBattleStatus.BackColor = System.Drawing.SystemColors.Control;
             this.tabBattleStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabBattleStatus.Controls.Add(this.label79);
             this.tabBattleStatus.Controls.Add(this.tabControl1);
             this.tabBattleStatus.Location = new System.Drawing.Point(4, 22);
             this.tabBattleStatus.Name = "tabBattleStatus";
             this.tabBattleStatus.Size = new System.Drawing.Size(620, 432);
             this.tabBattleStatus.TabIndex = 3;
             this.tabBattleStatus.Text = "Battle Status";
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(15, 319);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(399, 26);
-            this.label79.TabIndex = 1;
-            this.label79.Text = "Currently, secondary and bonus objective values are raw numbers from the pilot fi" +
-    "le.\r\nI\'m not yet sure how these translate to the values seen in-game.";
             // 
             // tabControl1
             // 
@@ -4630,50 +4662,6 @@
             this.label162.TabIndex = 0;
             this.label162.Text = "The Emperor\'s Will";
             // 
-            // trainingShipTypeDataGridViewTextBoxColumn
-            // 
-            this.trainingShipTypeDataGridViewTextBoxColumn.DataPropertyName = "TrainingShipType";
-            this.trainingShipTypeDataGridViewTextBoxColumn.HeaderText = "TrainingShipType";
-            this.trainingShipTypeDataGridViewTextBoxColumn.Name = "trainingShipTypeDataGridViewTextBoxColumn";
-            // 
-            // nextTrainingLevelDataGridViewTextBoxColumn
-            // 
-            this.nextTrainingLevelDataGridViewTextBoxColumn.DataPropertyName = "NextTrainingLevel";
-            this.nextTrainingLevelDataGridViewTextBoxColumn.HeaderText = "NextTrainingLevel";
-            this.nextTrainingLevelDataGridViewTextBoxColumn.Name = "nextTrainingLevelDataGridViewTextBoxColumn";
-            // 
-            // trainingScoreDataGridViewTextBoxColumn
-            // 
-            this.trainingScoreDataGridViewTextBoxColumn.DataPropertyName = "TrainingScore";
-            this.trainingScoreDataGridViewTextBoxColumn.HeaderText = "TrainingScore";
-            this.trainingScoreDataGridViewTextBoxColumn.Name = "trainingScoreDataGridViewTextBoxColumn";
-            // 
-            // trainingLevelCompletedDataGridViewTextBoxColumn
-            // 
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.DataPropertyName = "TrainingLevelCompleted";
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.HeaderText = "TrainingLevelCompleted";
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.Name = "trainingLevelCompletedDataGridViewTextBoxColumn";
-            // 
-            // trainingRecordBindingSource
-            // 
-            this.trainingRecordBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.TrainingRecord);
-            // 
-            // victoryNPCDataGridViewTextBoxColumn
-            // 
-            this.victoryNPCDataGridViewTextBoxColumn.DataPropertyName = "VictoryNPC";
-            this.victoryNPCDataGridViewTextBoxColumn.HeaderText = "VictoryNPC";
-            this.victoryNPCDataGridViewTextBoxColumn.Name = "victoryNPCDataGridViewTextBoxColumn";
-            // 
-            // victoriesDataGridViewTextBoxColumn
-            // 
-            this.victoriesDataGridViewTextBoxColumn.DataPropertyName = "Victories";
-            this.victoriesDataGridViewTextBoxColumn.HeaderText = "Victories";
-            this.victoriesDataGridViewTextBoxColumn.Name = "victoriesDataGridViewTextBoxColumn";
-            // 
-            // playerBattleVictoriesBindingSource
-            // 
-            this.playerBattleVictoriesBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.PlayerBattleVictories);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4695,6 +4683,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattleVictories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).EndInit();
             this.tabControlPilot.ResumeLayout(false);
             this.tabPilotStatus.ResumeLayout(false);
             this.tabPilotStatus.PerformLayout();
@@ -4755,6 +4744,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTraining)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).EndInit();
             this.tabBattleStats.ResumeLayout(false);
             this.tabBattleStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCraftLost)).EndInit();
@@ -4765,7 +4755,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudLaserFired)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLaserHits)).EndInit();
             this.tabBattleStatus.ResumeLayout(false);
-            this.tabBattleStatus.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabBattle1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -4858,8 +4847,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle13Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5236,7 +5223,6 @@
         private System.Windows.Forms.Label label162;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.CheckBox cbValidationToggle;
-        private System.Windows.Forms.Label label79;
     }
 }
 

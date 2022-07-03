@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace TIE_Fighter_Pilot_Editor
+﻿namespace TIE_Fighter_Pilot_Editor
 {
     public enum Health
     {
