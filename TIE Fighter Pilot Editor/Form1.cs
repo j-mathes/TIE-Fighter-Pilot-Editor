@@ -272,15 +272,12 @@ namespace TIE_Fighter_Pilot_Editor
 
             // #TODO Populate check boxes for objectives for all battles
             List<bool> battleSecondaryObjectives = new List<bool>();
-            SecondaryObjectives secondaryObjectives = (SecondaryObjectives)pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted;
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.First) == SecondaryObjectives.First);
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Second) == SecondaryObjectives.Second);
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Third) == SecondaryObjectives.Third);
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Fourth) == SecondaryObjectives.Fourth);
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Fifth) == SecondaryObjectives.Fifth);
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Sixth) == SecondaryObjectives.Sixth);
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Seventh) == SecondaryObjectives.Seventh);
-            battleSecondaryObjectives.Add((secondaryObjectives & SecondaryObjectives.Eighth) == SecondaryObjectives.Eighth);
+            foreach (SecondaryObjectives so in Enum.GetValues(typeof(SecondaryObjectives)))
+            {
+		        SecondaryObjectives secondaryObjectives = (SecondaryObjectives)pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted;
+		        battleSecondaryObjectives.Add((secondaryObjectives & so) == so);
+
+            }
 
             for (int i = 0; i < clbSecondaryObjectiveB1.Items.Count - 1; i++)
             {

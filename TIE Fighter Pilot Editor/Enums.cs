@@ -136,7 +136,6 @@ namespace TIE_Fighter_Pilot_Editor
     [Flags]
     public enum SecondaryObjectives
     {
-        None    = 0b_0000_0000,  // 0
         First   = 0b_0000_0001,  // 1
         Second  = 0b_0000_0010,  // 2
         Third   = 0b_0000_0100,  // 4
@@ -150,7 +149,6 @@ namespace TIE_Fighter_Pilot_Editor
     [Flags]
     public enum BonusObjectives
     {
-        None    = 0b_0000_0000,  // 0
         First   = 0b_0000_0001,  // 1
         Second  = 0b_0000_0010,  // 2
         Third   = 0b_0000_0100,  // 4
