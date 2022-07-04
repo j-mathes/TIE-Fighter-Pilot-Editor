@@ -262,34 +262,6 @@ namespace TIE_Fighter_Pilot_Editor
             nudLastMissionCompB12.Value = pilot.ListOfBattles.BattlesList[11].LastMissionCompleted;
             nudLastMissionCompB13.Value = pilot.ListOfBattles.BattlesList[12].LastMissionCompleted;
 
-            nudSecondaryObjectivesCompB1.Value = pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB2.Value = pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB3.Value = pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB4.Value = pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB5.Value = pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB6.Value = pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB7.Value = pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB8.Value = pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB9.Value = pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB10.Value = pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB11.Value = pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB12.Value = pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB13.Value = pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted;
-
-            nudBonusObjectivesCompB1.Value = pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB2.Value = pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB3.Value = pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB4.Value = pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB5.Value = pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB6.Value = pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB7.Value = pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB8.Value = pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB9.Value = pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB10.Value = pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB11.Value = pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB12.Value = pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB13.Value = pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted;
-
             for (int i = 0; i < pilot.ListOfBattles.BattlesList.Count; i++)
             {
                 List<bool> battleSecondaryObjectives = new List<bool>();
@@ -1028,30 +1000,30 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[0].LastMissionCompleted = (int)nudLastMissionCompB1.Value;
         }
 
-        private void nudSecondaryObjCompB1_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB1.Value;
-        }
+        //private void nudSecondaryObjCompB1_ValueChanged(object sender, EventArgs e)
+        //{
+        //    pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB1.Value;
+        //}
 
-        private void nudBonusObjCompB1_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB1.Value;
-        }
+        //private void nudBonusObjCompB1_ValueChanged(object sender, EventArgs e)
+        //{
+        //    pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB1.Value;
+        //}
 
         private void nudLastMissionCompB1_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB1.Select(0, nudLastMissionCompB1.Text.Length);
         }
 
-        private void nudSecondaryObjCompB1_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB1.Select(0, nudSecondaryObjectivesCompB1.Text.Length);
-        }
+        //private void nudSecondaryObjCompB1_Enter(object sender, EventArgs e)
+        //{
+        //    nudSecondaryObjectivesCompB1.Select(0, nudSecondaryObjectivesCompB1.Text.Length);
+        //}
 
-        private void nudBonusObjCompB1_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB1.Select(0, nudBonusObjectivesCompB1.Text.Length);
-        }
+        //private void nudBonusObjCompB1_Enter(object sender, EventArgs e)
+        //{
+        //    nudBonusObjectivesCompB1.Select(0, nudBonusObjectivesCompB1.Text.Length);
+        //}
 
         private void gvBattle1Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -1073,29 +1045,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[1].LastMissionCompleted = (int)nudLastMissionCompB2.Value;
         }
 
-        private void nudSecondaryObjectivesCompB2_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB2.Value;
-        }
-
-        private void nudBonusObjectivesCompB2_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB2.Value;
-        }
-
         private void nudLastMissionCompB2_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB2.Select(0, nudLastMissionCompB2.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB2_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB2.Select(0, nudSecondaryObjectivesCompB2.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB2_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB2.Select(0, nudBonusObjectivesCompB2.Text.Length);
         }
 
         private void gvBattle2Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1119,29 +1071,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[2].LastMissionCompleted = (int)nudLastMissionCompB3.Value;
         }
 
-        private void nudSecondaryObjectivesCompB3_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB3.Value;
-        }
-
-        private void nudBonusObjectivesCompB3_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB3.Value;
-        }
-
         private void nudLastMissionCompB3_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB3.Select(0, nudLastMissionCompB3.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB3_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB3.Select(0, nudSecondaryObjectivesCompB3.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB3_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB3.Select(0, nudBonusObjectivesCompB3.Text.Length);
         }
 
         private void gvBattle3Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1164,29 +1096,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[3].LastMissionCompleted = (int)nudLastMissionCompB4.Value;
         }
 
-        private void nudSecondaryObjectivesCompB4_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB4.Value;
-        }
-
-        private void nudBonusObjectivesCompB4_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB4.Value;
-        }
-
         private void nudLastMissionCompB4_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB4.Select(0, nudLastMissionCompB4.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB4_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB4.Select(0, nudSecondaryObjectivesCompB4.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB4_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB4.Select(0, nudBonusObjectivesCompB4.Text.Length);
         }
 
         private void gvBattle4Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1209,29 +1121,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[4].LastMissionCompleted = (int)nudLastMissionCompB5.Value;
         }
 
-        private void nudSecondaryObjectivesCompB5_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB5.Value;
-        }
-
-        private void nudBonusObjectivesCompB5_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB5.Value;
-        }
-
         private void nudLastMissionCompB5_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB5.Select(0, nudLastMissionCompB5.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB5_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB5.Select(0, nudSecondaryObjectivesCompB5.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB5_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB5.Select(0, nudBonusObjectivesCompB5.Text.Length);
         }
 
         private void gvBattle5Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1254,29 +1146,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[5].LastMissionCompleted = (int)nudLastMissionCompB6.Value;
         }
 
-        private void nudSecondaryObjectivesCompB6_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB6.Value;
-        }
-
-        private void nudBonusObjectivesCompB6_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB6.Value;
-        }
-
         private void nudLastMissionCompB6_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB6.Select(0, nudLastMissionCompB6.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB6_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB6.Select(0, nudSecondaryObjectivesCompB6.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB6_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB6.Select(0, nudBonusObjectivesCompB6.Text.Length);
         }
 
         private void gvBattle6Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1299,29 +1171,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[6].LastMissionCompleted = (int)nudLastMissionCompB7.Value;
         }
 
-        private void nudSecondaryObjectivesCompB7_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB7.Value;
-        }
-
-        private void nudBonusObjectivesCompB7_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB7.Value;
-        }
-
         private void nudLastMissionCompB7_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB7.Select(0, nudLastMissionCompB7.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB7_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB7.Select(0, nudSecondaryObjectivesCompB7.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB7_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB7.Select(0, nudBonusObjectivesCompB7.Text.Length);
         }
 
         private void gvBattle7Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1344,29 +1196,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[7].LastMissionCompleted = (int)nudLastMissionCompB8.Value;
         }
 
-        private void nudSecondaryObjectivesCompB8_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB8.Value;
-        }
-
-        private void nudBonusObjectivesCompB8_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB8.Value;
-        }
-
         private void nudLastMissionCompB8_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB8.Select(0, nudLastMissionCompB8.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB8_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB8.Select(0, nudSecondaryObjectivesCompB8.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB8_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB8.Select(0, nudBonusObjectivesCompB8.Text.Length);
         }
 
         private void gvBattle8Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1389,29 +1221,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[8].LastMissionCompleted = (int)nudLastMissionCompB9.Value;
         }
 
-        private void nudSecondaryObjectivesCompB9_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB9.Value;
-        }
-
-        private void nudBonusObjectivesCompB9_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB9.Value;
-        }
-
         private void nudLastMissionCompB9_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB9.Select(0, nudLastMissionCompB9.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB9_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB9.Select(0, nudSecondaryObjectivesCompB9.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB9_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB9.Select(0, nudBonusObjectivesCompB9.Text.Length);
         }
 
         private void gvBattle9Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1434,29 +1246,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[9].LastMissionCompleted = (int)nudLastMissionCompB10.Value;
         }
 
-        private void nudSecondaryObjectivesCompB10_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB10.Value;
-        }
-
-        private void nudBonusObjectivesCompB10_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB10.Value;
-        }
-
         private void nudLastMissionCompB10_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB10.Select(0, nudLastMissionCompB10.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB10_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB10.Select(0, nudSecondaryObjectivesCompB10.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB10_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB10.Select(0, nudBonusObjectivesCompB10.Text.Length);
         }
 
         private void gvBattle10Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1479,29 +1271,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[10].LastMissionCompleted = (int)nudLastMissionCompB11.Value;
         }
 
-        private void nudSecondaryObjectivesCompB11_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB11.Value;
-        }
-
-        private void nudBonusObjectivesCompB11_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB11.Value;
-        }
-
         private void nudLastMissionCompB11_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB11.Select(0, nudLastMissionCompB11.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB11_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB11.Select(0, nudSecondaryObjectivesCompB11.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB11_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB11.Select(0, nudBonusObjectivesCompB11.Text.Length);
         }
 
         private void gvBattle11Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1524,29 +1296,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[11].LastMissionCompleted = (int)nudLastMissionCompB12.Value;
         }
 
-        private void nudSecondaryObjectivesCompB12_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB12.Value;
-        }
-
-        private void nudBonusObjectivesCompB12_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB12.Value;
-        }
-
         private void nudLastMissionCompB12_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB12.Select(0, nudLastMissionCompB12.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB12_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB12.Select(0, nudSecondaryObjectivesCompB12.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB12_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB12.Select(0, nudBonusObjectivesCompB12.Text.Length);
         }
 
         private void gvBattle12Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1569,29 +1321,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[12].LastMissionCompleted = (int)nudLastMissionCompB13.Value;
         }
 
-        private void nudSecondaryObjectivesCompB13_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB13.Value;
-        }
-
-        private void nudBonusObjectivesCompB13_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB13.Value;
-        }
-
         private void nudLastMissionCompB13_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB13.Select(0, nudLastMissionCompB13.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB13_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB13.Select(0, nudSecondaryObjectivesCompB13.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB13_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB13.Select(0, nudBonusObjectivesCompB13.Text.Length);
         }
 
         private void gvBattle13Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)

@@ -41,9 +41,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gvBattleVictories = new System.Windows.Forms.DataGridView();
-            this.victoryNPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.victoriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerBattleVictoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlPilot = new System.Windows.Forms.TabControl();
             this.tabPilotStatus = new System.Windows.Forms.TabPage();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -193,11 +190,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.gvTraining = new System.Windows.Forms.DataGridView();
-            this.trainingShipTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nextTrainingLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingLevelCompletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabBattleStats = new System.Windows.Forms.TabPage();
             this.nudCraftLost = new System.Windows.Forms.NumericUpDown();
             this.nudTotalCaptures = new System.Windows.Forms.NumericUpDown();
@@ -223,15 +215,11 @@
             this.label86 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB1 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB1 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB1 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle1Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB1 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB1 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB1 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
@@ -241,15 +229,11 @@
             this.label93 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB2 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB2 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB2 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle2Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB2 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB2 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB2 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
@@ -259,15 +243,11 @@
             this.label107 = new System.Windows.Forms.Label();
             this.label114 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB3 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB3 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB3 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle3Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB3 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB3 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB3 = new System.Windows.Forms.Label();
             this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
@@ -277,15 +257,11 @@
             this.label121 = new System.Windows.Forms.Label();
             this.label128 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB4 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB4 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB4 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle4Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB4 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB4 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB4 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
             this.label97 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
@@ -295,15 +271,11 @@
             this.label135 = new System.Windows.Forms.Label();
             this.label142 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB5 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB5 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB5 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle5Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB5 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB5 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB5 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
             this.label106 = new System.Windows.Forms.Label();
@@ -313,15 +285,11 @@
             this.label149 = new System.Windows.Forms.Label();
             this.label156 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB6 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB6 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB6 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle6Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB6 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB6 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB6 = new System.Windows.Forms.Label();
             this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
@@ -331,15 +299,11 @@
             this.label163 = new System.Windows.Forms.Label();
             this.label164 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB7 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB7 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB7 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle7Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB7 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB7 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB7 = new System.Windows.Forms.Label();
             this.label115 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
             this.label118 = new System.Windows.Forms.Label();
             this.label119 = new System.Windows.Forms.Label();
             this.label120 = new System.Windows.Forms.Label();
@@ -349,15 +313,11 @@
             this.label165 = new System.Windows.Forms.Label();
             this.label166 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB8 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB8 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB8 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle8Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB8 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB8 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB8 = new System.Windows.Forms.Label();
             this.label122 = new System.Windows.Forms.Label();
-            this.label123 = new System.Windows.Forms.Label();
-            this.label124 = new System.Windows.Forms.Label();
             this.label125 = new System.Windows.Forms.Label();
             this.label126 = new System.Windows.Forms.Label();
             this.label127 = new System.Windows.Forms.Label();
@@ -367,15 +327,11 @@
             this.label167 = new System.Windows.Forms.Label();
             this.label168 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB9 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB9 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB9 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle9Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB9 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB9 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB9 = new System.Windows.Forms.Label();
             this.label129 = new System.Windows.Forms.Label();
-            this.label130 = new System.Windows.Forms.Label();
-            this.label131 = new System.Windows.Forms.Label();
             this.label132 = new System.Windows.Forms.Label();
             this.label133 = new System.Windows.Forms.Label();
             this.label134 = new System.Windows.Forms.Label();
@@ -385,15 +341,11 @@
             this.label169 = new System.Windows.Forms.Label();
             this.label170 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB10 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB10 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB10 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle10Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB10 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB10 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB10 = new System.Windows.Forms.Label();
             this.label136 = new System.Windows.Forms.Label();
-            this.label137 = new System.Windows.Forms.Label();
-            this.label138 = new System.Windows.Forms.Label();
             this.label139 = new System.Windows.Forms.Label();
             this.label140 = new System.Windows.Forms.Label();
             this.label141 = new System.Windows.Forms.Label();
@@ -403,15 +355,11 @@
             this.label171 = new System.Windows.Forms.Label();
             this.label172 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB11 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB11 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB11 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle11Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB11 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB11 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB11 = new System.Windows.Forms.Label();
             this.label143 = new System.Windows.Forms.Label();
-            this.label144 = new System.Windows.Forms.Label();
-            this.label145 = new System.Windows.Forms.Label();
             this.label146 = new System.Windows.Forms.Label();
             this.label147 = new System.Windows.Forms.Label();
             this.label148 = new System.Windows.Forms.Label();
@@ -421,15 +369,11 @@
             this.label173 = new System.Windows.Forms.Label();
             this.label174 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB12 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB12 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB12 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle12Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB12 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB12 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB12 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
-            this.label151 = new System.Windows.Forms.Label();
-            this.label152 = new System.Windows.Forms.Label();
             this.label153 = new System.Windows.Forms.Label();
             this.label154 = new System.Windows.Forms.Label();
             this.label155 = new System.Windows.Forms.Label();
@@ -439,22 +383,25 @@
             this.label175 = new System.Windows.Forms.Label();
             this.label176 = new System.Windows.Forms.Label();
             this.clbSecondaryObjectiveB13 = new System.Windows.Forms.CheckedListBox();
-            this.nudBonusObjectivesCompB13 = new System.Windows.Forms.NumericUpDown();
-            this.nudSecondaryObjectivesCompB13 = new System.Windows.Forms.NumericUpDown();
             this.gvBattle13Scores = new System.Windows.Forms.DataGridView();
             this.nudLastMissionCompB13 = new System.Windows.Forms.NumericUpDown();
             this.comStatusB13 = new System.Windows.Forms.ComboBox();
             this.lblTotalScoreB13 = new System.Windows.Forms.Label();
             this.label157 = new System.Windows.Forms.Label();
-            this.label158 = new System.Windows.Forms.Label();
-            this.label159 = new System.Windows.Forms.Label();
             this.label160 = new System.Windows.Forms.Label();
             this.label161 = new System.Windows.Forms.Label();
             this.label162 = new System.Windows.Forms.Label();
+            this.trainingShipTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nextTrainingLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingLevelCompletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.victoryNPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.victoriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerBattleVictoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattleVictories)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).BeginInit();
             this.tabControlPilot.SuspendLayout();
             this.tabPilotStatus.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -505,7 +452,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTraining)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).BeginInit();
             this.tabBattleStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCraftLost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalCaptures)).BeginInit();
@@ -518,82 +464,58 @@
             this.tabControl1.SuspendLayout();
             this.tabBattle1.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle1Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB1)).BeginInit();
             this.tabBattle2.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle2Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB2)).BeginInit();
             this.tabBattle3.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle3Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB3)).BeginInit();
             this.tabBattle4.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle4Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB4)).BeginInit();
             this.tabBattle5.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle5Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB5)).BeginInit();
             this.tabBattle6.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle6Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB6)).BeginInit();
             this.tabBattle7.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle7Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB7)).BeginInit();
             this.tabBattle8.SuspendLayout();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle8Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB8)).BeginInit();
             this.tabBattle9.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle9Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB9)).BeginInit();
             this.tabBattle10.SuspendLayout();
             this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle10Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB10)).BeginInit();
             this.tabBattle11.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle11Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB11)).BeginInit();
             this.tabBattle12.SuspendLayout();
             this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle12Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB12)).BeginInit();
             this.tabBattle13.SuspendLayout();
             this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle13Scores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -692,22 +614,6 @@
             this.gvBattleVictories.TabIndex = 2;
             this.gvBattleVictories.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattleVictories_CellEndEdit);
             this.gvBattleVictories.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattleVictories_CellValidating);
-            // 
-            // victoryNPCDataGridViewTextBoxColumn
-            // 
-            this.victoryNPCDataGridViewTextBoxColumn.DataPropertyName = "VictoryNPC";
-            this.victoryNPCDataGridViewTextBoxColumn.HeaderText = "VictoryNPC";
-            this.victoryNPCDataGridViewTextBoxColumn.Name = "victoryNPCDataGridViewTextBoxColumn";
-            // 
-            // victoriesDataGridViewTextBoxColumn
-            // 
-            this.victoriesDataGridViewTextBoxColumn.DataPropertyName = "Victories";
-            this.victoriesDataGridViewTextBoxColumn.HeaderText = "Victories";
-            this.victoriesDataGridViewTextBoxColumn.Name = "victoriesDataGridViewTextBoxColumn";
-            // 
-            // playerBattleVictoriesBindingSource
-            // 
-            this.playerBattleVictoriesBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.PlayerBattleVictories);
             // 
             // tabControlPilot
             // 
@@ -2407,34 +2313,6 @@
             this.gvTraining.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTraining_CellEndEdit);
             this.gvTraining.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvTraining_CellValidating);
             // 
-            // trainingShipTypeDataGridViewTextBoxColumn
-            // 
-            this.trainingShipTypeDataGridViewTextBoxColumn.DataPropertyName = "TrainingShipType";
-            this.trainingShipTypeDataGridViewTextBoxColumn.HeaderText = "TrainingShipType";
-            this.trainingShipTypeDataGridViewTextBoxColumn.Name = "trainingShipTypeDataGridViewTextBoxColumn";
-            // 
-            // nextTrainingLevelDataGridViewTextBoxColumn
-            // 
-            this.nextTrainingLevelDataGridViewTextBoxColumn.DataPropertyName = "NextTrainingLevel";
-            this.nextTrainingLevelDataGridViewTextBoxColumn.HeaderText = "NextTrainingLevel";
-            this.nextTrainingLevelDataGridViewTextBoxColumn.Name = "nextTrainingLevelDataGridViewTextBoxColumn";
-            // 
-            // trainingScoreDataGridViewTextBoxColumn
-            // 
-            this.trainingScoreDataGridViewTextBoxColumn.DataPropertyName = "TrainingScore";
-            this.trainingScoreDataGridViewTextBoxColumn.HeaderText = "TrainingScore";
-            this.trainingScoreDataGridViewTextBoxColumn.Name = "trainingScoreDataGridViewTextBoxColumn";
-            // 
-            // trainingLevelCompletedDataGridViewTextBoxColumn
-            // 
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.DataPropertyName = "TrainingLevelCompleted";
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.HeaderText = "TrainingLevelCompleted";
-            this.trainingLevelCompletedDataGridViewTextBoxColumn.Name = "trainingLevelCompletedDataGridViewTextBoxColumn";
-            // 
-            // trainingRecordBindingSource
-            // 
-            this.trainingRecordBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.TrainingRecord);
-            // 
             // tabBattleStats
             // 
             this.tabBattleStats.BackColor = System.Drawing.SystemColors.Control;
@@ -2690,21 +2568,17 @@
             this.panel8.Controls.Add(this.label86);
             this.panel8.Controls.Add(this.label79);
             this.panel8.Controls.Add(this.clbSecondaryObjectiveB1);
-            this.panel8.Controls.Add(this.nudBonusObjectivesCompB1);
-            this.panel8.Controls.Add(this.nudSecondaryObjectivesCompB1);
             this.panel8.Controls.Add(this.gvBattle1Scores);
             this.panel8.Controls.Add(this.nudLastMissionCompB1);
             this.panel8.Controls.Add(this.comStatusB1);
             this.panel8.Controls.Add(this.lblTotalScoreB1);
             this.panel8.Controls.Add(this.label78);
-            this.panel8.Controls.Add(this.label77);
-            this.panel8.Controls.Add(this.label76);
             this.panel8.Controls.Add(this.label75);
             this.panel8.Controls.Add(this.label74);
             this.panel8.Controls.Add(this.label72);
             this.panel8.Location = new System.Drawing.Point(3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(492, 364);
+            this.panel8.Size = new System.Drawing.Size(492, 288);
             this.panel8.TabIndex = 0;
             // 
             // clbBonusObjectiveB1
@@ -2738,34 +2612,6 @@
             this.clbSecondaryObjectiveB1.Name = "clbSecondaryObjectiveB1";
             this.clbSecondaryObjectiveB1.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB1.TabIndex = 7;
-            // 
-            // nudBonusObjectivesCompB1
-            // 
-            this.nudBonusObjectivesCompB1.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB1.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB1.Name = "nudBonusObjectivesCompB1";
-            this.nudBonusObjectivesCompB1.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB1.TabIndex = 3;
-            this.nudBonusObjectivesCompB1.ValueChanged += new System.EventHandler(this.nudBonusObjCompB1_ValueChanged);
-            this.nudBonusObjectivesCompB1.Enter += new System.EventHandler(this.nudBonusObjCompB1_Enter);
-            // 
-            // nudSecondaryObjectivesCompB1
-            // 
-            this.nudSecondaryObjectivesCompB1.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB1.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB1.Name = "nudSecondaryObjectivesCompB1";
-            this.nudSecondaryObjectivesCompB1.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB1.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB1.ValueChanged += new System.EventHandler(this.nudSecondaryObjCompB1_ValueChanged);
-            this.nudSecondaryObjectivesCompB1.Enter += new System.EventHandler(this.nudSecondaryObjCompB1_Enter);
             // 
             // gvBattle1Scores
             // 
@@ -2822,24 +2668,6 @@
             this.label78.TabIndex = 5;
             this.label78.Text = "Total score:";
             // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(13, 323);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(143, 13);
-            this.label77.TabIndex = 4;
-            this.label77.Text = "Bonus objectives completed:";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(13, 276);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(164, 13);
-            this.label76.TabIndex = 3;
-            this.label76.Text = "Secondary objectives completed:";
-            // 
             // label75
             // 
             this.label75.AutoSize = true;
@@ -2883,15 +2711,11 @@
             this.panel9.Controls.Add(this.label93);
             this.panel9.Controls.Add(this.label100);
             this.panel9.Controls.Add(this.clbSecondaryObjectiveB2);
-            this.panel9.Controls.Add(this.nudBonusObjectivesCompB2);
-            this.panel9.Controls.Add(this.nudSecondaryObjectivesCompB2);
             this.panel9.Controls.Add(this.gvBattle2Scores);
             this.panel9.Controls.Add(this.nudLastMissionCompB2);
             this.panel9.Controls.Add(this.comStatusB2);
             this.panel9.Controls.Add(this.lblTotalScoreB2);
             this.panel9.Controls.Add(this.label80);
-            this.panel9.Controls.Add(this.label81);
-            this.panel9.Controls.Add(this.label82);
             this.panel9.Controls.Add(this.label83);
             this.panel9.Controls.Add(this.label84);
             this.panel9.Controls.Add(this.label85);
@@ -2931,34 +2755,6 @@
             this.clbSecondaryObjectiveB2.Name = "clbSecondaryObjectiveB2";
             this.clbSecondaryObjectiveB2.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB2.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB2
-            // 
-            this.nudBonusObjectivesCompB2.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB2.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB2.Name = "nudBonusObjectivesCompB2";
-            this.nudBonusObjectivesCompB2.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB2.TabIndex = 3;
-            this.nudBonusObjectivesCompB2.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB2_ValueChanged);
-            this.nudBonusObjectivesCompB2.Enter += new System.EventHandler(this.nudBonusObjectivesCompB2_Enter);
-            // 
-            // nudSecondaryObjectivesCompB2
-            // 
-            this.nudSecondaryObjectivesCompB2.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB2.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB2.Name = "nudSecondaryObjectivesCompB2";
-            this.nudSecondaryObjectivesCompB2.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB2.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB2.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB2_ValueChanged);
-            this.nudSecondaryObjectivesCompB2.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB2_Enter);
             // 
             // gvBattle2Scores
             // 
@@ -3015,24 +2811,6 @@
             this.label80.TabIndex = 5;
             this.label80.Text = "Total score:";
             // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(13, 323);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(143, 13);
-            this.label81.TabIndex = 4;
-            this.label81.Text = "Bonus objectives completed:";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(13, 276);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(164, 13);
-            this.label82.TabIndex = 3;
-            this.label82.Text = "Secondary objectives completed:";
-            // 
             // label83
             // 
             this.label83.AutoSize = true;
@@ -3076,15 +2854,11 @@
             this.panel10.Controls.Add(this.label107);
             this.panel10.Controls.Add(this.label114);
             this.panel10.Controls.Add(this.clbSecondaryObjectiveB3);
-            this.panel10.Controls.Add(this.nudBonusObjectivesCompB3);
-            this.panel10.Controls.Add(this.nudSecondaryObjectivesCompB3);
             this.panel10.Controls.Add(this.gvBattle3Scores);
             this.panel10.Controls.Add(this.nudLastMissionCompB3);
             this.panel10.Controls.Add(this.comStatusB3);
             this.panel10.Controls.Add(this.lblTotalScoreB3);
             this.panel10.Controls.Add(this.label87);
-            this.panel10.Controls.Add(this.label88);
-            this.panel10.Controls.Add(this.label89);
             this.panel10.Controls.Add(this.label90);
             this.panel10.Controls.Add(this.label91);
             this.panel10.Controls.Add(this.label92);
@@ -3124,34 +2898,6 @@
             this.clbSecondaryObjectiveB3.Name = "clbSecondaryObjectiveB3";
             this.clbSecondaryObjectiveB3.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB3.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB3
-            // 
-            this.nudBonusObjectivesCompB3.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB3.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB3.Name = "nudBonusObjectivesCompB3";
-            this.nudBonusObjectivesCompB3.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB3.TabIndex = 3;
-            this.nudBonusObjectivesCompB3.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB3_ValueChanged);
-            this.nudBonusObjectivesCompB3.Enter += new System.EventHandler(this.nudBonusObjectivesCompB3_Enter);
-            // 
-            // nudSecondaryObjectivesCompB3
-            // 
-            this.nudSecondaryObjectivesCompB3.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB3.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB3.Name = "nudSecondaryObjectivesCompB3";
-            this.nudSecondaryObjectivesCompB3.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB3.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB3.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB3_ValueChanged);
-            this.nudSecondaryObjectivesCompB3.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB3_Enter);
             // 
             // gvBattle3Scores
             // 
@@ -3208,24 +2954,6 @@
             this.label87.TabIndex = 5;
             this.label87.Text = "Total score:";
             // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(13, 323);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(143, 13);
-            this.label88.TabIndex = 4;
-            this.label88.Text = "Bonus objectives completed:";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(13, 276);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(164, 13);
-            this.label89.TabIndex = 3;
-            this.label89.Text = "Secondary objectives completed:";
-            // 
             // label90
             // 
             this.label90.AutoSize = true;
@@ -3269,15 +2997,11 @@
             this.panel11.Controls.Add(this.label121);
             this.panel11.Controls.Add(this.label128);
             this.panel11.Controls.Add(this.clbSecondaryObjectiveB4);
-            this.panel11.Controls.Add(this.nudBonusObjectivesCompB4);
-            this.panel11.Controls.Add(this.nudSecondaryObjectivesCompB4);
             this.panel11.Controls.Add(this.gvBattle4Scores);
             this.panel11.Controls.Add(this.nudLastMissionCompB4);
             this.panel11.Controls.Add(this.comStatusB4);
             this.panel11.Controls.Add(this.lblTotalScoreB4);
             this.panel11.Controls.Add(this.label94);
-            this.panel11.Controls.Add(this.label95);
-            this.panel11.Controls.Add(this.label96);
             this.panel11.Controls.Add(this.label97);
             this.panel11.Controls.Add(this.label98);
             this.panel11.Controls.Add(this.label99);
@@ -3317,34 +3041,6 @@
             this.clbSecondaryObjectiveB4.Name = "clbSecondaryObjectiveB4";
             this.clbSecondaryObjectiveB4.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB4.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB4
-            // 
-            this.nudBonusObjectivesCompB4.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB4.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB4.Name = "nudBonusObjectivesCompB4";
-            this.nudBonusObjectivesCompB4.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB4.TabIndex = 3;
-            this.nudBonusObjectivesCompB4.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB4_ValueChanged);
-            this.nudBonusObjectivesCompB4.Enter += new System.EventHandler(this.nudBonusObjectivesCompB4_Enter);
-            // 
-            // nudSecondaryObjectivesCompB4
-            // 
-            this.nudSecondaryObjectivesCompB4.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB4.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB4.Name = "nudSecondaryObjectivesCompB4";
-            this.nudSecondaryObjectivesCompB4.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB4.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB4.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB4_ValueChanged);
-            this.nudSecondaryObjectivesCompB4.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB4_Enter);
             // 
             // gvBattle4Scores
             // 
@@ -3401,24 +3097,6 @@
             this.label94.TabIndex = 5;
             this.label94.Text = "Total score:";
             // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(13, 323);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(143, 13);
-            this.label95.TabIndex = 4;
-            this.label95.Text = "Bonus objectives completed:";
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(13, 276);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(164, 13);
-            this.label96.TabIndex = 3;
-            this.label96.Text = "Secondary objectives completed:";
-            // 
             // label97
             // 
             this.label97.AutoSize = true;
@@ -3462,15 +3140,11 @@
             this.panel12.Controls.Add(this.label135);
             this.panel12.Controls.Add(this.label142);
             this.panel12.Controls.Add(this.clbSecondaryObjectiveB5);
-            this.panel12.Controls.Add(this.nudBonusObjectivesCompB5);
-            this.panel12.Controls.Add(this.nudSecondaryObjectivesCompB5);
             this.panel12.Controls.Add(this.gvBattle5Scores);
             this.panel12.Controls.Add(this.nudLastMissionCompB5);
             this.panel12.Controls.Add(this.comStatusB5);
             this.panel12.Controls.Add(this.lblTotalScoreB5);
             this.panel12.Controls.Add(this.label101);
-            this.panel12.Controls.Add(this.label102);
-            this.panel12.Controls.Add(this.label103);
             this.panel12.Controls.Add(this.label104);
             this.panel12.Controls.Add(this.label105);
             this.panel12.Controls.Add(this.label106);
@@ -3510,34 +3184,6 @@
             this.clbSecondaryObjectiveB5.Name = "clbSecondaryObjectiveB5";
             this.clbSecondaryObjectiveB5.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB5.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB5
-            // 
-            this.nudBonusObjectivesCompB5.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB5.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB5.Name = "nudBonusObjectivesCompB5";
-            this.nudBonusObjectivesCompB5.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB5.TabIndex = 3;
-            this.nudBonusObjectivesCompB5.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB5_ValueChanged);
-            this.nudBonusObjectivesCompB5.Enter += new System.EventHandler(this.nudBonusObjectivesCompB5_Enter);
-            // 
-            // nudSecondaryObjectivesCompB5
-            // 
-            this.nudSecondaryObjectivesCompB5.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB5.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB5.Name = "nudSecondaryObjectivesCompB5";
-            this.nudSecondaryObjectivesCompB5.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB5.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB5.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB5_ValueChanged);
-            this.nudSecondaryObjectivesCompB5.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB5_Enter);
             // 
             // gvBattle5Scores
             // 
@@ -3594,24 +3240,6 @@
             this.label101.TabIndex = 5;
             this.label101.Text = "Total score:";
             // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(13, 323);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(143, 13);
-            this.label102.TabIndex = 4;
-            this.label102.Text = "Bonus objectives completed:";
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(13, 276);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(164, 13);
-            this.label103.TabIndex = 3;
-            this.label103.Text = "Secondary objectives completed:";
-            // 
             // label104
             // 
             this.label104.AutoSize = true;
@@ -3655,15 +3283,11 @@
             this.panel13.Controls.Add(this.label149);
             this.panel13.Controls.Add(this.label156);
             this.panel13.Controls.Add(this.clbSecondaryObjectiveB6);
-            this.panel13.Controls.Add(this.nudBonusObjectivesCompB6);
-            this.panel13.Controls.Add(this.nudSecondaryObjectivesCompB6);
             this.panel13.Controls.Add(this.gvBattle6Scores);
             this.panel13.Controls.Add(this.nudLastMissionCompB6);
             this.panel13.Controls.Add(this.comStatusB6);
             this.panel13.Controls.Add(this.lblTotalScoreB6);
             this.panel13.Controls.Add(this.label108);
-            this.panel13.Controls.Add(this.label109);
-            this.panel13.Controls.Add(this.label110);
             this.panel13.Controls.Add(this.label111);
             this.panel13.Controls.Add(this.label112);
             this.panel13.Controls.Add(this.label113);
@@ -3703,34 +3327,6 @@
             this.clbSecondaryObjectiveB6.Name = "clbSecondaryObjectiveB6";
             this.clbSecondaryObjectiveB6.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB6.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB6
-            // 
-            this.nudBonusObjectivesCompB6.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB6.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB6.Name = "nudBonusObjectivesCompB6";
-            this.nudBonusObjectivesCompB6.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB6.TabIndex = 3;
-            this.nudBonusObjectivesCompB6.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB6_ValueChanged);
-            this.nudBonusObjectivesCompB6.Enter += new System.EventHandler(this.nudBonusObjectivesCompB6_Enter);
-            // 
-            // nudSecondaryObjectivesCompB6
-            // 
-            this.nudSecondaryObjectivesCompB6.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB6.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB6.Name = "nudSecondaryObjectivesCompB6";
-            this.nudSecondaryObjectivesCompB6.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB6.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB6.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB6_ValueChanged);
-            this.nudSecondaryObjectivesCompB6.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB6_Enter);
             // 
             // gvBattle6Scores
             // 
@@ -3787,24 +3383,6 @@
             this.label108.TabIndex = 5;
             this.label108.Text = "Total score:";
             // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(13, 323);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(143, 13);
-            this.label109.TabIndex = 4;
-            this.label109.Text = "Bonus objectives completed:";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(13, 276);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(164, 13);
-            this.label110.TabIndex = 3;
-            this.label110.Text = "Secondary objectives completed:";
-            // 
             // label111
             // 
             this.label111.AutoSize = true;
@@ -3848,15 +3426,11 @@
             this.panel14.Controls.Add(this.label163);
             this.panel14.Controls.Add(this.label164);
             this.panel14.Controls.Add(this.clbSecondaryObjectiveB7);
-            this.panel14.Controls.Add(this.nudBonusObjectivesCompB7);
-            this.panel14.Controls.Add(this.nudSecondaryObjectivesCompB7);
             this.panel14.Controls.Add(this.gvBattle7Scores);
             this.panel14.Controls.Add(this.nudLastMissionCompB7);
             this.panel14.Controls.Add(this.comStatusB7);
             this.panel14.Controls.Add(this.lblTotalScoreB7);
             this.panel14.Controls.Add(this.label115);
-            this.panel14.Controls.Add(this.label116);
-            this.panel14.Controls.Add(this.label117);
             this.panel14.Controls.Add(this.label118);
             this.panel14.Controls.Add(this.label119);
             this.panel14.Controls.Add(this.label120);
@@ -3896,34 +3470,6 @@
             this.clbSecondaryObjectiveB7.Name = "clbSecondaryObjectiveB7";
             this.clbSecondaryObjectiveB7.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB7.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB7
-            // 
-            this.nudBonusObjectivesCompB7.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB7.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB7.Name = "nudBonusObjectivesCompB7";
-            this.nudBonusObjectivesCompB7.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB7.TabIndex = 3;
-            this.nudBonusObjectivesCompB7.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB7_ValueChanged);
-            this.nudBonusObjectivesCompB7.Enter += new System.EventHandler(this.nudBonusObjectivesCompB7_Enter);
-            // 
-            // nudSecondaryObjectivesCompB7
-            // 
-            this.nudSecondaryObjectivesCompB7.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB7.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB7.Name = "nudSecondaryObjectivesCompB7";
-            this.nudSecondaryObjectivesCompB7.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB7.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB7.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB7_ValueChanged);
-            this.nudSecondaryObjectivesCompB7.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB7_Enter);
             // 
             // gvBattle7Scores
             // 
@@ -3980,24 +3526,6 @@
             this.label115.TabIndex = 5;
             this.label115.Text = "Total score:";
             // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(13, 323);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(143, 13);
-            this.label116.TabIndex = 4;
-            this.label116.Text = "Bonus objectives completed:";
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(13, 276);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(164, 13);
-            this.label117.TabIndex = 3;
-            this.label117.Text = "Secondary objectives completed:";
-            // 
             // label118
             // 
             this.label118.AutoSize = true;
@@ -4041,15 +3569,11 @@
             this.panel15.Controls.Add(this.label165);
             this.panel15.Controls.Add(this.label166);
             this.panel15.Controls.Add(this.clbSecondaryObjectiveB8);
-            this.panel15.Controls.Add(this.nudBonusObjectivesCompB8);
-            this.panel15.Controls.Add(this.nudSecondaryObjectivesCompB8);
             this.panel15.Controls.Add(this.gvBattle8Scores);
             this.panel15.Controls.Add(this.nudLastMissionCompB8);
             this.panel15.Controls.Add(this.comStatusB8);
             this.panel15.Controls.Add(this.lblTotalScoreB8);
             this.panel15.Controls.Add(this.label122);
-            this.panel15.Controls.Add(this.label123);
-            this.panel15.Controls.Add(this.label124);
             this.panel15.Controls.Add(this.label125);
             this.panel15.Controls.Add(this.label126);
             this.panel15.Controls.Add(this.label127);
@@ -4089,34 +3613,6 @@
             this.clbSecondaryObjectiveB8.Name = "clbSecondaryObjectiveB8";
             this.clbSecondaryObjectiveB8.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB8.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB8
-            // 
-            this.nudBonusObjectivesCompB8.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB8.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB8.Name = "nudBonusObjectivesCompB8";
-            this.nudBonusObjectivesCompB8.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB8.TabIndex = 3;
-            this.nudBonusObjectivesCompB8.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB8_ValueChanged);
-            this.nudBonusObjectivesCompB8.Enter += new System.EventHandler(this.nudBonusObjectivesCompB8_Enter);
-            // 
-            // nudSecondaryObjectivesCompB8
-            // 
-            this.nudSecondaryObjectivesCompB8.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB8.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB8.Name = "nudSecondaryObjectivesCompB8";
-            this.nudSecondaryObjectivesCompB8.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB8.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB8.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB8_ValueChanged);
-            this.nudSecondaryObjectivesCompB8.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB8_Enter);
             // 
             // gvBattle8Scores
             // 
@@ -4173,24 +3669,6 @@
             this.label122.TabIndex = 5;
             this.label122.Text = "Total score:";
             // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(13, 323);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(143, 13);
-            this.label123.TabIndex = 4;
-            this.label123.Text = "Bonus objectives completed:";
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(13, 276);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(164, 13);
-            this.label124.TabIndex = 3;
-            this.label124.Text = "Secondary objectives completed:";
-            // 
             // label125
             // 
             this.label125.AutoSize = true;
@@ -4234,15 +3712,11 @@
             this.panel16.Controls.Add(this.label167);
             this.panel16.Controls.Add(this.label168);
             this.panel16.Controls.Add(this.clbSecondaryObjectiveB9);
-            this.panel16.Controls.Add(this.nudBonusObjectivesCompB9);
-            this.panel16.Controls.Add(this.nudSecondaryObjectivesCompB9);
             this.panel16.Controls.Add(this.gvBattle9Scores);
             this.panel16.Controls.Add(this.nudLastMissionCompB9);
             this.panel16.Controls.Add(this.comStatusB9);
             this.panel16.Controls.Add(this.lblTotalScoreB9);
             this.panel16.Controls.Add(this.label129);
-            this.panel16.Controls.Add(this.label130);
-            this.panel16.Controls.Add(this.label131);
             this.panel16.Controls.Add(this.label132);
             this.panel16.Controls.Add(this.label133);
             this.panel16.Controls.Add(this.label134);
@@ -4282,34 +3756,6 @@
             this.clbSecondaryObjectiveB9.Name = "clbSecondaryObjectiveB9";
             this.clbSecondaryObjectiveB9.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB9.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB9
-            // 
-            this.nudBonusObjectivesCompB9.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB9.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB9.Name = "nudBonusObjectivesCompB9";
-            this.nudBonusObjectivesCompB9.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB9.TabIndex = 3;
-            this.nudBonusObjectivesCompB9.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB9_ValueChanged);
-            this.nudBonusObjectivesCompB9.Enter += new System.EventHandler(this.nudBonusObjectivesCompB9_Enter);
-            // 
-            // nudSecondaryObjectivesCompB9
-            // 
-            this.nudSecondaryObjectivesCompB9.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB9.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB9.Name = "nudSecondaryObjectivesCompB9";
-            this.nudSecondaryObjectivesCompB9.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB9.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB9.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB9_ValueChanged);
-            this.nudSecondaryObjectivesCompB9.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB9_Enter);
             // 
             // gvBattle9Scores
             // 
@@ -4366,24 +3812,6 @@
             this.label129.TabIndex = 5;
             this.label129.Text = "Total score:";
             // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Location = new System.Drawing.Point(13, 323);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(143, 13);
-            this.label130.TabIndex = 4;
-            this.label130.Text = "Bonus objectives completed:";
-            // 
-            // label131
-            // 
-            this.label131.AutoSize = true;
-            this.label131.Location = new System.Drawing.Point(13, 276);
-            this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(164, 13);
-            this.label131.TabIndex = 3;
-            this.label131.Text = "Secondary objectives completed:";
-            // 
             // label132
             // 
             this.label132.AutoSize = true;
@@ -4427,15 +3855,11 @@
             this.panel17.Controls.Add(this.label169);
             this.panel17.Controls.Add(this.label170);
             this.panel17.Controls.Add(this.clbSecondaryObjectiveB10);
-            this.panel17.Controls.Add(this.nudBonusObjectivesCompB10);
-            this.panel17.Controls.Add(this.nudSecondaryObjectivesCompB10);
             this.panel17.Controls.Add(this.gvBattle10Scores);
             this.panel17.Controls.Add(this.nudLastMissionCompB10);
             this.panel17.Controls.Add(this.comStatusB10);
             this.panel17.Controls.Add(this.lblTotalScoreB10);
             this.panel17.Controls.Add(this.label136);
-            this.panel17.Controls.Add(this.label137);
-            this.panel17.Controls.Add(this.label138);
             this.panel17.Controls.Add(this.label139);
             this.panel17.Controls.Add(this.label140);
             this.panel17.Controls.Add(this.label141);
@@ -4475,34 +3899,6 @@
             this.clbSecondaryObjectiveB10.Name = "clbSecondaryObjectiveB10";
             this.clbSecondaryObjectiveB10.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB10.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB10
-            // 
-            this.nudBonusObjectivesCompB10.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB10.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB10.Name = "nudBonusObjectivesCompB10";
-            this.nudBonusObjectivesCompB10.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB10.TabIndex = 3;
-            this.nudBonusObjectivesCompB10.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB10_ValueChanged);
-            this.nudBonusObjectivesCompB10.Enter += new System.EventHandler(this.nudBonusObjectivesCompB10_Enter);
-            // 
-            // nudSecondaryObjectivesCompB10
-            // 
-            this.nudSecondaryObjectivesCompB10.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB10.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB10.Name = "nudSecondaryObjectivesCompB10";
-            this.nudSecondaryObjectivesCompB10.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB10.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB10.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB10_ValueChanged);
-            this.nudSecondaryObjectivesCompB10.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB10_Enter);
             // 
             // gvBattle10Scores
             // 
@@ -4559,24 +3955,6 @@
             this.label136.TabIndex = 5;
             this.label136.Text = "Total score:";
             // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Location = new System.Drawing.Point(13, 323);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(143, 13);
-            this.label137.TabIndex = 4;
-            this.label137.Text = "Bonus objectives completed:";
-            // 
-            // label138
-            // 
-            this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(13, 276);
-            this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(164, 13);
-            this.label138.TabIndex = 3;
-            this.label138.Text = "Secondary objectives completed:";
-            // 
             // label139
             // 
             this.label139.AutoSize = true;
@@ -4620,15 +3998,11 @@
             this.panel18.Controls.Add(this.label171);
             this.panel18.Controls.Add(this.label172);
             this.panel18.Controls.Add(this.clbSecondaryObjectiveB11);
-            this.panel18.Controls.Add(this.nudBonusObjectivesCompB11);
-            this.panel18.Controls.Add(this.nudSecondaryObjectivesCompB11);
             this.panel18.Controls.Add(this.gvBattle11Scores);
             this.panel18.Controls.Add(this.nudLastMissionCompB11);
             this.panel18.Controls.Add(this.comStatusB11);
             this.panel18.Controls.Add(this.lblTotalScoreB11);
             this.panel18.Controls.Add(this.label143);
-            this.panel18.Controls.Add(this.label144);
-            this.panel18.Controls.Add(this.label145);
             this.panel18.Controls.Add(this.label146);
             this.panel18.Controls.Add(this.label147);
             this.panel18.Controls.Add(this.label148);
@@ -4668,34 +4042,6 @@
             this.clbSecondaryObjectiveB11.Name = "clbSecondaryObjectiveB11";
             this.clbSecondaryObjectiveB11.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB11.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB11
-            // 
-            this.nudBonusObjectivesCompB11.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB11.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB11.Name = "nudBonusObjectivesCompB11";
-            this.nudBonusObjectivesCompB11.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB11.TabIndex = 3;
-            this.nudBonusObjectivesCompB11.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB11_ValueChanged);
-            this.nudBonusObjectivesCompB11.Enter += new System.EventHandler(this.nudBonusObjectivesCompB11_Enter);
-            // 
-            // nudSecondaryObjectivesCompB11
-            // 
-            this.nudSecondaryObjectivesCompB11.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB11.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB11.Name = "nudSecondaryObjectivesCompB11";
-            this.nudSecondaryObjectivesCompB11.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB11.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB11.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB11_ValueChanged);
-            this.nudSecondaryObjectivesCompB11.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB11_Enter);
             // 
             // gvBattle11Scores
             // 
@@ -4752,24 +4098,6 @@
             this.label143.TabIndex = 5;
             this.label143.Text = "Total score:";
             // 
-            // label144
-            // 
-            this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(13, 323);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(143, 13);
-            this.label144.TabIndex = 4;
-            this.label144.Text = "Bonus objectives completed:";
-            // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(13, 276);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(164, 13);
-            this.label145.TabIndex = 3;
-            this.label145.Text = "Secondary objectives completed:";
-            // 
             // label146
             // 
             this.label146.AutoSize = true;
@@ -4813,15 +4141,11 @@
             this.panel19.Controls.Add(this.label173);
             this.panel19.Controls.Add(this.label174);
             this.panel19.Controls.Add(this.clbSecondaryObjectiveB12);
-            this.panel19.Controls.Add(this.nudBonusObjectivesCompB12);
-            this.panel19.Controls.Add(this.nudSecondaryObjectivesCompB12);
             this.panel19.Controls.Add(this.gvBattle12Scores);
             this.panel19.Controls.Add(this.nudLastMissionCompB12);
             this.panel19.Controls.Add(this.comStatusB12);
             this.panel19.Controls.Add(this.lblTotalScoreB12);
             this.panel19.Controls.Add(this.label150);
-            this.panel19.Controls.Add(this.label151);
-            this.panel19.Controls.Add(this.label152);
             this.panel19.Controls.Add(this.label153);
             this.panel19.Controls.Add(this.label154);
             this.panel19.Controls.Add(this.label155);
@@ -4861,34 +4185,6 @@
             this.clbSecondaryObjectiveB12.Name = "clbSecondaryObjectiveB12";
             this.clbSecondaryObjectiveB12.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB12.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB12
-            // 
-            this.nudBonusObjectivesCompB12.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB12.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB12.Name = "nudBonusObjectivesCompB12";
-            this.nudBonusObjectivesCompB12.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB12.TabIndex = 3;
-            this.nudBonusObjectivesCompB12.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB12_ValueChanged);
-            this.nudBonusObjectivesCompB12.Enter += new System.EventHandler(this.nudBonusObjectivesCompB12_Enter);
-            // 
-            // nudSecondaryObjectivesCompB12
-            // 
-            this.nudSecondaryObjectivesCompB12.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB12.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB12.Name = "nudSecondaryObjectivesCompB12";
-            this.nudSecondaryObjectivesCompB12.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB12.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB12.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB12_ValueChanged);
-            this.nudSecondaryObjectivesCompB12.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB12_Enter);
             // 
             // gvBattle12Scores
             // 
@@ -4945,24 +4241,6 @@
             this.label150.TabIndex = 5;
             this.label150.Text = "Total score:";
             // 
-            // label151
-            // 
-            this.label151.AutoSize = true;
-            this.label151.Location = new System.Drawing.Point(13, 323);
-            this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(143, 13);
-            this.label151.TabIndex = 4;
-            this.label151.Text = "Bonus objectives completed:";
-            // 
-            // label152
-            // 
-            this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(13, 276);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(164, 13);
-            this.label152.TabIndex = 3;
-            this.label152.Text = "Secondary objectives completed:";
-            // 
             // label153
             // 
             this.label153.AutoSize = true;
@@ -5006,15 +4284,11 @@
             this.panel20.Controls.Add(this.label175);
             this.panel20.Controls.Add(this.label176);
             this.panel20.Controls.Add(this.clbSecondaryObjectiveB13);
-            this.panel20.Controls.Add(this.nudBonusObjectivesCompB13);
-            this.panel20.Controls.Add(this.nudSecondaryObjectivesCompB13);
             this.panel20.Controls.Add(this.gvBattle13Scores);
             this.panel20.Controls.Add(this.nudLastMissionCompB13);
             this.panel20.Controls.Add(this.comStatusB13);
             this.panel20.Controls.Add(this.lblTotalScoreB13);
             this.panel20.Controls.Add(this.label157);
-            this.panel20.Controls.Add(this.label158);
-            this.panel20.Controls.Add(this.label159);
             this.panel20.Controls.Add(this.label160);
             this.panel20.Controls.Add(this.label161);
             this.panel20.Controls.Add(this.label162);
@@ -5054,34 +4328,6 @@
             this.clbSecondaryObjectiveB13.Name = "clbSecondaryObjectiveB13";
             this.clbSecondaryObjectiveB13.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB13.TabIndex = 11;
-            // 
-            // nudBonusObjectivesCompB13
-            // 
-            this.nudBonusObjectivesCompB13.Location = new System.Drawing.Point(16, 340);
-            this.nudBonusObjectivesCompB13.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudBonusObjectivesCompB13.Name = "nudBonusObjectivesCompB13";
-            this.nudBonusObjectivesCompB13.Size = new System.Drawing.Size(120, 20);
-            this.nudBonusObjectivesCompB13.TabIndex = 3;
-            this.nudBonusObjectivesCompB13.ValueChanged += new System.EventHandler(this.nudBonusObjectivesCompB13_ValueChanged);
-            this.nudBonusObjectivesCompB13.Enter += new System.EventHandler(this.nudBonusObjectivesCompB13_Enter);
-            // 
-            // nudSecondaryObjectivesCompB13
-            // 
-            this.nudSecondaryObjectivesCompB13.Location = new System.Drawing.Point(16, 293);
-            this.nudSecondaryObjectivesCompB13.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nudSecondaryObjectivesCompB13.Name = "nudSecondaryObjectivesCompB13";
-            this.nudSecondaryObjectivesCompB13.Size = new System.Drawing.Size(120, 20);
-            this.nudSecondaryObjectivesCompB13.TabIndex = 2;
-            this.nudSecondaryObjectivesCompB13.ValueChanged += new System.EventHandler(this.nudSecondaryObjectivesCompB13_ValueChanged);
-            this.nudSecondaryObjectivesCompB13.Enter += new System.EventHandler(this.nudSecondaryObjectivesCompB13_Enter);
             // 
             // gvBattle13Scores
             // 
@@ -5138,24 +4384,6 @@
             this.label157.TabIndex = 5;
             this.label157.Text = "Total score:";
             // 
-            // label158
-            // 
-            this.label158.AutoSize = true;
-            this.label158.Location = new System.Drawing.Point(13, 323);
-            this.label158.Name = "label158";
-            this.label158.Size = new System.Drawing.Size(143, 13);
-            this.label158.TabIndex = 4;
-            this.label158.Text = "Bonus objectives completed:";
-            // 
-            // label159
-            // 
-            this.label159.AutoSize = true;
-            this.label159.Location = new System.Drawing.Point(13, 276);
-            this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(164, 13);
-            this.label159.TabIndex = 3;
-            this.label159.Text = "Secondary objectives completed:";
-            // 
             // label160
             // 
             this.label160.AutoSize = true;
@@ -5183,6 +4411,50 @@
             this.label162.TabIndex = 0;
             this.label162.Text = "The Emperor\'s Will";
             // 
+            // trainingShipTypeDataGridViewTextBoxColumn
+            // 
+            this.trainingShipTypeDataGridViewTextBoxColumn.DataPropertyName = "TrainingShipType";
+            this.trainingShipTypeDataGridViewTextBoxColumn.HeaderText = "TrainingShipType";
+            this.trainingShipTypeDataGridViewTextBoxColumn.Name = "trainingShipTypeDataGridViewTextBoxColumn";
+            // 
+            // nextTrainingLevelDataGridViewTextBoxColumn
+            // 
+            this.nextTrainingLevelDataGridViewTextBoxColumn.DataPropertyName = "NextTrainingLevel";
+            this.nextTrainingLevelDataGridViewTextBoxColumn.HeaderText = "NextTrainingLevel";
+            this.nextTrainingLevelDataGridViewTextBoxColumn.Name = "nextTrainingLevelDataGridViewTextBoxColumn";
+            // 
+            // trainingScoreDataGridViewTextBoxColumn
+            // 
+            this.trainingScoreDataGridViewTextBoxColumn.DataPropertyName = "TrainingScore";
+            this.trainingScoreDataGridViewTextBoxColumn.HeaderText = "TrainingScore";
+            this.trainingScoreDataGridViewTextBoxColumn.Name = "trainingScoreDataGridViewTextBoxColumn";
+            // 
+            // trainingLevelCompletedDataGridViewTextBoxColumn
+            // 
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.DataPropertyName = "TrainingLevelCompleted";
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.HeaderText = "TrainingLevelCompleted";
+            this.trainingLevelCompletedDataGridViewTextBoxColumn.Name = "trainingLevelCompletedDataGridViewTextBoxColumn";
+            // 
+            // trainingRecordBindingSource
+            // 
+            this.trainingRecordBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.TrainingRecord);
+            // 
+            // victoryNPCDataGridViewTextBoxColumn
+            // 
+            this.victoryNPCDataGridViewTextBoxColumn.DataPropertyName = "VictoryNPC";
+            this.victoryNPCDataGridViewTextBoxColumn.HeaderText = "VictoryNPC";
+            this.victoryNPCDataGridViewTextBoxColumn.Name = "victoryNPCDataGridViewTextBoxColumn";
+            // 
+            // victoriesDataGridViewTextBoxColumn
+            // 
+            this.victoriesDataGridViewTextBoxColumn.DataPropertyName = "Victories";
+            this.victoriesDataGridViewTextBoxColumn.HeaderText = "Victories";
+            this.victoriesDataGridViewTextBoxColumn.Name = "victoriesDataGridViewTextBoxColumn";
+            // 
+            // playerBattleVictoriesBindingSource
+            // 
+            this.playerBattleVictoriesBindingSource.DataSource = typeof(TIE_Fighter_Pilot_Editor.PlayerBattleVictories);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5204,7 +4476,6 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattleVictories)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).EndInit();
             this.tabControlPilot.ResumeLayout(false);
             this.tabPilotStatus.ResumeLayout(false);
             this.tabPilotStatus.PerformLayout();
@@ -5265,7 +4536,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHistCombatPointsMBM1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTraining)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).EndInit();
             this.tabBattleStats.ResumeLayout(false);
             this.tabBattleStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCraftLost)).EndInit();
@@ -5280,94 +4550,70 @@
             this.tabBattle1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle1Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB1)).EndInit();
             this.tabBattle2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle2Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB2)).EndInit();
             this.tabBattle3.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle3Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB3)).EndInit();
             this.tabBattle4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle4Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB4)).EndInit();
             this.tabBattle5.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle5Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB5)).EndInit();
             this.tabBattle6.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle6Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB6)).EndInit();
             this.tabBattle7.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle7Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB7)).EndInit();
             this.tabBattle8.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle8Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB8)).EndInit();
             this.tabBattle9.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle9Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB9)).EndInit();
             this.tabBattle10.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle10Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB10)).EndInit();
             this.tabBattle11.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle11Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB11)).EndInit();
             this.tabBattle12.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle12Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB12)).EndInit();
             this.tabBattle13.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBonusObjectivesCompB13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSecondaryObjectivesCompB13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBattle13Scores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLastMissionCompB13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingRecordBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleVictoriesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5577,168 +4823,116 @@
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Label lblTotalScoreB1;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB1;
         private System.Windows.Forms.ComboBox comStatusB1;
         private System.Windows.Forms.DataGridView gvBattle1Scores;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB1;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB2;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB2;
         private System.Windows.Forms.DataGridView gvBattle2Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB2;
         private System.Windows.Forms.ComboBox comStatusB2;
         private System.Windows.Forms.Label lblTotalScoreB2;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB3;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB3;
         private System.Windows.Forms.DataGridView gvBattle3Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB3;
         private System.Windows.Forms.ComboBox comStatusB3;
         private System.Windows.Forms.Label lblTotalScoreB3;
         private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label label89;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB4;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB4;
         private System.Windows.Forms.DataGridView gvBattle4Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB4;
         private System.Windows.Forms.ComboBox comStatusB4;
         private System.Windows.Forms.Label lblTotalScoreB4;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.Label label96;
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB5;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB5;
         private System.Windows.Forms.DataGridView gvBattle5Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB5;
         private System.Windows.Forms.ComboBox comStatusB5;
         private System.Windows.Forms.Label lblTotalScoreB5;
         private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB6;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB6;
         private System.Windows.Forms.DataGridView gvBattle6Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB6;
         private System.Windows.Forms.ComboBox comStatusB6;
         private System.Windows.Forms.Label lblTotalScoreB6;
         private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.Label label109;
-        private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Label label113;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB7;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB7;
         private System.Windows.Forms.DataGridView gvBattle7Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB7;
         private System.Windows.Forms.ComboBox comStatusB7;
         private System.Windows.Forms.Label lblTotalScoreB7;
         private System.Windows.Forms.Label label115;
-        private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.Label label117;
         private System.Windows.Forms.Label label118;
         private System.Windows.Forms.Label label119;
         private System.Windows.Forms.Label label120;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB8;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB8;
         private System.Windows.Forms.DataGridView gvBattle8Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB8;
         private System.Windows.Forms.ComboBox comStatusB8;
         private System.Windows.Forms.Label lblTotalScoreB8;
         private System.Windows.Forms.Label label122;
-        private System.Windows.Forms.Label label123;
-        private System.Windows.Forms.Label label124;
         private System.Windows.Forms.Label label125;
         private System.Windows.Forms.Label label126;
         private System.Windows.Forms.Label label127;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB9;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB9;
         private System.Windows.Forms.DataGridView gvBattle9Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB9;
         private System.Windows.Forms.ComboBox comStatusB9;
         private System.Windows.Forms.Label lblTotalScoreB9;
         private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.Label label130;
-        private System.Windows.Forms.Label label131;
         private System.Windows.Forms.Label label132;
         private System.Windows.Forms.Label label133;
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB10;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB10;
         private System.Windows.Forms.DataGridView gvBattle10Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB10;
         private System.Windows.Forms.ComboBox comStatusB10;
         private System.Windows.Forms.Label lblTotalScoreB10;
         private System.Windows.Forms.Label label136;
-        private System.Windows.Forms.Label label137;
-        private System.Windows.Forms.Label label138;
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.Label label140;
         private System.Windows.Forms.Label label141;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB11;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB11;
         private System.Windows.Forms.DataGridView gvBattle11Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB11;
         private System.Windows.Forms.ComboBox comStatusB11;
         private System.Windows.Forms.Label lblTotalScoreB11;
         private System.Windows.Forms.Label label143;
-        private System.Windows.Forms.Label label144;
-        private System.Windows.Forms.Label label145;
         private System.Windows.Forms.Label label146;
         private System.Windows.Forms.Label label147;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB12;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB12;
         private System.Windows.Forms.DataGridView gvBattle12Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB12;
         private System.Windows.Forms.ComboBox comStatusB12;
         private System.Windows.Forms.Label lblTotalScoreB12;
         private System.Windows.Forms.Label label150;
-        private System.Windows.Forms.Label label151;
-        private System.Windows.Forms.Label label152;
         private System.Windows.Forms.Label label153;
         private System.Windows.Forms.Label label154;
         private System.Windows.Forms.Label label155;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.NumericUpDown nudBonusObjectivesCompB13;
-        private System.Windows.Forms.NumericUpDown nudSecondaryObjectivesCompB13;
         private System.Windows.Forms.DataGridView gvBattle13Scores;
         private System.Windows.Forms.NumericUpDown nudLastMissionCompB13;
         private System.Windows.Forms.ComboBox comStatusB13;
         private System.Windows.Forms.Label lblTotalScoreB13;
         private System.Windows.Forms.Label label157;
-        private System.Windows.Forms.Label label158;
-        private System.Windows.Forms.Label label159;
         private System.Windows.Forms.Label label160;
         private System.Windows.Forms.Label label161;
         private System.Windows.Forms.Label label162;
