@@ -108,12 +108,14 @@ namespace TIE_Fighter_Pilot_Editor
             
             foreach (var item in secondaryObjectiveList)
             {
-                item.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+                item.DataSource = Enum.GetValues(typeof(SecondaryObjectives));  // (1) This automatically selects the first item, and triggers SelectedIndexChanged...
+                item.ClearSelected();                                           // (3) So we clear the selection here...
             }
             
             foreach (var item in bonusObjectiveList)
             {
                 item.DataSource = Enum.GetValues(typeof(BonusObjectives));
+                item.ClearSelected();
             }
 
             cbValidationToggle.Checked = validationPopUp;
@@ -179,6 +181,80 @@ namespace TIE_Fighter_Pilot_Editor
         {
             //#TODO Update version
             MessageBox.Show("TIE Fighter Pilot Editor v1.0" + Environment.NewLine + Environment.NewLine + "email: retrotek@shaw.ca", "About TIE Fighter Pilot Editor");
+        }
+
+        private SecondaryObjectives GetSecondaryObjectiveEnum(int index)
+        {
+            SecondaryObjectives value;
+            
+            switch (index)
+            {
+                case 0:
+                    value = SecondaryObjectives.First;
+                    break;
+                case 1:
+                    value = SecondaryObjectives.Second;
+                    break;
+                case 2:
+                    value = SecondaryObjectives.Third;
+                    break;
+                case 3:
+                    value = SecondaryObjectives.Fourth;
+                    break;
+                case 4:
+                    value = SecondaryObjectives.Fifth;
+                    break;
+                case 5:
+                    value = SecondaryObjectives.Sixth;
+                    break;
+                case 6:
+                    value = SecondaryObjectives.Seventh;
+                    break;
+                case 7:
+                    value = SecondaryObjectives.Eighth;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid selection");
+            }
+
+            return value;
+        }
+
+        private BonusObjectives GetBonusObjectiveEnum(int index)
+        {
+            BonusObjectives value;
+
+            switch (index)
+            {
+                case 0:
+                    value = BonusObjectives.First;
+                    break;
+                case 1:
+                    value = BonusObjectives.Second;
+                    break;
+                case 2:
+                    value = BonusObjectives.Third;
+                    break;
+                case 3:
+                    value = BonusObjectives.Fourth;
+                    break;
+                case 4:
+                    value = BonusObjectives.Fifth;
+                    break;
+                case 5:
+                    value = BonusObjectives.Sixth;
+                    break;
+                case 6:
+                    value = BonusObjectives.Seventh;
+                    break;
+                case 7:
+                    value = BonusObjectives.Eighth;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid selection");
+            }
+
+            return value;
         }
 
         private void UpdateForm()
@@ -1000,35 +1076,41 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[0].LastMissionCompleted = (int)nudLastMissionCompB1.Value;
         }
 
-        //private void nudSecondaryObjCompB1_ValueChanged(object sender, EventArgs e)
-        //{
-        //    pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB1.Value;
-        //}
-
-        //private void nudBonusObjCompB1_ValueChanged(object sender, EventArgs e)
-        //{
-        //    pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB1.Value;
-        //}
-
         private void nudLastMissionCompB1_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB1.Select(0, nudLastMissionCompB1.Text.Length);
         }
 
-        //private void nudSecondaryObjCompB1_Enter(object sender, EventArgs e)
-        //{
-        //    nudSecondaryObjectivesCompB1.Select(0, nudSecondaryObjectivesCompB1.Text.Length);
-        //}
-
-        //private void nudBonusObjCompB1_Enter(object sender, EventArgs e)
-        //{
-        //    nudBonusObjectivesCompB1.Select(0, nudBonusObjectivesCompB1.Text.Length);
-        //}
-
         private void gvBattle1Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             pilot.ListOfBattles.BattlesList[0].UpdateBattleTotalScore(6);
             UpdateForm();
+        }
+
+        private void clbSecondaryObjectiveB1_SelectedIndexChanged(object sender, EventArgs e)   //#TODO Test changes read and write properly
+        {
+            int selected = clbSecondaryObjectiveB1.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB1.SelectedIndex);  // (2) ...but we only want this to happen on an explicit selection.
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted = 0;    // (4) ...and overwrite any selection with no selection here.
+            }
+        }
+
+        private void clbBonusObjectiveB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB1.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB1.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted = 0;
+            }
         }
 
         //--------------------------------------------------------------------
