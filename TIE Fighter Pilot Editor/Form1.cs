@@ -33,6 +33,8 @@ namespace TIE_Fighter_Pilot_Editor
             { "MissionScore", 65535 }
         };
 
+        List<CheckedListBox> secondaryObjectiveList;
+        List<CheckedListBox> bonusObjectiveList;
 
         public Form1()
         {
@@ -40,10 +42,45 @@ namespace TIE_Fighter_Pilot_Editor
 
             pilot = new Pilot();
             bytes = new byte[3856]; // First 1928 bytes are for active pilot.  Last 1928 bytes are for backup pilot data
+            
             for (int i = 0; i < bytes.Length; i++)
             {
                 bytes[i] = 0x00;
             }
+            
+            secondaryObjectiveList = new List<CheckedListBox>()
+            {
+                clbSecondaryObjectiveB1,
+                clbSecondaryObjectiveB2,
+                clbSecondaryObjectiveB3,
+                clbSecondaryObjectiveB4,
+                clbSecondaryObjectiveB5,
+                clbSecondaryObjectiveB6,
+                clbSecondaryObjectiveB7,
+                clbSecondaryObjectiveB8,
+                clbSecondaryObjectiveB9,
+                clbSecondaryObjectiveB10,
+                clbSecondaryObjectiveB11,
+                clbSecondaryObjectiveB12,
+                clbSecondaryObjectiveB13
+            };
+
+            bonusObjectiveList = new List<CheckedListBox>()
+            {
+                clbBonusObjectiveB1,
+                clbBonusObjectiveB2,
+                clbBonusObjectiveB3,
+                clbBonusObjectiveB4,
+                clbBonusObjectiveB5,
+                clbBonusObjectiveB6,
+                clbBonusObjectiveB7,
+                clbBonusObjectiveB8,
+                clbBonusObjectiveB9,
+                clbBonusObjectiveB10,
+                clbBonusObjectiveB11,
+                clbBonusObjectiveB12,
+                clbBonusObjectiveB13
+            };
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,34 +105,16 @@ namespace TIE_Fighter_Pilot_Editor
             comStatusB11.DataSource = Enum.GetValues(typeof(BattleStatus));
             comStatusB12.DataSource = Enum.GetValues(typeof(BattleStatus));
             comStatusB13.DataSource = Enum.GetValues(typeof(BattleStatus));
-
-            clbSecondaryObjectiveB1.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB2.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB3.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB4.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB5.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB6.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB7.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB8.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB9.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB10.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB11.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB12.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-            clbSecondaryObjectiveB13.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
-
-            clbBonusObjectiveB1.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB2.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB3.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB4.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB5.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB6.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB7.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB8.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB9.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB10.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB11.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB12.DataSource = Enum.GetValues(typeof(BonusObjectives));
-            clbBonusObjectiveB13.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            
+            foreach (var item in secondaryObjectiveList)
+            {
+                item.DataSource = Enum.GetValues(typeof(SecondaryObjectives));
+            }
+            
+            foreach (var item in bonusObjectiveList)
+            {
+                item.DataSource = Enum.GetValues(typeof(BonusObjectives));
+            }
 
             cbValidationToggle.Checked = validationPopUp;
 
@@ -158,6 +177,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
+            //#TODO Update version
             MessageBox.Show("TIE Fighter Pilot Editor v1.0" + Environment.NewLine + Environment.NewLine + "email: retrotek@shaw.ca", "About TIE Fighter Pilot Editor");
         }
 
@@ -270,24 +290,49 @@ namespace TIE_Fighter_Pilot_Editor
             nudBonusObjectivesCompB12.Value = pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted;
             nudBonusObjectivesCompB13.Value = pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted;
 
-            // #TODO Populate check boxes for objectives for all battles
-            List<bool> battleSecondaryObjectives = new List<bool>();
-            foreach (SecondaryObjectives so in Enum.GetValues(typeof(SecondaryObjectives)))
+            for (int i = 0; i < pilot.ListOfBattles.BattlesList.Count; i++)
             {
-		        SecondaryObjectives secondaryObjectives = (SecondaryObjectives)pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted;
-		        battleSecondaryObjectives.Add((secondaryObjectives & so) == so);
+                List<bool> battleSecondaryObjectives = new List<bool>();
+                foreach (SecondaryObjectives so in Enum.GetValues(typeof(SecondaryObjectives))) 
+                {
+                    SecondaryObjectives secondaryObjectives = (SecondaryObjectives)pilot.ListOfBattles.BattlesList[i].SecondaryObjectivesCompleted;
+                    battleSecondaryObjectives.Add((secondaryObjectives & so) == so);
 
+                }
+
+                for (int j = 0; j < secondaryObjectiveList[i].Items.Count; j++)
+                {
+                    if (battleSecondaryObjectives[j])
+                    {
+                    secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Checked);
+                    }
+                    else
+                    {
+                    secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Unchecked);
+                    }
+                }
             }
 
-            for (int i = 0; i < clbSecondaryObjectiveB1.Items.Count - 1; i++)
+            for (int i = 0; i < pilot.ListOfBattles.BattlesList.Count; i++)
             {
-                if (battleSecondaryObjectives[i])
+                List<bool> battleBonusObjectives = new List<bool>();
+                foreach (BonusObjectives bo in Enum.GetValues(typeof(BonusObjectives)))
                 {
-                    clbSecondaryObjectiveB1.SetItemCheckState(i, CheckState.Checked);
+                    BonusObjectives bonusObjectives = (BonusObjectives)pilot.ListOfBattles.BattlesList[i].BonusObjectivesCompleted;
+                    battleBonusObjectives.Add((bonusObjectives & bo) == bo);
+
                 }
-                else
+
+                for (int j = 0; j < bonusObjectiveList[i].Items.Count; j++)
                 {
-                    clbSecondaryObjectiveB1.SetItemCheckState(i, CheckState.Unchecked);
+                    if (battleBonusObjectives[j])
+                    {
+                        bonusObjectiveList[i].SetItemCheckState(j, CheckState.Checked);
+                    }
+                    else
+                    {
+                        bonusObjectiveList[i].SetItemCheckState(j, CheckState.Unchecked);
+                    }
                 }
             }
 
@@ -401,7 +446,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Pilot Status Tab
-
+        //--------------------------------------------------------------------
         private void comHealth_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.PltHealth = (Health)comHealth.SelectedItem;
@@ -448,7 +493,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Fighter
-
+        //--------------------------------------------------------------------
         //These update the mission score when the value is changed
         private void nudHistCombatPointsTFM1_ValueChanged(object sender, EventArgs e)
         {
@@ -514,7 +559,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Interceptor
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTIM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[1].MissionScore[0] = (uint)nudHistCombatPointsTIM1.Value;
@@ -577,7 +622,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Bomber
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTBM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[2].MissionScore[0] = (uint)nudHistCombatPointsTBM1.Value;
@@ -640,7 +685,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Advanced
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTAM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[3].MissionScore[0] = (uint)nudHistCombatPointsTAM1.Value;
@@ -703,7 +748,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Assault Gunboat
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsAGM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[4].MissionScore[0] = (uint)nudHistCombatPointsAGM1.Value;
@@ -766,7 +811,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Defender
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTDM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[5].MissionScore[0] = (uint)nudHistCombatPointsTDM1.Value;
@@ -829,7 +874,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Missile Boat
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsMBM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[6].MissionScore[0] = (uint)nudHistCombatPointsMBM1.Value;
@@ -892,7 +937,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle Stats
-
+        //--------------------------------------------------------------------
         private void nudLaserHits_ValueChanged(object sender, EventArgs e)
         {
             pilot.BattleStats.LaserCraftHits = (uint)nudLaserHits.Value;
@@ -969,10 +1014,9 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle Status
-
         //--------------------------------------------------------------------
         //Battle 1
-
+        //--------------------------------------------------------------------
         private void comStatusB1_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[0].Status = (BattleStatus)comStatusB1.SelectedItem;
@@ -1017,7 +1061,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 2
-
+        //--------------------------------------------------------------------
         private void comStatusB2_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[1].Status = (BattleStatus)comStatusB2.SelectedItem;
@@ -1063,7 +1107,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 3
-
+        //--------------------------------------------------------------------
         private void comStatusB3_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[2].Status = (BattleStatus)comStatusB3.SelectedItem;
@@ -1108,7 +1152,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 4
-
+        //--------------------------------------------------------------------
         private void comStatusB4_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[3].Status = (BattleStatus)comStatusB4.SelectedItem;
@@ -1153,7 +1197,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 5
-
+        //--------------------------------------------------------------------
         private void comStatusB5_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[4].Status = (BattleStatus)comStatusB5.SelectedItem;
@@ -1198,7 +1242,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 6
-
+        //--------------------------------------------------------------------
         private void comStatusB6_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[5].Status = (BattleStatus)comStatusB6.SelectedItem;
@@ -1243,7 +1287,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 7
-
+        //--------------------------------------------------------------------
         private void comStatusB7_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[6].Status = (BattleStatus)comStatusB7.SelectedItem;
@@ -1288,7 +1332,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 8
-
+        //--------------------------------------------------------------------
         private void comStatusB8_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[7].Status = (BattleStatus)comStatusB8.SelectedItem;
@@ -1333,7 +1377,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 9
-
+        //--------------------------------------------------------------------
         private void comStatusB9_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[8].Status = (BattleStatus)comStatusB9.SelectedItem;
@@ -1378,7 +1422,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 10
-
+        //--------------------------------------------------------------------
         private void comStatusB10_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[9].Status = (BattleStatus)comStatusB10.SelectedItem;
@@ -1423,7 +1467,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 11
-
+        //--------------------------------------------------------------------
         private void comStatusB11_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[10].Status = (BattleStatus)comStatusB11.SelectedItem;
@@ -1468,7 +1512,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 12
-
+        //--------------------------------------------------------------------
         private void comStatusB12_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[11].Status = (BattleStatus)comStatusB12.SelectedItem;
@@ -1513,7 +1557,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle 13
-
+        //--------------------------------------------------------------------
         private void comStatusB13_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[12].Status = (BattleStatus)comStatusB13.SelectedItem;
@@ -1558,7 +1602,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         // Validate data entry in gvTraining
-
+        //--------------------------------------------------------------------
         private void gvTraining_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             string headerText = gvTraining.Columns[e.ColumnIndex].HeaderText;
@@ -1591,7 +1635,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         // Validate data entry in gvBattleVictories
-
+        //--------------------------------------------------------------------
         private void gvBattleVictories_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             string headerText = gvBattleVictories.Columns[e.ColumnIndex].HeaderText;
@@ -1623,7 +1667,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         // Validate data entry in gvBattleXScores
-
+        //--------------------------------------------------------------------
         private void gvBattle1Scores_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             string headerText = gvBattle1Scores.Columns[e.ColumnIndex].HeaderText;
@@ -2001,8 +2045,9 @@ namespace TIE_Fighter_Pilot_Editor
             gvBattle13Scores.Rows[e.RowIndex].ErrorText = string.Empty;
         }
 
+        //--------------------------------------------------------------------
         //Validation Pop-up Toggle
-
+        //--------------------------------------------------------------------
         private void cbValidationToggle_CheckedChanged(object sender, EventArgs e)
         {
             validationPopUp = cbValidationToggle.Checked;
