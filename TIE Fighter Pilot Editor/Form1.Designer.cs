@@ -2583,6 +2583,7 @@
             // 
             // clbBonusObjectiveB1
             // 
+            this.clbBonusObjectiveB1.CheckOnClick = true;
             this.clbBonusObjectiveB1.FormattingEnabled = true;
             this.clbBonusObjectiveB1.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB1.Name = "clbBonusObjectiveB1";
@@ -2607,6 +2608,7 @@
             // 
             // clbSecondaryObjectiveB1
             // 
+            this.clbSecondaryObjectiveB1.CheckOnClick = true;
             this.clbSecondaryObjectiveB1.FormattingEnabled = true;
             this.clbSecondaryObjectiveB1.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB1.Name = "clbSecondaryObjectiveB1";
@@ -2726,6 +2728,7 @@
             // 
             // clbBonusObjectiveB2
             // 
+            this.clbBonusObjectiveB2.CheckOnClick = true;
             this.clbBonusObjectiveB2.FormattingEnabled = true;
             this.clbBonusObjectiveB2.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB2.Name = "clbBonusObjectiveB2";
@@ -2750,6 +2753,7 @@
             // 
             // clbSecondaryObjectiveB2
             // 
+            this.clbSecondaryObjectiveB2.CheckOnClick = true;
             this.clbSecondaryObjectiveB2.FormattingEnabled = true;
             this.clbSecondaryObjectiveB2.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB2.Name = "clbSecondaryObjectiveB2";
@@ -2869,6 +2873,7 @@
             // 
             // clbBonusObjectiveB3
             // 
+            this.clbBonusObjectiveB3.CheckOnClick = true;
             this.clbBonusObjectiveB3.FormattingEnabled = true;
             this.clbBonusObjectiveB3.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB3.Name = "clbBonusObjectiveB3";
@@ -2893,6 +2898,7 @@
             // 
             // clbSecondaryObjectiveB3
             // 
+            this.clbSecondaryObjectiveB3.CheckOnClick = true;
             this.clbSecondaryObjectiveB3.FormattingEnabled = true;
             this.clbSecondaryObjectiveB3.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB3.Name = "clbSecondaryObjectiveB3";
@@ -3012,6 +3018,7 @@
             // 
             // clbBonusObjectiveB4
             // 
+            this.clbBonusObjectiveB4.CheckOnClick = true;
             this.clbBonusObjectiveB4.FormattingEnabled = true;
             this.clbBonusObjectiveB4.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB4.Name = "clbBonusObjectiveB4";
@@ -3036,6 +3043,7 @@
             // 
             // clbSecondaryObjectiveB4
             // 
+            this.clbSecondaryObjectiveB4.CheckOnClick = true;
             this.clbSecondaryObjectiveB4.FormattingEnabled = true;
             this.clbSecondaryObjectiveB4.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB4.Name = "clbSecondaryObjectiveB4";
@@ -3155,6 +3163,7 @@
             // 
             // clbBonusObjectiveB5
             // 
+            this.clbBonusObjectiveB5.CheckOnClick = true;
             this.clbBonusObjectiveB5.FormattingEnabled = true;
             this.clbBonusObjectiveB5.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB5.Name = "clbBonusObjectiveB5";
@@ -3179,6 +3188,7 @@
             // 
             // clbSecondaryObjectiveB5
             // 
+            this.clbSecondaryObjectiveB5.CheckOnClick = true;
             this.clbSecondaryObjectiveB5.FormattingEnabled = true;
             this.clbSecondaryObjectiveB5.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB5.Name = "clbSecondaryObjectiveB5";
@@ -3298,6 +3308,7 @@
             // 
             // clbBonusObjectiveB6
             // 
+            this.clbBonusObjectiveB6.CheckOnClick = true;
             this.clbBonusObjectiveB6.FormattingEnabled = true;
             this.clbBonusObjectiveB6.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB6.Name = "clbBonusObjectiveB6";
@@ -3322,6 +3333,7 @@
             // 
             // clbSecondaryObjectiveB6
             // 
+            this.clbSecondaryObjectiveB6.CheckOnClick = true;
             this.clbSecondaryObjectiveB6.FormattingEnabled = true;
             this.clbSecondaryObjectiveB6.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB6.Name = "clbSecondaryObjectiveB6";
@@ -3441,6 +3453,7 @@
             // 
             // clbBonusObjectiveB7
             // 
+            this.clbBonusObjectiveB7.CheckOnClick = true;
             this.clbBonusObjectiveB7.FormattingEnabled = true;
             this.clbBonusObjectiveB7.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB7.Name = "clbBonusObjectiveB7";
@@ -3465,6 +3478,7 @@
             // 
             // clbSecondaryObjectiveB7
             // 
+            this.clbSecondaryObjectiveB7.CheckOnClick = true;
             this.clbSecondaryObjectiveB7.FormattingEnabled = true;
             this.clbSecondaryObjectiveB7.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB7.Name = "clbSecondaryObjectiveB7";
@@ -3584,6 +3598,7 @@
             // 
             // clbBonusObjectiveB8
             // 
+            this.clbBonusObjectiveB8.CheckOnClick = true;
             this.clbBonusObjectiveB8.FormattingEnabled = true;
             this.clbBonusObjectiveB8.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB8.Name = "clbBonusObjectiveB8";
@@ -3608,6 +3623,7 @@
             // 
             // clbSecondaryObjectiveB8
             // 
+            this.clbSecondaryObjectiveB8.CheckOnClick = true;
             this.clbSecondaryObjectiveB8.FormattingEnabled = true;
             this.clbSecondaryObjectiveB8.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB8.Name = "clbSecondaryObjectiveB8";
@@ -3727,6 +3743,7 @@
             // 
             // clbBonusObjectiveB9
             // 
+            this.clbBonusObjectiveB9.CheckOnClick = true;
             this.clbBonusObjectiveB9.FormattingEnabled = true;
             this.clbBonusObjectiveB9.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB9.Name = "clbBonusObjectiveB9";
@@ -3751,6 +3768,7 @@
             // 
             // clbSecondaryObjectiveB9
             // 
+            this.clbSecondaryObjectiveB9.CheckOnClick = true;
             this.clbSecondaryObjectiveB9.FormattingEnabled = true;
             this.clbSecondaryObjectiveB9.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB9.Name = "clbSecondaryObjectiveB9";
@@ -3870,6 +3888,7 @@
             // 
             // clbBonusObjectiveB10
             // 
+            this.clbBonusObjectiveB10.CheckOnClick = true;
             this.clbBonusObjectiveB10.FormattingEnabled = true;
             this.clbBonusObjectiveB10.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB10.Name = "clbBonusObjectiveB10";
@@ -3894,6 +3913,7 @@
             // 
             // clbSecondaryObjectiveB10
             // 
+            this.clbSecondaryObjectiveB10.CheckOnClick = true;
             this.clbSecondaryObjectiveB10.FormattingEnabled = true;
             this.clbSecondaryObjectiveB10.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB10.Name = "clbSecondaryObjectiveB10";
@@ -4013,6 +4033,7 @@
             // 
             // clbBonusObjectiveB11
             // 
+            this.clbBonusObjectiveB11.CheckOnClick = true;
             this.clbBonusObjectiveB11.FormattingEnabled = true;
             this.clbBonusObjectiveB11.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB11.Name = "clbBonusObjectiveB11";
@@ -4037,6 +4058,7 @@
             // 
             // clbSecondaryObjectiveB11
             // 
+            this.clbSecondaryObjectiveB11.CheckOnClick = true;
             this.clbSecondaryObjectiveB11.FormattingEnabled = true;
             this.clbSecondaryObjectiveB11.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB11.Name = "clbSecondaryObjectiveB11";
@@ -4156,6 +4178,7 @@
             // 
             // clbBonusObjectiveB12
             // 
+            this.clbBonusObjectiveB12.CheckOnClick = true;
             this.clbBonusObjectiveB12.FormattingEnabled = true;
             this.clbBonusObjectiveB12.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB12.Name = "clbBonusObjectiveB12";
@@ -4180,6 +4203,7 @@
             // 
             // clbSecondaryObjectiveB12
             // 
+            this.clbSecondaryObjectiveB12.CheckOnClick = true;
             this.clbSecondaryObjectiveB12.FormattingEnabled = true;
             this.clbSecondaryObjectiveB12.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB12.Name = "clbSecondaryObjectiveB12";
@@ -4299,6 +4323,7 @@
             // 
             // clbBonusObjectiveB13
             // 
+            this.clbBonusObjectiveB13.CheckOnClick = true;
             this.clbBonusObjectiveB13.FormattingEnabled = true;
             this.clbBonusObjectiveB13.Location = new System.Drawing.Point(151, 149);
             this.clbBonusObjectiveB13.Name = "clbBonusObjectiveB13";
@@ -4323,6 +4348,7 @@
             // 
             // clbSecondaryObjectiveB13
             // 
+            this.clbSecondaryObjectiveB13.CheckOnClick = true;
             this.clbSecondaryObjectiveB13.FormattingEnabled = true;
             this.clbSecondaryObjectiveB13.Location = new System.Drawing.Point(16, 149);
             this.clbSecondaryObjectiveB13.Name = "clbSecondaryObjectiveB13";
