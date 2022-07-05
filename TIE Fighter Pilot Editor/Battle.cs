@@ -9,7 +9,7 @@ namespace TIE_Fighter_Pilot_Editor
         public int LastMissionCompleted { get; set; }
         public List<Mission> MissionsList { get; set; }
         public uint TotalScore { get; set; }
-        public byte SecondaryObjectivesCompleted { get; set;}
+        public byte SecondaryObjectivesCompleted { get; set; }
         public byte BonusObjectivesCompleted { get; set; }
 
         int MissionScoreOffset;
@@ -27,7 +27,7 @@ namespace TIE_Fighter_Pilot_Editor
 
             for (int i = 0; i < numberOfMissions; i++)
             {
-                MissionsList.Add(new Mission(i+1));
+                MissionsList.Add(new Mission(i + 1));
             }
         }
 

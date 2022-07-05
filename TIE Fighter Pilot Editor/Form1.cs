@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 
 namespace TIE_Fighter_Pilot_Editor
@@ -16,23 +16,22 @@ namespace TIE_Fighter_Pilot_Editor
         // Dictionaries containing grid view header names and their max values.
         // Used for cell validation
 
-        Dictionary<string, int> gvTrainingMaxValueByHeaderTextDict
+        readonly Dictionary<string, int> gvTrainingMaxValueByHeaderTextDict
         = new Dictionary<string, int>() {
             { "NextTrainingLevel", 21 },
             { "TrainingScore", 2046820351 },
             { "TrainingLevelComp", 20 }
         };
-
-        Dictionary<string, int> gvBattleVictoriesMaxValueByHeaderTextDict
+        readonly Dictionary<string, int> gvBattleVictoriesMaxValueByHeaderTextDict
         = new Dictionary<string, int>() {
             { "Victories", 65535 }
         };
-
-        Dictionary<string, int> gvBattleScoresMaxValueByHeaderTextDict
+        readonly Dictionary<string, int> gvBattleScoresMaxValueByHeaderTextDict
         = new Dictionary<string, int>() {
             { "MissionScore", 65535 }
         };
-
+        readonly List<CheckedListBox> secondaryObjectiveList;
+        readonly List<CheckedListBox> bonusObjectiveList;
 
         public Form1()
         {
@@ -40,10 +39,45 @@ namespace TIE_Fighter_Pilot_Editor
 
             pilot = new Pilot();
             bytes = new byte[3856]; // First 1928 bytes are for active pilot.  Last 1928 bytes are for backup pilot data
+
             for (int i = 0; i < bytes.Length; i++)
             {
                 bytes[i] = 0x00;
             }
+
+            secondaryObjectiveList = new List<CheckedListBox>()
+            {
+                clbSecondaryObjectiveB1,
+                clbSecondaryObjectiveB2,
+                clbSecondaryObjectiveB3,
+                clbSecondaryObjectiveB4,
+                clbSecondaryObjectiveB5,
+                clbSecondaryObjectiveB6,
+                clbSecondaryObjectiveB7,
+                clbSecondaryObjectiveB8,
+                clbSecondaryObjectiveB9,
+                clbSecondaryObjectiveB10,
+                clbSecondaryObjectiveB11,
+                clbSecondaryObjectiveB12,
+                clbSecondaryObjectiveB13
+            };
+
+            bonusObjectiveList = new List<CheckedListBox>()
+            {
+                clbBonusObjectiveB1,
+                clbBonusObjectiveB2,
+                clbBonusObjectiveB3,
+                clbBonusObjectiveB4,
+                clbBonusObjectiveB5,
+                clbBonusObjectiveB6,
+                clbBonusObjectiveB7,
+                clbBonusObjectiveB8,
+                clbBonusObjectiveB9,
+                clbBonusObjectiveB10,
+                clbBonusObjectiveB11,
+                clbBonusObjectiveB12,
+                clbBonusObjectiveB13
+            };
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,6 +102,18 @@ namespace TIE_Fighter_Pilot_Editor
             comStatusB11.DataSource = Enum.GetValues(typeof(BattleStatus));
             comStatusB12.DataSource = Enum.GetValues(typeof(BattleStatus));
             comStatusB13.DataSource = Enum.GetValues(typeof(BattleStatus));
+
+            foreach (CheckedListBox item in secondaryObjectiveList)
+            {
+                item.DataSource = Enum.GetValues(typeof(SecondaryObjectives));  // (1) This automatically selects the first item, and triggers SelectedIndexChanged...
+                item.ClearSelected();                                           // (3) So we clear the selection here...
+            }
+
+            foreach (CheckedListBox item in bonusObjectiveList)
+            {
+                item.DataSource = Enum.GetValues(typeof(BonusObjectives));
+                item.ClearSelected();
+            }
 
             cbValidationToggle.Checked = validationPopUp;
 
@@ -130,7 +176,81 @@ namespace TIE_Fighter_Pilot_Editor
 
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("TIE Fighter Pilot Editor v1.0" + Environment.NewLine + Environment.NewLine + "email: retrotek@shaw.ca", "About TIE Fighter Pilot Editor");
+            MessageBox.Show("TIE Fighter Pilot Editor v1.1" + Environment.NewLine + Environment.NewLine + "https://github.com/j-mathes/TIE-Fighter-Pilot-Editor", "About TIE Fighter Pilot Editor");
+        }
+
+        private SecondaryObjectives GetSecondaryObjectiveEnum(int index)
+        {
+            SecondaryObjectives value;
+
+            switch (index)
+            {
+                case 0:
+                    value = SecondaryObjectives.First;
+                    break;
+                case 1:
+                    value = SecondaryObjectives.Second;
+                    break;
+                case 2:
+                    value = SecondaryObjectives.Third;
+                    break;
+                case 3:
+                    value = SecondaryObjectives.Fourth;
+                    break;
+                case 4:
+                    value = SecondaryObjectives.Fifth;
+                    break;
+                case 5:
+                    value = SecondaryObjectives.Sixth;
+                    break;
+                case 6:
+                    value = SecondaryObjectives.Seventh;
+                    break;
+                case 7:
+                    value = SecondaryObjectives.Eighth;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid selection");
+            }
+
+            return value;
+        }
+
+        private BonusObjectives GetBonusObjectiveEnum(int index)
+        {
+            BonusObjectives value;
+
+            switch (index)
+            {
+                case 0:
+                    value = BonusObjectives.First;
+                    break;
+                case 1:
+                    value = BonusObjectives.Second;
+                    break;
+                case 2:
+                    value = BonusObjectives.Third;
+                    break;
+                case 3:
+                    value = BonusObjectives.Fourth;
+                    break;
+                case 4:
+                    value = BonusObjectives.Fifth;
+                    break;
+                case 5:
+                    value = BonusObjectives.Sixth;
+                    break;
+                case 6:
+                    value = BonusObjectives.Seventh;
+                    break;
+                case 7:
+                    value = BonusObjectives.Eighth;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid selection");
+            }
+
+            return value;
         }
 
         private void UpdateForm()
@@ -214,33 +334,51 @@ namespace TIE_Fighter_Pilot_Editor
             nudLastMissionCompB12.Value = pilot.ListOfBattles.BattlesList[11].LastMissionCompleted;
             nudLastMissionCompB13.Value = pilot.ListOfBattles.BattlesList[12].LastMissionCompleted;
 
-            nudSecondaryObjectivesCompB1.Value = pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB2.Value = pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB3.Value = pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB4.Value = pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB5.Value = pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB6.Value = pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB7.Value = pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB8.Value = pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB9.Value = pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB10.Value = pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB11.Value = pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB12.Value = pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted;
-            nudSecondaryObjectivesCompB13.Value = pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted;
+            for (int i = 0; i < pilot.ListOfBattles.BattlesList.Count; i++)
+            {
+                List<bool> battleSecondaryObjectives = new List<bool>();
+                foreach (SecondaryObjectives so in Enum.GetValues(typeof(SecondaryObjectives)))
+                {
+                    SecondaryObjectives secondaryObjectives = (SecondaryObjectives)pilot.ListOfBattles.BattlesList[i].SecondaryObjectivesCompleted;
+                    battleSecondaryObjectives.Add((secondaryObjectives & so) == so);
 
-            nudBonusObjectivesCompB1.Value = pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB2.Value = pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB3.Value = pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB4.Value = pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB5.Value = pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB6.Value = pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB7.Value = pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB8.Value = pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB9.Value = pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB10.Value = pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB11.Value = pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB12.Value = pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted;
-            nudBonusObjectivesCompB13.Value = pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted;
+                }
+
+                for (int j = 0; j < secondaryObjectiveList[i].Items.Count; j++)
+                {
+                    if (battleSecondaryObjectives[j])
+                    {
+                        secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Checked);
+                    }
+                    else
+                    {
+                        secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Unchecked);
+                    }
+                }
+            }
+
+            for (int i = 0; i < pilot.ListOfBattles.BattlesList.Count; i++)
+            {
+                List<bool> battleBonusObjectives = new List<bool>();
+                foreach (BonusObjectives bo in Enum.GetValues(typeof(BonusObjectives)))
+                {
+                    BonusObjectives bonusObjectives = (BonusObjectives)pilot.ListOfBattles.BattlesList[i].BonusObjectivesCompleted;
+                    battleBonusObjectives.Add((bonusObjectives & bo) == bo);
+
+                }
+
+                for (int j = 0; j < bonusObjectiveList[i].Items.Count; j++)
+                {
+                    if (battleBonusObjectives[j])
+                    {
+                        bonusObjectiveList[i].SetItemCheckState(j, CheckState.Checked);
+                    }
+                    else
+                    {
+                        bonusObjectiveList[i].SetItemCheckState(j, CheckState.Unchecked);
+                    }
+                }
+            }
 
             lblTotalScoreB1.Text = pilot.ListOfBattles.BattlesList[0].TotalScore.ToString();
             lblTotalScoreB2.Text = pilot.ListOfBattles.BattlesList[1].TotalScore.ToString();
@@ -268,7 +406,7 @@ namespace TIE_Fighter_Pilot_Editor
             {
                 lblLaserPercent.Text = "(" + (int)((nudLaserHits.Value / nudLaserFired.Value) * 100) + "%)";
             }
-            else 
+            else
             {
                 lblLaserPercent.Text = "(0%)";
             }
@@ -352,7 +490,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Pilot Status Tab
-
+        //--------------------------------------------------------------------
         private void comHealth_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.PltHealth = (Health)comHealth.SelectedItem;
@@ -399,7 +537,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Fighter
-
+        //--------------------------------------------------------------------
         //These update the mission score when the value is changed
         private void nudHistCombatPointsTFM1_ValueChanged(object sender, EventArgs e)
         {
@@ -465,7 +603,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Interceptor
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTIM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[1].MissionScore[0] = (uint)nudHistCombatPointsTIM1.Value;
@@ -528,7 +666,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Bomber
-        
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTBM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[2].MissionScore[0] = (uint)nudHistCombatPointsTBM1.Value;
@@ -591,7 +729,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Advanced
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTAM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[3].MissionScore[0] = (uint)nudHistCombatPointsTAM1.Value;
@@ -654,7 +792,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Assault Gunboat
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsAGM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[4].MissionScore[0] = (uint)nudHistCombatPointsAGM1.Value;
@@ -693,8 +831,8 @@ namespace TIE_Fighter_Pilot_Editor
         private void nudHistCombatPointsAGM4_Enter(object sender, EventArgs e)
         {
             nudHistCombatPointsAGM4.Select(0, nudHistCombatPointsAGM4.Text.Length);
-        }        
-        
+        }
+
         private void cbHistCombatCompAGM1_CheckedChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[4].MissionComplete[0] = cbHistCombatCompAGM1.Checked;
@@ -717,7 +855,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //TIE Defender
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsTDM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[5].MissionScore[0] = (uint)nudHistCombatPointsTDM1.Value;
@@ -780,7 +918,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Missile Boat
-
+        //--------------------------------------------------------------------
         private void nudHistCombatPointsMBM1_ValueChanged(object sender, EventArgs e)
         {
             pilot.HistoricCombatRecordList[6].MissionScore[0] = (uint)nudHistCombatPointsMBM1.Value;
@@ -843,7 +981,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle Stats
-
+        //--------------------------------------------------------------------
         private void nudLaserHits_ValueChanged(object sender, EventArgs e)
         {
             pilot.BattleStats.LaserCraftHits = (uint)nudLaserHits.Value;
@@ -920,10 +1058,9 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         //Battle Status
-
         //--------------------------------------------------------------------
         //Battle 1
-
+        //--------------------------------------------------------------------
         private void comStatusB1_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[0].Status = (BattleStatus)comStatusB1.SelectedItem;
@@ -935,29 +1072,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[0].LastMissionCompleted = (int)nudLastMissionCompB1.Value;
         }
 
-        private void nudSecondaryObjCompB1_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB1.Value;
-        }
-
-        private void nudBonusObjCompB1_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB1.Value;
-        }
-
         private void nudLastMissionCompB1_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB1.Select(0, nudLastMissionCompB1.Text.Length);
-        }
-
-        private void nudSecondaryObjCompB1_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB1.Select(0, nudSecondaryObjectivesCompB1.Text.Length);
-        }
-
-        private void nudBonusObjCompB1_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB1.Select(0, nudBonusObjectivesCompB1.Text.Length);
         }
 
         private void gvBattle1Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -966,9 +1083,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB1.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB1.SelectedIndex);  // (2) ...but we only want this to happen on an explicit selection.
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[0].SecondaryObjectivesCompleted = 0;    // (4) ...and overwrite any selection with no selection here.
+            }
+        }
+
+        private void clbBonusObjectiveB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB1.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB1.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[0].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 2
-
+        //--------------------------------------------------------------------
         private void comStatusB2_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[1].Status = (BattleStatus)comStatusB2.SelectedItem;
@@ -980,41 +1123,46 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[1].LastMissionCompleted = (int)nudLastMissionCompB2.Value;
         }
 
-        private void nudSecondaryObjectivesCompB2_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB2.Value;
-        }
-
-        private void nudBonusObjectivesCompB2_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB2.Value;
-        }
-
         private void nudLastMissionCompB2_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB2.Select(0, nudLastMissionCompB2.Text.Length);
         }
 
-        private void nudSecondaryObjectivesCompB2_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB2.Select(0, nudSecondaryObjectivesCompB2.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB2_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB2.Select(0, nudBonusObjectivesCompB2.Text.Length);
-        }
-        
         private void gvBattle2Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             pilot.ListOfBattles.BattlesList[1].UpdateBattleTotalScore(5);
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB2.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB2.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB2.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB2.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted = 0;
+            }
+        }
 
         //--------------------------------------------------------------------
         //Battle 3
-
+        //--------------------------------------------------------------------
         private void comStatusB3_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[2].Status = (BattleStatus)comStatusB3.SelectedItem;
@@ -1026,40 +1174,46 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[2].LastMissionCompleted = (int)nudLastMissionCompB3.Value;
         }
 
-        private void nudSecondaryObjectivesCompB3_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB3.Value;
-        }
-
-        private void nudBonusObjectivesCompB3_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB3.Value;
-        }
-
         private void nudLastMissionCompB3_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB3.Select(0, nudLastMissionCompB3.Text.Length);
         }
 
-        private void nudSecondaryObjectivesCompB3_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB3.Select(0, nudSecondaryObjectivesCompB3.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB3_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB3.Select(0, nudBonusObjectivesCompB3.Text.Length);
-        }        
-        
         private void gvBattle3Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             pilot.ListOfBattles.BattlesList[2].UpdateBattleTotalScore(6);
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB3.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB3.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB3.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB3.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 4
-
+        //--------------------------------------------------------------------
         private void comStatusB4_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[3].Status = (BattleStatus)comStatusB4.SelectedItem;
@@ -1071,29 +1225,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[3].LastMissionCompleted = (int)nudLastMissionCompB4.Value;
         }
 
-        private void nudSecondaryObjectivesCompB4_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB4.Value;
-        }
-
-        private void nudBonusObjectivesCompB4_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB4.Value;
-        }
-
         private void nudLastMissionCompB4_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB4.Select(0, nudLastMissionCompB4.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB4_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB4.Select(0, nudSecondaryObjectivesCompB4.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB4_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB4.Select(0, nudBonusObjectivesCompB4.Text.Length);
         }
 
         private void gvBattle4Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1102,9 +1236,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB4.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB4.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB4.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB4.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 5
-
+        //--------------------------------------------------------------------
         private void comStatusB5_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[4].Status = (BattleStatus)comStatusB5.SelectedItem;
@@ -1116,29 +1276,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[4].LastMissionCompleted = (int)nudLastMissionCompB5.Value;
         }
 
-        private void nudSecondaryObjectivesCompB5_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB5.Value;
-        }
-
-        private void nudBonusObjectivesCompB5_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB5.Value;
-        }
-
         private void nudLastMissionCompB5_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB5.Select(0, nudLastMissionCompB5.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB5_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB5.Select(0, nudSecondaryObjectivesCompB5.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB5_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB5.Select(0, nudBonusObjectivesCompB5.Text.Length);
         }
 
         private void gvBattle5Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1147,9 +1287,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB5.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB5.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB5.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB5.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 6
-
+        //--------------------------------------------------------------------
         private void comStatusB6_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[5].Status = (BattleStatus)comStatusB6.SelectedItem;
@@ -1161,29 +1327,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[5].LastMissionCompleted = (int)nudLastMissionCompB6.Value;
         }
 
-        private void nudSecondaryObjectivesCompB6_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB6.Value;
-        }
-
-        private void nudBonusObjectivesCompB6_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB6.Value;
-        }
-
         private void nudLastMissionCompB6_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB6.Select(0, nudLastMissionCompB6.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB6_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB6.Select(0, nudSecondaryObjectivesCompB6.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB6_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB6.Select(0, nudBonusObjectivesCompB6.Text.Length);
         }
 
         private void gvBattle6Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1192,9 +1338,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB6.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB6.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB6.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB6.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 7
-
+        //--------------------------------------------------------------------
         private void comStatusB7_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[6].Status = (BattleStatus)comStatusB7.SelectedItem;
@@ -1206,29 +1378,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[6].LastMissionCompleted = (int)nudLastMissionCompB7.Value;
         }
 
-        private void nudSecondaryObjectivesCompB7_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB7.Value;
-        }
-
-        private void nudBonusObjectivesCompB7_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB7.Value;
-        }
-
         private void nudLastMissionCompB7_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB7.Select(0, nudLastMissionCompB7.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB7_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB7.Select(0, nudSecondaryObjectivesCompB7.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB7_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB7.Select(0, nudBonusObjectivesCompB7.Text.Length);
         }
 
         private void gvBattle7Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1237,9 +1389,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB7.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB7.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB7.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB7.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 8
-
+        //--------------------------------------------------------------------
         private void comStatusB8_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[7].Status = (BattleStatus)comStatusB8.SelectedItem;
@@ -1251,29 +1429,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[7].LastMissionCompleted = (int)nudLastMissionCompB8.Value;
         }
 
-        private void nudSecondaryObjectivesCompB8_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB8.Value;
-        }
-
-        private void nudBonusObjectivesCompB8_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB8.Value;
-        }
-
         private void nudLastMissionCompB8_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB8.Select(0, nudLastMissionCompB8.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB8_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB8.Select(0, nudSecondaryObjectivesCompB8.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB8_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB8.Select(0, nudBonusObjectivesCompB8.Text.Length);
         }
 
         private void gvBattle8Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1282,9 +1440,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB8.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB8.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB8.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB8.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 9
-
+        //--------------------------------------------------------------------
         private void comStatusB9_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[8].Status = (BattleStatus)comStatusB9.SelectedItem;
@@ -1296,29 +1480,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[8].LastMissionCompleted = (int)nudLastMissionCompB9.Value;
         }
 
-        private void nudSecondaryObjectivesCompB9_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB9.Value;
-        }
-
-        private void nudBonusObjectivesCompB9_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB9.Value;
-        }
-
         private void nudLastMissionCompB9_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB9.Select(0, nudLastMissionCompB9.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB9_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB9.Select(0, nudSecondaryObjectivesCompB9.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB9_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB9.Select(0, nudBonusObjectivesCompB9.Text.Length);
         }
 
         private void gvBattle9Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1327,9 +1491,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB9.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB9.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB9.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB9.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 10
-
+        //--------------------------------------------------------------------
         private void comStatusB10_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[9].Status = (BattleStatus)comStatusB10.SelectedItem;
@@ -1341,29 +1531,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[9].LastMissionCompleted = (int)nudLastMissionCompB10.Value;
         }
 
-        private void nudSecondaryObjectivesCompB10_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB10.Value;
-        }
-
-        private void nudBonusObjectivesCompB10_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB10.Value;
-        }
-
         private void nudLastMissionCompB10_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB10.Select(0, nudLastMissionCompB10.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB10_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB10.Select(0, nudSecondaryObjectivesCompB10.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB10_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB10.Select(0, nudBonusObjectivesCompB10.Text.Length);
         }
 
         private void gvBattle10Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1372,9 +1542,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB10.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB10.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB10.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB10.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 11
-
+        //--------------------------------------------------------------------
         private void comStatusB11_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[10].Status = (BattleStatus)comStatusB11.SelectedItem;
@@ -1386,29 +1582,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[10].LastMissionCompleted = (int)nudLastMissionCompB11.Value;
         }
 
-        private void nudSecondaryObjectivesCompB11_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB11.Value;
-        }
-
-        private void nudBonusObjectivesCompB11_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB11.Value;
-        }
-
         private void nudLastMissionCompB11_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB11.Select(0, nudLastMissionCompB11.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB11_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB11.Select(0, nudSecondaryObjectivesCompB11.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB11_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB11.Select(0, nudBonusObjectivesCompB11.Text.Length);
         }
 
         private void gvBattle11Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1417,9 +1593,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB11.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB11.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB11.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB11.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 12
-
+        //--------------------------------------------------------------------
         private void comStatusB12_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[11].Status = (BattleStatus)comStatusB12.SelectedItem;
@@ -1431,29 +1633,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[11].LastMissionCompleted = (int)nudLastMissionCompB12.Value;
         }
 
-        private void nudSecondaryObjectivesCompB12_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB12.Value;
-        }
-
-        private void nudBonusObjectivesCompB12_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB12.Value;
-        }
-
         private void nudLastMissionCompB12_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB12.Select(0, nudLastMissionCompB12.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB12_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB12.Select(0, nudSecondaryObjectivesCompB12.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB12_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB12.Select(0, nudBonusObjectivesCompB12.Text.Length);
         }
 
         private void gvBattle12Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1462,9 +1644,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB12.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB12.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB12.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB12.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 13
-
+        //--------------------------------------------------------------------
         private void comStatusB13_SelectedIndexChanged(object sender, EventArgs e)
         {
             pilot.ListOfBattles.BattlesList[12].Status = (BattleStatus)comStatusB13.SelectedItem;
@@ -1476,29 +1684,9 @@ namespace TIE_Fighter_Pilot_Editor
             pilot.ListOfBattles.BattlesList[12].LastMissionCompleted = (int)nudLastMissionCompB13.Value;
         }
 
-        private void nudSecondaryObjectivesCompB13_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted = (byte)nudSecondaryObjectivesCompB13.Value;
-        }
-
-        private void nudBonusObjectivesCompB13_ValueChanged(object sender, EventArgs e)
-        {
-            pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted = (byte)nudBonusObjectivesCompB13.Value;
-        }
-
         private void nudLastMissionCompB13_Enter(object sender, EventArgs e)
         {
             nudLastMissionCompB13.Select(0, nudLastMissionCompB13.Text.Length);
-        }
-
-        private void nudSecondaryObjectivesCompB13_Enter(object sender, EventArgs e)
-        {
-            nudSecondaryObjectivesCompB13.Select(0, nudSecondaryObjectivesCompB13.Text.Length);
-        }
-
-        private void nudBonusObjectivesCompB13_Enter(object sender, EventArgs e)
-        {
-            nudBonusObjectivesCompB13.Select(0, nudBonusObjectivesCompB13.Text.Length);
         }
 
         private void gvBattle13Scores_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1507,9 +1695,35 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB13_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB13.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB13.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB13_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB13.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB13.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         // Validate data entry in gvTraining
-
+        //--------------------------------------------------------------------
         private void gvTraining_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             string headerText = gvTraining.Columns[e.ColumnIndex].HeaderText;
@@ -1523,7 +1737,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvTraining.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                         gvTraining.CurrentCell.Value = 0;
                     }
@@ -1538,7 +1756,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         // Validate data entry in gvBattleVictories
-
+        //--------------------------------------------------------------------
         private void gvBattleVictories_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             string headerText = gvBattleVictories.Columns[e.ColumnIndex].HeaderText;
@@ -1552,7 +1770,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattleVictories.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1566,7 +1788,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         //--------------------------------------------------------------------
         // Validate data entry in gvBattleXScores
-
+        //--------------------------------------------------------------------
         private void gvBattle1Scores_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             string headerText = gvBattle1Scores.Columns[e.ColumnIndex].HeaderText;
@@ -1580,7 +1802,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle1Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1605,7 +1831,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle2Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1630,7 +1860,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle3Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1655,7 +1889,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle4Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1680,7 +1918,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle5Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1705,7 +1947,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle6Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1730,7 +1976,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle7Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1755,7 +2005,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle8Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1780,7 +2034,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle9Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1805,7 +2063,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle10Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1830,7 +2092,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle11Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1855,7 +2121,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle12Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1880,7 +2150,11 @@ namespace TIE_Fighter_Pilot_Editor
                     if (!int.TryParse(e.FormattedValue.ToString(), out newInteger) || newInteger < 0 || newInteger > maxValue)
                     {
                         gvBattle13Scores.Rows[e.RowIndex].ErrorText = string.Format("Please enter a numeric value between 0 and {0}. Press Esc to clear.", maxValue);
-                        if (validationPopUp) MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        if (validationPopUp)
+                        {
+                            MessageBox.Show("Please enter a numeric value between 0 and " + maxValue + ". After clicking on OK, Press Esc to clear the cell.");
+                        }
+
                         e.Cancel = true;
                     }
                 }
@@ -1892,8 +2166,9 @@ namespace TIE_Fighter_Pilot_Editor
             gvBattle13Scores.Rows[e.RowIndex].ErrorText = string.Empty;
         }
 
+        //--------------------------------------------------------------------
         //Validation Pop-up Toggle
-
+        //--------------------------------------------------------------------
         private void cbValidationToggle_CheckedChanged(object sender, EventArgs e)
         {
             validationPopUp = cbValidationToggle.Checked;

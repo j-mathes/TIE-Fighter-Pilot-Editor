@@ -7,7 +7,7 @@ namespace TIE_Fighter_Pilot_Editor
         public NPCShipType VictoryNPC { get; set; }
         public ushort Victories { get; set; }
 
-        public PlayerBattleVictories (NPCShipType victoryNPC)
+        public PlayerBattleVictories(NPCShipType victoryNPC)
         {
             VictoryNPC = victoryNPC;
             Victories = 0;

@@ -21,7 +21,7 @@ namespace TIE_Fighter_Pilot_Editor
         public BattleStats BattleStats;
         public ListOfBattles ListOfBattles;
 
-        private int totalBattles = 13;
+        private readonly int totalBattles = 13;
 
         public Pilot() // all values should be initialized here before a pilot file is loaded
         {
@@ -146,7 +146,7 @@ namespace TIE_Fighter_Pilot_Editor
             // Write Training Record data
             foreach (FlyableShipType playerShip in Enum.GetValues(typeof(FlyableShipType)))
             {
-                TrainingRecordList[(int)playerShip].WriteData(playerShip, bytes); 
+                TrainingRecordList[(int)playerShip].WriteData(playerShip, bytes);
             }
 
             // Write Historic Combat Record data
