@@ -16,25 +16,22 @@ namespace TIE_Fighter_Pilot_Editor
         // Dictionaries containing grid view header names and their max values.
         // Used for cell validation
 
-        Dictionary<string, int> gvTrainingMaxValueByHeaderTextDict
+        readonly Dictionary<string, int> gvTrainingMaxValueByHeaderTextDict
         = new Dictionary<string, int>() {
             { "NextTrainingLevel", 21 },
             { "TrainingScore", 2046820351 },
             { "TrainingLevelComp", 20 }
         };
-
-        Dictionary<string, int> gvBattleVictoriesMaxValueByHeaderTextDict
+        readonly Dictionary<string, int> gvBattleVictoriesMaxValueByHeaderTextDict
         = new Dictionary<string, int>() {
             { "Victories", 65535 }
         };
-
-        Dictionary<string, int> gvBattleScoresMaxValueByHeaderTextDict
+        readonly Dictionary<string, int> gvBattleScoresMaxValueByHeaderTextDict
         = new Dictionary<string, int>() {
             { "MissionScore", 65535 }
         };
-
-        List<CheckedListBox> secondaryObjectiveList;
-        List<CheckedListBox> bonusObjectiveList;
+        readonly List<CheckedListBox> secondaryObjectiveList;
+        readonly List<CheckedListBox> bonusObjectiveList;
 
         public Form1()
         {
@@ -42,12 +39,12 @@ namespace TIE_Fighter_Pilot_Editor
 
             pilot = new Pilot();
             bytes = new byte[3856]; // First 1928 bytes are for active pilot.  Last 1928 bytes are for backup pilot data
-            
+
             for (int i = 0; i < bytes.Length; i++)
             {
                 bytes[i] = 0x00;
             }
-            
+
             secondaryObjectiveList = new List<CheckedListBox>()
             {
                 clbSecondaryObjectiveB1,
@@ -105,14 +102,14 @@ namespace TIE_Fighter_Pilot_Editor
             comStatusB11.DataSource = Enum.GetValues(typeof(BattleStatus));
             comStatusB12.DataSource = Enum.GetValues(typeof(BattleStatus));
             comStatusB13.DataSource = Enum.GetValues(typeof(BattleStatus));
-            
-            foreach (var item in secondaryObjectiveList)
+
+            foreach (CheckedListBox item in secondaryObjectiveList)
             {
                 item.DataSource = Enum.GetValues(typeof(SecondaryObjectives));  // (1) This automatically selects the first item, and triggers SelectedIndexChanged...
                 item.ClearSelected();                                           // (3) So we clear the selection here...
             }
-            
-            foreach (var item in bonusObjectiveList)
+
+            foreach (CheckedListBox item in bonusObjectiveList)
             {
                 item.DataSource = Enum.GetValues(typeof(BonusObjectives));
                 item.ClearSelected();
@@ -186,7 +183,7 @@ namespace TIE_Fighter_Pilot_Editor
         private SecondaryObjectives GetSecondaryObjectiveEnum(int index)
         {
             SecondaryObjectives value;
-            
+
             switch (index)
             {
                 case 0:
@@ -341,7 +338,7 @@ namespace TIE_Fighter_Pilot_Editor
             for (int i = 0; i < pilot.ListOfBattles.BattlesList.Count; i++)
             {
                 List<bool> battleSecondaryObjectives = new List<bool>();
-                foreach (SecondaryObjectives so in Enum.GetValues(typeof(SecondaryObjectives))) 
+                foreach (SecondaryObjectives so in Enum.GetValues(typeof(SecondaryObjectives)))
                 {
                     SecondaryObjectives secondaryObjectives = (SecondaryObjectives)pilot.ListOfBattles.BattlesList[i].SecondaryObjectivesCompleted;
                     battleSecondaryObjectives.Add((secondaryObjectives & so) == so);
@@ -352,11 +349,11 @@ namespace TIE_Fighter_Pilot_Editor
                 {
                     if (battleSecondaryObjectives[j])
                     {
-                    secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Checked);
+                        secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Checked);
                     }
                     else
                     {
-                    secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Unchecked);
+                        secondaryObjectiveList[i].SetItemCheckState(j, CheckState.Unchecked);
                     }
                 }
             }
