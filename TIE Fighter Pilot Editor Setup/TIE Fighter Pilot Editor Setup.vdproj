@@ -176,7 +176,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_C38EB32BA6454A7A8317C26649094CC3"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -214,7 +214,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TIE Fighter Pilot Editor"
         "ProductCode" = "8:{50675136-656D-40A2-A595-4E4DADE0AE4A}"
-        "PackageCode" = "8:{4840834E-AB9B-4A37-AF39-F16B1EDA48ED}"
+        "PackageCode" = "8:{F8DE2EB1-2344-48F9-983A-236EAA5481C2}"
         "UpgradeCode" = "8:{103FF2C2-C984-47A2-BFEC-41AA03360CDA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -222,12 +222,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:RetroTek"
+        "Manufacturer" = "8:JMathes"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:TIE Fighter Pilot Editor Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:RetroTek"
+        "ARPCONTACT" = "8:JMathes"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -444,7 +444,7 @@
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:2"
-                            "Value" = "8:(C) 2015 RetroTek"
+                            "Value" = "8:(C) 2022 JMathes"
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -690,7 +690,7 @@
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:2"
-                            "Value" = "8:(C) 2015 RetroTek"
+                            "Value" = "8:(C) 2022 JMathes"
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -763,7 +763,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1D8FED81967C4F4BB2BE7EFCCE3F86FB"
             {
-            "SourcePath" = "8:..\\TIE Fighter Pilot Editor\\obj\\Debug\\TIE Fighter Pilot Editor.exe"
+            "SourcePath" = "8:..\\TIE Fighter Pilot Editor\\obj\\Release\\TIE Fighter Pilot Editor.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C38EB32BA6454A7A8317C26649094CC3"
