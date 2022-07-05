@@ -56,6 +56,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -155,7 +163,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_0CD66E52F8B644BBAE5E9D0E83F68880"
                     {
-                    "Name" = "8:RetroTek"
+                    "Name" = "8:J-Mathes"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -755,7 +763,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1D8FED81967C4F4BB2BE7EFCCE3F86FB"
             {
-            "SourcePath" = "8:..\\TIE Fighter Pilot Editor\\obj\\Release\\TIE Fighter Pilot Editor.exe"
+            "SourcePath" = "8:..\\TIE Fighter Pilot Editor\\obj\\Debug\\TIE Fighter Pilot Editor.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C38EB32BA6454A7A8317C26649094CC3"

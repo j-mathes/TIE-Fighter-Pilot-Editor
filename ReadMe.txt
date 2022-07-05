@@ -1,4 +1,4 @@
-TIE Fighter Pilot Editor v1.0 2015-08-28
+TIE Fighter Pilot Editor v1.1 2022-07-04
 
-(C) 2015 RetroTek
+(C) 2022 https://github.com/j-mathes/TIE-Fighter-Pilot-Editor
 

@@ -176,8 +176,7 @@ namespace TIE_Fighter_Pilot_Editor
 
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
-            //#TODO Update version
-            MessageBox.Show("TIE Fighter Pilot Editor v1.0" + Environment.NewLine + Environment.NewLine + "email: retrotek@shaw.ca", "About TIE Fighter Pilot Editor");
+            MessageBox.Show("TIE Fighter Pilot Editor v1.1" + Environment.NewLine + Environment.NewLine + "https://github.com/j-mathes/TIE-Fighter-Pilot-Editor", "About TIE Fighter Pilot Editor");
         }
 
         private SecondaryObjectives GetSecondaryObjectiveEnum(int index)
