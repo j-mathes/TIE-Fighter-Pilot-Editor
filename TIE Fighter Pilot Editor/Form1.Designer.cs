@@ -2780,6 +2780,7 @@
             this.clbBonusObjectiveB2.Name = "clbBonusObjectiveB2";
             this.clbBonusObjectiveB2.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB2.TabIndex = 14;
+            this.clbBonusObjectiveB2.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB2_SelectedIndexChanged);
             // 
             // label93
             // 
@@ -2805,6 +2806,7 @@
             this.clbSecondaryObjectiveB2.Name = "clbSecondaryObjectiveB2";
             this.clbSecondaryObjectiveB2.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB2.TabIndex = 11;
+            this.clbSecondaryObjectiveB2.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB2_SelectedIndexChanged);
             // 
             // gvBattle2Scores
             // 
@@ -2925,6 +2927,7 @@
             this.clbBonusObjectiveB3.Name = "clbBonusObjectiveB3";
             this.clbBonusObjectiveB3.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB3.TabIndex = 14;
+            this.clbBonusObjectiveB3.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB3_SelectedIndexChanged);
             // 
             // label107
             // 
@@ -2950,6 +2953,7 @@
             this.clbSecondaryObjectiveB3.Name = "clbSecondaryObjectiveB3";
             this.clbSecondaryObjectiveB3.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB3.TabIndex = 11;
+            this.clbSecondaryObjectiveB3.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB3_SelectedIndexChanged);
             // 
             // gvBattle3Scores
             // 
@@ -3070,6 +3074,7 @@
             this.clbBonusObjectiveB4.Name = "clbBonusObjectiveB4";
             this.clbBonusObjectiveB4.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB4.TabIndex = 14;
+            this.clbBonusObjectiveB4.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB4_SelectedIndexChanged);
             // 
             // label121
             // 
@@ -3095,6 +3100,7 @@
             this.clbSecondaryObjectiveB4.Name = "clbSecondaryObjectiveB4";
             this.clbSecondaryObjectiveB4.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB4.TabIndex = 11;
+            this.clbSecondaryObjectiveB4.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB4_SelectedIndexChanged);
             // 
             // gvBattle4Scores
             // 
@@ -3215,6 +3221,7 @@
             this.clbBonusObjectiveB5.Name = "clbBonusObjectiveB5";
             this.clbBonusObjectiveB5.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB5.TabIndex = 14;
+            this.clbBonusObjectiveB5.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB5_SelectedIndexChanged);
             // 
             // label135
             // 
@@ -3240,6 +3247,7 @@
             this.clbSecondaryObjectiveB5.Name = "clbSecondaryObjectiveB5";
             this.clbSecondaryObjectiveB5.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB5.TabIndex = 11;
+            this.clbSecondaryObjectiveB5.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB5_SelectedIndexChanged);
             // 
             // gvBattle5Scores
             // 
@@ -3360,6 +3368,7 @@
             this.clbBonusObjectiveB6.Name = "clbBonusObjectiveB6";
             this.clbBonusObjectiveB6.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB6.TabIndex = 14;
+            this.clbBonusObjectiveB6.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB6_SelectedIndexChanged);
             // 
             // label149
             // 
@@ -3385,6 +3394,7 @@
             this.clbSecondaryObjectiveB6.Name = "clbSecondaryObjectiveB6";
             this.clbSecondaryObjectiveB6.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB6.TabIndex = 11;
+            this.clbSecondaryObjectiveB6.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB6_SelectedIndexChanged);
             // 
             // gvBattle6Scores
             // 
@@ -3505,6 +3515,7 @@
             this.clbBonusObjectiveB7.Name = "clbBonusObjectiveB7";
             this.clbBonusObjectiveB7.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB7.TabIndex = 14;
+            this.clbBonusObjectiveB7.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB7_SelectedIndexChanged);
             // 
             // label163
             // 
@@ -3530,6 +3541,7 @@
             this.clbSecondaryObjectiveB7.Name = "clbSecondaryObjectiveB7";
             this.clbSecondaryObjectiveB7.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB7.TabIndex = 11;
+            this.clbSecondaryObjectiveB7.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB7_SelectedIndexChanged);
             // 
             // gvBattle7Scores
             // 
@@ -3650,6 +3662,7 @@
             this.clbBonusObjectiveB8.Name = "clbBonusObjectiveB8";
             this.clbBonusObjectiveB8.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB8.TabIndex = 14;
+            this.clbBonusObjectiveB8.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB8_SelectedIndexChanged);
             // 
             // label165
             // 
@@ -3675,6 +3688,7 @@
             this.clbSecondaryObjectiveB8.Name = "clbSecondaryObjectiveB8";
             this.clbSecondaryObjectiveB8.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB8.TabIndex = 11;
+            this.clbSecondaryObjectiveB8.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB8_SelectedIndexChanged);
             // 
             // gvBattle8Scores
             // 
@@ -3795,6 +3809,7 @@
             this.clbBonusObjectiveB9.Name = "clbBonusObjectiveB9";
             this.clbBonusObjectiveB9.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB9.TabIndex = 14;
+            this.clbBonusObjectiveB9.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB9_SelectedIndexChanged);
             // 
             // label167
             // 
@@ -3820,6 +3835,7 @@
             this.clbSecondaryObjectiveB9.Name = "clbSecondaryObjectiveB9";
             this.clbSecondaryObjectiveB9.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB9.TabIndex = 11;
+            this.clbSecondaryObjectiveB9.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB9_SelectedIndexChanged);
             // 
             // gvBattle9Scores
             // 
@@ -3940,6 +3956,7 @@
             this.clbBonusObjectiveB10.Name = "clbBonusObjectiveB10";
             this.clbBonusObjectiveB10.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB10.TabIndex = 14;
+            this.clbBonusObjectiveB10.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB10_SelectedIndexChanged);
             // 
             // label169
             // 
@@ -3965,6 +3982,7 @@
             this.clbSecondaryObjectiveB10.Name = "clbSecondaryObjectiveB10";
             this.clbSecondaryObjectiveB10.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB10.TabIndex = 11;
+            this.clbSecondaryObjectiveB10.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB10_SelectedIndexChanged);
             // 
             // gvBattle10Scores
             // 
@@ -4085,6 +4103,7 @@
             this.clbBonusObjectiveB11.Name = "clbBonusObjectiveB11";
             this.clbBonusObjectiveB11.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB11.TabIndex = 14;
+            this.clbBonusObjectiveB11.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB11_SelectedIndexChanged);
             // 
             // label171
             // 
@@ -4110,6 +4129,7 @@
             this.clbSecondaryObjectiveB11.Name = "clbSecondaryObjectiveB11";
             this.clbSecondaryObjectiveB11.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB11.TabIndex = 11;
+            this.clbSecondaryObjectiveB11.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB11_SelectedIndexChanged);
             // 
             // gvBattle11Scores
             // 
@@ -4230,6 +4250,7 @@
             this.clbBonusObjectiveB12.Name = "clbBonusObjectiveB12";
             this.clbBonusObjectiveB12.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB12.TabIndex = 14;
+            this.clbBonusObjectiveB12.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB12_SelectedIndexChanged);
             // 
             // label173
             // 
@@ -4255,6 +4276,7 @@
             this.clbSecondaryObjectiveB12.Name = "clbSecondaryObjectiveB12";
             this.clbSecondaryObjectiveB12.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB12.TabIndex = 11;
+            this.clbSecondaryObjectiveB12.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB12_SelectedIndexChanged);
             // 
             // gvBattle12Scores
             // 
@@ -4375,6 +4397,7 @@
             this.clbBonusObjectiveB13.Name = "clbBonusObjectiveB13";
             this.clbBonusObjectiveB13.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB13.TabIndex = 14;
+            this.clbBonusObjectiveB13.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB13_SelectedIndexChanged);
             // 
             // label175
             // 
@@ -4400,6 +4423,7 @@
             this.clbSecondaryObjectiveB13.Name = "clbSecondaryObjectiveB13";
             this.clbSecondaryObjectiveB13.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB13.TabIndex = 11;
+            this.clbSecondaryObjectiveB13.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB13_SelectedIndexChanged);
             // 
             // gvBattle13Scores
             // 

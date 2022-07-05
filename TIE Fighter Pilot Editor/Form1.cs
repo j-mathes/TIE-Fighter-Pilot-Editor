@@ -1087,7 +1087,7 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
-        private void clbSecondaryObjectiveB1_SelectedIndexChanged(object sender, EventArgs e)   //#TODO Test changes read and write properly
+        private void clbSecondaryObjectiveB1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selected = clbSecondaryObjectiveB1.SelectedIndex;
             if (selected != -1)
@@ -1138,6 +1138,31 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB2.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB2.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[1].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB2.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB2.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[1].BonusObjectivesCompleted = 0;
+            }
+        }
 
         //--------------------------------------------------------------------
         //Battle 3
@@ -1162,6 +1187,32 @@ namespace TIE_Fighter_Pilot_Editor
         {
             pilot.ListOfBattles.BattlesList[2].UpdateBattleTotalScore(6);
             UpdateForm();
+        }
+
+        private void clbSecondaryObjectiveB3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB3.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB3.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[2].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB3.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB3.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[2].BonusObjectivesCompleted = 0;
+            }
         }
 
         //--------------------------------------------------------------------
@@ -1189,6 +1240,32 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB4.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB4.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[3].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB4.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB4.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[3].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 5
         //--------------------------------------------------------------------
@@ -1212,6 +1289,32 @@ namespace TIE_Fighter_Pilot_Editor
         {
             pilot.ListOfBattles.BattlesList[4].UpdateBattleTotalScore(5);
             UpdateForm();
+        }
+
+        private void clbSecondaryObjectiveB5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB5.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB5.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[4].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB5.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB5.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[4].BonusObjectivesCompleted = 0;
+            }
         }
 
         //--------------------------------------------------------------------
@@ -1239,6 +1342,32 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB6.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB6.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[5].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB6.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB6.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[5].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 7
         //--------------------------------------------------------------------
@@ -1262,6 +1391,32 @@ namespace TIE_Fighter_Pilot_Editor
         {
             pilot.ListOfBattles.BattlesList[6].UpdateBattleTotalScore(5);
             UpdateForm();
+        }
+
+        private void clbSecondaryObjectiveB7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB7.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB7.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[6].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB7.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB7.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[6].BonusObjectivesCompleted = 0;
+            }
         }
 
         //--------------------------------------------------------------------
@@ -1289,6 +1444,32 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB8.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB8.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[7].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB8.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB8.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[7].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 9
         //--------------------------------------------------------------------
@@ -1312,6 +1493,32 @@ namespace TIE_Fighter_Pilot_Editor
         {
             pilot.ListOfBattles.BattlesList[8].UpdateBattleTotalScore(6);
             UpdateForm();
+        }
+
+        private void clbSecondaryObjectiveB9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB9.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB9.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[8].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB9.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB9.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[8].BonusObjectivesCompleted = 0;
+            }
         }
 
         //--------------------------------------------------------------------
@@ -1339,6 +1546,32 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB10.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB10.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[9].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB10.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB10.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[9].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 11
         //--------------------------------------------------------------------
@@ -1362,6 +1595,32 @@ namespace TIE_Fighter_Pilot_Editor
         {
             pilot.ListOfBattles.BattlesList[10].UpdateBattleTotalScore(7);
             UpdateForm();
+        }
+
+        private void clbSecondaryObjectiveB11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB11.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB11.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[10].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB11.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB11.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[10].BonusObjectivesCompleted = 0;
+            }
         }
 
         //--------------------------------------------------------------------
@@ -1389,6 +1648,32 @@ namespace TIE_Fighter_Pilot_Editor
             UpdateForm();
         }
 
+        private void clbSecondaryObjectiveB12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB12.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB12.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[11].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB12.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB12.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[11].BonusObjectivesCompleted = 0;
+            }
+        }
+
         //--------------------------------------------------------------------
         //Battle 13
         //--------------------------------------------------------------------
@@ -1412,6 +1697,32 @@ namespace TIE_Fighter_Pilot_Editor
         {
             pilot.ListOfBattles.BattlesList[12].UpdateBattleTotalScore(8);
             UpdateForm();
+        }
+
+        private void clbSecondaryObjectiveB13_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbSecondaryObjectiveB13.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted |= (byte)GetSecondaryObjectiveEnum(clbSecondaryObjectiveB13.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[12].SecondaryObjectivesCompleted = 0;
+            }
+        }
+
+        private void clbBonusObjectiveB13_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selected = clbBonusObjectiveB13.SelectedIndex;
+            if (selected != -1)
+            {
+                pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted |= (byte)GetBonusObjectiveEnum(clbBonusObjectiveB13.SelectedIndex);
+            }
+            else
+            {
+                pilot.ListOfBattles.BattlesList[12].BonusObjectivesCompleted = 0;
+            }
         }
 
         //--------------------------------------------------------------------
