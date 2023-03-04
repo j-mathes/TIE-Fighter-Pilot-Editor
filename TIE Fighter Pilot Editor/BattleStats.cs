@@ -45,7 +45,7 @@ namespace TIE_Fighter_Pilot_Editor
             TotalCaptures = BitConverter.ToUInt16(bytes, 1628);
 
             BattleVictoriesList.Clear();
-            int firstKillsOffset = 1632; 
+            int firstKillsOffset = 1632;
             //int firstCapturesOffset = xxxx;
             int countMultiplier = 0;
 

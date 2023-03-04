@@ -483,7 +483,7 @@ namespace TIE_Fighter_Pilot_Editor
             cbHistCombatCompMBM3.Checked = pilot.HistoricCombatRecordList[6].MissionComplete[2];
             cbHistCombatCompMBM4.Checked = pilot.HistoricCombatRecordList[6].MissionComplete[3];
 
-            this.Refresh();
+            Refresh();
         }
 
         //Form Control Change Methods

@@ -6,7 +6,7 @@ namespace TIE_Fighter_Pilot_Editor
     {
         public int Num { get; set; }
         public uint MissionScore { get; set; }
-        
+
         public Mission(int missionNumber)
         {
             Num = missionNumber;
