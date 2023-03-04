@@ -12,7 +12,7 @@ namespace TIE_Fighter_Pilot_Editor
         public byte SecondaryObjectivesCompleted { get; set; }
         public byte BonusObjectivesCompleted { get; set; }
 
-        int MissionScoreOffset;
+        private int MissionScoreOffset;
 
         public Battle(int numberOfMissions)
         {
@@ -45,7 +45,7 @@ namespace TIE_Fighter_Pilot_Editor
                 MissionsList.Add(new Mission(bytes, MissionScoreOffset, i + 1));
                 MissionsList[i].MissionScore = BitConverter.ToUInt32(bytes, MissionScoreOffset);
                 TotalScore += MissionsList[i].MissionScore;
-                MissionScoreOffset = MissionScoreOffset + 4;
+                MissionScoreOffset += 4;
             }
         }
 
@@ -71,7 +71,7 @@ namespace TIE_Fighter_Pilot_Editor
             for (int i = 0; i < numberOfMissions; i++)
             {
                 MissionsList[i].MissionScore.CopyToByteArrayLE(bytes, MissionScoreOffset);
-                MissionScoreOffset = MissionScoreOffset + 4;
+                MissionScoreOffset += 4;
             }
         }
     }

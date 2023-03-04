@@ -540,7 +540,7 @@
             this.newToolStripButton.Name = "newToolStripButton";
             this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.newToolStripButton.Text = "&New";
-            this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
+            this.newToolStripButton.Click += new System.EventHandler(this.NewToolStripButton_Click);
             // 
             // openToolStripButton
             // 
@@ -550,7 +550,7 @@
             this.openToolStripButton.Name = "openToolStripButton";
             this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.openToolStripButton.Text = "&Open";
-            this.openToolStripButton.Click += new System.EventHandler(this.openToolStripButton_Click);
+            this.openToolStripButton.Click += new System.EventHandler(this.OpenToolStripButton_Click);
             // 
             // saveToolStripButton
             // 
@@ -560,7 +560,7 @@
             this.saveToolStripButton.Name = "saveToolStripButton";
             this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.saveToolStripButton.Text = "&Save";
-            this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
+            this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
             // 
             // toolStripSeparator
             // 
@@ -575,7 +575,7 @@
             this.helpToolStripButton.Name = "helpToolStripButton";
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
-            this.helpToolStripButton.Click += new System.EventHandler(this.helpToolStripButton_Click);
+            this.helpToolStripButton.Click += new System.EventHandler(this.HelpToolStripButton_Click);
             // 
             // statusStrip1
             // 
@@ -612,8 +612,8 @@
             this.gvBattleVictories.Name = "gvBattleVictories";
             this.gvBattleVictories.Size = new System.Drawing.Size(262, 373);
             this.gvBattleVictories.TabIndex = 2;
-            this.gvBattleVictories.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattleVictories_CellEndEdit);
-            this.gvBattleVictories.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattleVictories_CellValidating);
+            this.gvBattleVictories.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattleVictories_CellEndEdit);
+            this.gvBattleVictories.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattleVictories_CellValidating);
             // 
             // victoryNPCDataGridViewTextBoxColumn
             // 
@@ -687,7 +687,7 @@
             this.cbValidationToggle.TabIndex = 14;
             this.cbValidationToggle.Text = "Show validation pop-up\'s in editor";
             this.cbValidationToggle.UseVisualStyleBackColor = true;
-            this.cbValidationToggle.CheckedChanged += new System.EventHandler(this.cbValidationToggle_CheckedChanged);
+            this.cbValidationToggle.CheckedChanged += new System.EventHandler(this.CbValidationToggle_CheckedChanged);
             // 
             // comSecretOrderRank
             // 
@@ -696,7 +696,7 @@
             this.comSecretOrderRank.Name = "comSecretOrderRank";
             this.comSecretOrderRank.Size = new System.Drawing.Size(121, 21);
             this.comSecretOrderRank.TabIndex = 13;
-            this.comSecretOrderRank.SelectedIndexChanged += new System.EventHandler(this.comSecretOrderRank_SelectedIndexChanged);
+            this.comSecretOrderRank.SelectedIndexChanged += new System.EventHandler(this.ComSecretOrderRank_SelectedIndexChanged);
             // 
             // nudSkill
             // 
@@ -709,8 +709,8 @@
             this.nudSkill.Name = "nudSkill";
             this.nudSkill.Size = new System.Drawing.Size(162, 20);
             this.nudSkill.TabIndex = 12;
-            this.nudSkill.ValueChanged += new System.EventHandler(this.nudSkill_ValueChanged);
-            this.nudSkill.Enter += new System.EventHandler(this.nudSkill_Enter);
+            this.nudSkill.ValueChanged += new System.EventHandler(this.NudSkill_ValueChanged);
+            this.nudSkill.Enter += new System.EventHandler(this.NudSkill_Enter);
             // 
             // nudBattleScore
             // 
@@ -723,8 +723,8 @@
             this.nudBattleScore.Name = "nudBattleScore";
             this.nudBattleScore.Size = new System.Drawing.Size(162, 20);
             this.nudBattleScore.TabIndex = 11;
-            this.nudBattleScore.ValueChanged += new System.EventHandler(this.nudBattleScore_ValueChanged);
-            this.nudBattleScore.Enter += new System.EventHandler(this.nudBattleScore_Enter);
+            this.nudBattleScore.ValueChanged += new System.EventHandler(this.NudBattleScore_ValueChanged);
+            this.nudBattleScore.Enter += new System.EventHandler(this.NudBattleScore_Enter);
             // 
             // comDifficulty
             // 
@@ -733,7 +733,7 @@
             this.comDifficulty.Name = "comDifficulty";
             this.comDifficulty.Size = new System.Drawing.Size(121, 21);
             this.comDifficulty.TabIndex = 10;
-            this.comDifficulty.SelectedIndexChanged += new System.EventHandler(this.comDifficulty_SelectedIndexChanged);
+            this.comDifficulty.SelectedIndexChanged += new System.EventHandler(this.ComDifficulty_SelectedIndexChanged);
             // 
             // comRank
             // 
@@ -742,7 +742,7 @@
             this.comRank.Name = "comRank";
             this.comRank.Size = new System.Drawing.Size(121, 21);
             this.comRank.TabIndex = 9;
-            this.comRank.SelectedIndexChanged += new System.EventHandler(this.comRank_SelectedIndexChanged);
+            this.comRank.SelectedIndexChanged += new System.EventHandler(this.ComRank_SelectedIndexChanged);
             // 
             // comHealth
             // 
@@ -751,7 +751,7 @@
             this.comHealth.Name = "comHealth";
             this.comHealth.Size = new System.Drawing.Size(121, 21);
             this.comHealth.TabIndex = 8;
-            this.comHealth.SelectedIndexChanged += new System.EventHandler(this.comHealth_SelectedIndexChanged);
+            this.comHealth.SelectedIndexChanged += new System.EventHandler(this.ComHealth_SelectedIndexChanged);
             // 
             // txtPilotName
             // 
@@ -897,7 +897,7 @@
             this.cbHistCombatCompTFM4.TabIndex = 15;
             this.cbHistCombatCompTFM4.Text = "Complete";
             this.cbHistCombatCompTFM4.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTFM4.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTFM4_CheckedChanged);
+            this.cbHistCombatCompTFM4.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTFM4_CheckedChanged);
             // 
             // label16
             // 
@@ -919,8 +919,8 @@
             this.nudHistCombatPointsTFM4.Name = "nudHistCombatPointsTFM4";
             this.nudHistCombatPointsTFM4.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTFM4.TabIndex = 13;
-            this.nudHistCombatPointsTFM4.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTFM4_ValueChanged);
-            this.nudHistCombatPointsTFM4.Enter += new System.EventHandler(this.nudHistCombatPointsTFM4_Enter);
+            this.nudHistCombatPointsTFM4.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTFM4_ValueChanged);
+            this.nudHistCombatPointsTFM4.Enter += new System.EventHandler(this.NudHistCombatPointsTFM4_Enter);
             // 
             // label17
             // 
@@ -940,7 +940,7 @@
             this.cbHistCombatCompTFM3.TabIndex = 11;
             this.cbHistCombatCompTFM3.Text = "Complete";
             this.cbHistCombatCompTFM3.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTFM3.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTFM3_CheckedChanged);
+            this.cbHistCombatCompTFM3.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTFM3_CheckedChanged);
             // 
             // label14
             // 
@@ -962,8 +962,8 @@
             this.nudHistCombatPointsTFM3.Name = "nudHistCombatPointsTFM3";
             this.nudHistCombatPointsTFM3.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTFM3.TabIndex = 9;
-            this.nudHistCombatPointsTFM3.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTFM3_ValueChanged);
-            this.nudHistCombatPointsTFM3.Enter += new System.EventHandler(this.nudHistCombatPointsTFM3_Enter);
+            this.nudHistCombatPointsTFM3.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTFM3_ValueChanged);
+            this.nudHistCombatPointsTFM3.Enter += new System.EventHandler(this.NudHistCombatPointsTFM3_Enter);
             // 
             // label15
             // 
@@ -983,7 +983,7 @@
             this.cbHistCombatCompTFM2.TabIndex = 7;
             this.cbHistCombatCompTFM2.Text = "Complete";
             this.cbHistCombatCompTFM2.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTFM2.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTFM2_CheckedChanged);
+            this.cbHistCombatCompTFM2.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTFM2_CheckedChanged);
             // 
             // label12
             // 
@@ -1005,8 +1005,8 @@
             this.nudHistCombatPointsTFM2.Name = "nudHistCombatPointsTFM2";
             this.nudHistCombatPointsTFM2.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTFM2.TabIndex = 5;
-            this.nudHistCombatPointsTFM2.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTFM2_ValueChanged);
-            this.nudHistCombatPointsTFM2.Enter += new System.EventHandler(this.nudHistCombatPointsTFM2_Enter);
+            this.nudHistCombatPointsTFM2.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTFM2_ValueChanged);
+            this.nudHistCombatPointsTFM2.Enter += new System.EventHandler(this.NudHistCombatPointsTFM2_Enter);
             // 
             // label13
             // 
@@ -1026,7 +1026,7 @@
             this.cbHistCombatCompTFM1.TabIndex = 3;
             this.cbHistCombatCompTFM1.Text = "Complete";
             this.cbHistCombatCompTFM1.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTFM1.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTFM1_CheckedChanged);
+            this.cbHistCombatCompTFM1.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTFM1_CheckedChanged);
             // 
             // label11
             // 
@@ -1048,8 +1048,8 @@
             this.nudHistCombatPointsTFM1.Name = "nudHistCombatPointsTFM1";
             this.nudHistCombatPointsTFM1.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTFM1.TabIndex = 1;
-            this.nudHistCombatPointsTFM1.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTFM1_ValueChanged);
-            this.nudHistCombatPointsTFM1.Enter += new System.EventHandler(this.nudHistCombatPointsTFM1_Enter);
+            this.nudHistCombatPointsTFM1.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTFM1_ValueChanged);
+            this.nudHistCombatPointsTFM1.Enter += new System.EventHandler(this.NudHistCombatPointsTFM1_Enter);
             // 
             // label10
             // 
@@ -1102,7 +1102,7 @@
             this.cbHistCombatCompTIM4.TabIndex = 15;
             this.cbHistCombatCompTIM4.Text = "Complete";
             this.cbHistCombatCompTIM4.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTIM4.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTIM4_CheckedChanged);
+            this.cbHistCombatCompTIM4.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTIM4_CheckedChanged);
             // 
             // label18
             // 
@@ -1124,8 +1124,8 @@
             this.nudHistCombatPointsTIM4.Name = "nudHistCombatPointsTIM4";
             this.nudHistCombatPointsTIM4.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTIM4.TabIndex = 13;
-            this.nudHistCombatPointsTIM4.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTIM4_ValueChanged);
-            this.nudHistCombatPointsTIM4.Enter += new System.EventHandler(this.nudHistCombatPointsTIM4_Enter);
+            this.nudHistCombatPointsTIM4.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTIM4_ValueChanged);
+            this.nudHistCombatPointsTIM4.Enter += new System.EventHandler(this.NudHistCombatPointsTIM4_Enter);
             // 
             // label19
             // 
@@ -1145,7 +1145,7 @@
             this.cbHistCombatCompTIM3.TabIndex = 11;
             this.cbHistCombatCompTIM3.Text = "Complete";
             this.cbHistCombatCompTIM3.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTIM3.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTIM3_CheckedChanged);
+            this.cbHistCombatCompTIM3.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTIM3_CheckedChanged);
             // 
             // label20
             // 
@@ -1167,8 +1167,8 @@
             this.nudHistCombatPointsTIM3.Name = "nudHistCombatPointsTIM3";
             this.nudHistCombatPointsTIM3.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTIM3.TabIndex = 9;
-            this.nudHistCombatPointsTIM3.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTIM3_ValueChanged);
-            this.nudHistCombatPointsTIM3.Enter += new System.EventHandler(this.nudHistCombatPointsTIM3_Enter);
+            this.nudHistCombatPointsTIM3.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTIM3_ValueChanged);
+            this.nudHistCombatPointsTIM3.Enter += new System.EventHandler(this.NudHistCombatPointsTIM3_Enter);
             // 
             // label21
             // 
@@ -1188,7 +1188,7 @@
             this.cbHistCombatCompTIM2.TabIndex = 7;
             this.cbHistCombatCompTIM2.Text = "Complete";
             this.cbHistCombatCompTIM2.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTIM2.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTIM2_CheckedChanged);
+            this.cbHistCombatCompTIM2.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTIM2_CheckedChanged);
             // 
             // label22
             // 
@@ -1210,8 +1210,8 @@
             this.nudHistCombatPointsTIM2.Name = "nudHistCombatPointsTIM2";
             this.nudHistCombatPointsTIM2.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTIM2.TabIndex = 5;
-            this.nudHistCombatPointsTIM2.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTIM2_ValueChanged);
-            this.nudHistCombatPointsTIM2.Enter += new System.EventHandler(this.nudHistCombatPointsTIM2_Enter);
+            this.nudHistCombatPointsTIM2.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTIM2_ValueChanged);
+            this.nudHistCombatPointsTIM2.Enter += new System.EventHandler(this.NudHistCombatPointsTIM2_Enter);
             // 
             // label23
             // 
@@ -1231,7 +1231,7 @@
             this.cbHistCombatCompTIM1.TabIndex = 3;
             this.cbHistCombatCompTIM1.Text = "Complete";
             this.cbHistCombatCompTIM1.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTIM1.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTIM1_CheckedChanged);
+            this.cbHistCombatCompTIM1.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTIM1_CheckedChanged);
             // 
             // label24
             // 
@@ -1253,7 +1253,7 @@
             this.nudHistCombatPointsTIM1.Name = "nudHistCombatPointsTIM1";
             this.nudHistCombatPointsTIM1.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTIM1.TabIndex = 1;
-            this.nudHistCombatPointsTIM1.Enter += new System.EventHandler(this.nudHistCombatPointsTIM1_Enter);
+            this.nudHistCombatPointsTIM1.Enter += new System.EventHandler(this.NudHistCombatPointsTIM1_Enter);
             // 
             // label25
             // 
@@ -1307,7 +1307,7 @@
             this.cbHistCombatCompTBM4.TabIndex = 15;
             this.cbHistCombatCompTBM4.Text = "Complete";
             this.cbHistCombatCompTBM4.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTBM4.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTBM4_CheckedChanged);
+            this.cbHistCombatCompTBM4.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTBM4_CheckedChanged);
             // 
             // label26
             // 
@@ -1329,8 +1329,8 @@
             this.nudHistCombatPointsTBM4.Name = "nudHistCombatPointsTBM4";
             this.nudHistCombatPointsTBM4.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTBM4.TabIndex = 13;
-            this.nudHistCombatPointsTBM4.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTBM4_ValueChanged);
-            this.nudHistCombatPointsTBM4.Enter += new System.EventHandler(this.nudHistCombatPointsTBM4_Enter);
+            this.nudHistCombatPointsTBM4.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTBM4_ValueChanged);
+            this.nudHistCombatPointsTBM4.Enter += new System.EventHandler(this.NudHistCombatPointsTBM4_Enter);
             // 
             // label27
             // 
@@ -1350,7 +1350,7 @@
             this.cbHistCombatCompTBM3.TabIndex = 11;
             this.cbHistCombatCompTBM3.Text = "Complete";
             this.cbHistCombatCompTBM3.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTBM3.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTBM3_CheckedChanged);
+            this.cbHistCombatCompTBM3.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTBM3_CheckedChanged);
             // 
             // label28
             // 
@@ -1372,8 +1372,8 @@
             this.nudHistCombatPointsTBM3.Name = "nudHistCombatPointsTBM3";
             this.nudHistCombatPointsTBM3.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTBM3.TabIndex = 9;
-            this.nudHistCombatPointsTBM3.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTBM3_ValueChanged);
-            this.nudHistCombatPointsTBM3.Enter += new System.EventHandler(this.nudHistCombatPointsTBM3_Enter);
+            this.nudHistCombatPointsTBM3.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTBM3_ValueChanged);
+            this.nudHistCombatPointsTBM3.Enter += new System.EventHandler(this.NudHistCombatPointsTBM3_Enter);
             // 
             // label29
             // 
@@ -1393,7 +1393,7 @@
             this.cbHistCombatCompTBM2.TabIndex = 7;
             this.cbHistCombatCompTBM2.Text = "Complete";
             this.cbHistCombatCompTBM2.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTBM2.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTBM2_CheckedChanged);
+            this.cbHistCombatCompTBM2.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTBM2_CheckedChanged);
             // 
             // label30
             // 
@@ -1415,8 +1415,8 @@
             this.nudHistCombatPointsTBM2.Name = "nudHistCombatPointsTBM2";
             this.nudHistCombatPointsTBM2.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTBM2.TabIndex = 5;
-            this.nudHistCombatPointsTBM2.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTBM2_ValueChanged);
-            this.nudHistCombatPointsTBM2.Enter += new System.EventHandler(this.nudHistCombatPointsTBM2_Enter);
+            this.nudHistCombatPointsTBM2.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTBM2_ValueChanged);
+            this.nudHistCombatPointsTBM2.Enter += new System.EventHandler(this.NudHistCombatPointsTBM2_Enter);
             // 
             // label31
             // 
@@ -1436,7 +1436,7 @@
             this.cbHistCombatCompTBM1.TabIndex = 3;
             this.cbHistCombatCompTBM1.Text = "Complete";
             this.cbHistCombatCompTBM1.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTBM1.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTBM1_CheckedChanged);
+            this.cbHistCombatCompTBM1.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTBM1_CheckedChanged);
             // 
             // label32
             // 
@@ -1458,8 +1458,8 @@
             this.nudHistCombatPointsTBM1.Name = "nudHistCombatPointsTBM1";
             this.nudHistCombatPointsTBM1.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTBM1.TabIndex = 1;
-            this.nudHistCombatPointsTBM1.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTBM1_ValueChanged);
-            this.nudHistCombatPointsTBM1.Enter += new System.EventHandler(this.nudHistCombatPointsTBM1_Enter);
+            this.nudHistCombatPointsTBM1.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTBM1_ValueChanged);
+            this.nudHistCombatPointsTBM1.Enter += new System.EventHandler(this.NudHistCombatPointsTBM1_Enter);
             // 
             // label33
             // 
@@ -1512,7 +1512,7 @@
             this.cbHistCombatCompTAM4.TabIndex = 15;
             this.cbHistCombatCompTAM4.Text = "Complete";
             this.cbHistCombatCompTAM4.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTAM4.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTAM4_CheckedChanged);
+            this.cbHistCombatCompTAM4.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTAM4_CheckedChanged);
             // 
             // label34
             // 
@@ -1534,8 +1534,8 @@
             this.nudHistCombatPointsTAM4.Name = "nudHistCombatPointsTAM4";
             this.nudHistCombatPointsTAM4.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTAM4.TabIndex = 13;
-            this.nudHistCombatPointsTAM4.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTAM4_ValueChanged);
-            this.nudHistCombatPointsTAM4.Enter += new System.EventHandler(this.nudHistCombatPointsTAM4_Enter);
+            this.nudHistCombatPointsTAM4.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTAM4_ValueChanged);
+            this.nudHistCombatPointsTAM4.Enter += new System.EventHandler(this.NudHistCombatPointsTAM4_Enter);
             // 
             // label35
             // 
@@ -1555,7 +1555,7 @@
             this.cbHistCombatCompTAM3.TabIndex = 11;
             this.cbHistCombatCompTAM3.Text = "Complete";
             this.cbHistCombatCompTAM3.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTAM3.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTAM3_CheckedChanged);
+            this.cbHistCombatCompTAM3.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTAM3_CheckedChanged);
             // 
             // label36
             // 
@@ -1577,8 +1577,8 @@
             this.nudHistCombatPointsTAM3.Name = "nudHistCombatPointsTAM3";
             this.nudHistCombatPointsTAM3.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTAM3.TabIndex = 9;
-            this.nudHistCombatPointsTAM3.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTAM3_ValueChanged);
-            this.nudHistCombatPointsTAM3.Enter += new System.EventHandler(this.nudHistCombatPointsTAM3_Enter);
+            this.nudHistCombatPointsTAM3.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTAM3_ValueChanged);
+            this.nudHistCombatPointsTAM3.Enter += new System.EventHandler(this.NudHistCombatPointsTAM3_Enter);
             // 
             // label37
             // 
@@ -1598,7 +1598,7 @@
             this.cbHistCombatCompTAM2.TabIndex = 7;
             this.cbHistCombatCompTAM2.Text = "Complete";
             this.cbHistCombatCompTAM2.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTAM2.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTAM2_CheckedChanged);
+            this.cbHistCombatCompTAM2.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTAM2_CheckedChanged);
             // 
             // label38
             // 
@@ -1620,8 +1620,8 @@
             this.nudHistCombatPointsTAM2.Name = "nudHistCombatPointsTAM2";
             this.nudHistCombatPointsTAM2.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTAM2.TabIndex = 5;
-            this.nudHistCombatPointsTAM2.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTAM2_ValueChanged);
-            this.nudHistCombatPointsTAM2.Enter += new System.EventHandler(this.nudHistCombatPointsTAM2_Enter);
+            this.nudHistCombatPointsTAM2.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTAM2_ValueChanged);
+            this.nudHistCombatPointsTAM2.Enter += new System.EventHandler(this.NudHistCombatPointsTAM2_Enter);
             // 
             // label39
             // 
@@ -1641,7 +1641,7 @@
             this.cbHistCombatCompTAM1.TabIndex = 3;
             this.cbHistCombatCompTAM1.Text = "Complete";
             this.cbHistCombatCompTAM1.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTAM1.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTAM1_CheckedChanged);
+            this.cbHistCombatCompTAM1.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTAM1_CheckedChanged);
             // 
             // label40
             // 
@@ -1663,8 +1663,8 @@
             this.nudHistCombatPointsTAM1.Name = "nudHistCombatPointsTAM1";
             this.nudHistCombatPointsTAM1.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTAM1.TabIndex = 1;
-            this.nudHistCombatPointsTAM1.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTAM1_ValueChanged);
-            this.nudHistCombatPointsTAM1.Enter += new System.EventHandler(this.nudHistCombatPointsTAM1_Enter);
+            this.nudHistCombatPointsTAM1.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTAM1_ValueChanged);
+            this.nudHistCombatPointsTAM1.Enter += new System.EventHandler(this.NudHistCombatPointsTAM1_Enter);
             // 
             // label41
             // 
@@ -1717,7 +1717,7 @@
             this.cbHistCombatCompAGM4.TabIndex = 15;
             this.cbHistCombatCompAGM4.Text = "Complete";
             this.cbHistCombatCompAGM4.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompAGM4.CheckedChanged += new System.EventHandler(this.cbHistCombatCompAGM4_CheckedChanged);
+            this.cbHistCombatCompAGM4.CheckedChanged += new System.EventHandler(this.CbHistCombatCompAGM4_CheckedChanged);
             // 
             // label42
             // 
@@ -1739,8 +1739,8 @@
             this.nudHistCombatPointsAGM4.Name = "nudHistCombatPointsAGM4";
             this.nudHistCombatPointsAGM4.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsAGM4.TabIndex = 13;
-            this.nudHistCombatPointsAGM4.ValueChanged += new System.EventHandler(this.nudHistCombatPointsAGM4_ValueChanged);
-            this.nudHistCombatPointsAGM4.Enter += new System.EventHandler(this.nudHistCombatPointsAGM4_Enter);
+            this.nudHistCombatPointsAGM4.ValueChanged += new System.EventHandler(this.NudHistCombatPointsAGM4_ValueChanged);
+            this.nudHistCombatPointsAGM4.Enter += new System.EventHandler(this.NudHistCombatPointsAGM4_Enter);
             // 
             // label43
             // 
@@ -1760,7 +1760,7 @@
             this.cbHistCombatCompAGM3.TabIndex = 11;
             this.cbHistCombatCompAGM3.Text = "Complete";
             this.cbHistCombatCompAGM3.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompAGM3.CheckedChanged += new System.EventHandler(this.cbHistCombatCompAGM3_CheckedChanged);
+            this.cbHistCombatCompAGM3.CheckedChanged += new System.EventHandler(this.CbHistCombatCompAGM3_CheckedChanged);
             // 
             // label44
             // 
@@ -1782,8 +1782,8 @@
             this.nudHistCombatPointsAGM3.Name = "nudHistCombatPointsAGM3";
             this.nudHistCombatPointsAGM3.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsAGM3.TabIndex = 9;
-            this.nudHistCombatPointsAGM3.ValueChanged += new System.EventHandler(this.nudHistCombatPointsAGM3_ValueChanged);
-            this.nudHistCombatPointsAGM3.Enter += new System.EventHandler(this.nudHistCombatPointsAGM3_Enter);
+            this.nudHistCombatPointsAGM3.ValueChanged += new System.EventHandler(this.NudHistCombatPointsAGM3_ValueChanged);
+            this.nudHistCombatPointsAGM3.Enter += new System.EventHandler(this.NudHistCombatPointsAGM3_Enter);
             // 
             // label45
             // 
@@ -1803,7 +1803,7 @@
             this.cbHistCombatCompAGM2.TabIndex = 7;
             this.cbHistCombatCompAGM2.Text = "Complete";
             this.cbHistCombatCompAGM2.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompAGM2.CheckedChanged += new System.EventHandler(this.cbHistCombatCompAGM2_CheckedChanged);
+            this.cbHistCombatCompAGM2.CheckedChanged += new System.EventHandler(this.CbHistCombatCompAGM2_CheckedChanged);
             // 
             // label46
             // 
@@ -1825,8 +1825,8 @@
             this.nudHistCombatPointsAGM2.Name = "nudHistCombatPointsAGM2";
             this.nudHistCombatPointsAGM2.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsAGM2.TabIndex = 5;
-            this.nudHistCombatPointsAGM2.ValueChanged += new System.EventHandler(this.nudHistCombatPointsAGM2_ValueChanged);
-            this.nudHistCombatPointsAGM2.Enter += new System.EventHandler(this.nudHistCombatPointsAGM2_Enter);
+            this.nudHistCombatPointsAGM2.ValueChanged += new System.EventHandler(this.NudHistCombatPointsAGM2_ValueChanged);
+            this.nudHistCombatPointsAGM2.Enter += new System.EventHandler(this.NudHistCombatPointsAGM2_Enter);
             // 
             // label47
             // 
@@ -1846,7 +1846,7 @@
             this.cbHistCombatCompAGM1.TabIndex = 3;
             this.cbHistCombatCompAGM1.Text = "Complete";
             this.cbHistCombatCompAGM1.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompAGM1.CheckedChanged += new System.EventHandler(this.cbHistCombatCompAGM1_CheckedChanged);
+            this.cbHistCombatCompAGM1.CheckedChanged += new System.EventHandler(this.CbHistCombatCompAGM1_CheckedChanged);
             // 
             // label48
             // 
@@ -1868,8 +1868,8 @@
             this.nudHistCombatPointsAGM1.Name = "nudHistCombatPointsAGM1";
             this.nudHistCombatPointsAGM1.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsAGM1.TabIndex = 1;
-            this.nudHistCombatPointsAGM1.ValueChanged += new System.EventHandler(this.nudHistCombatPointsAGM1_ValueChanged);
-            this.nudHistCombatPointsAGM1.Enter += new System.EventHandler(this.nudHistCombatPointsAGM1_Enter);
+            this.nudHistCombatPointsAGM1.ValueChanged += new System.EventHandler(this.NudHistCombatPointsAGM1_ValueChanged);
+            this.nudHistCombatPointsAGM1.Enter += new System.EventHandler(this.NudHistCombatPointsAGM1_Enter);
             // 
             // label49
             // 
@@ -1922,7 +1922,7 @@
             this.cbHistCombatCompTDM4.TabIndex = 15;
             this.cbHistCombatCompTDM4.Text = "Complete";
             this.cbHistCombatCompTDM4.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTDM4.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTDM4_CheckedChanged);
+            this.cbHistCombatCompTDM4.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTDM4_CheckedChanged);
             // 
             // label50
             // 
@@ -1944,8 +1944,8 @@
             this.nudHistCombatPointsTDM4.Name = "nudHistCombatPointsTDM4";
             this.nudHistCombatPointsTDM4.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTDM4.TabIndex = 13;
-            this.nudHistCombatPointsTDM4.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTDM4_ValueChanged);
-            this.nudHistCombatPointsTDM4.Enter += new System.EventHandler(this.nudHistCombatPointsTDM4_Enter);
+            this.nudHistCombatPointsTDM4.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTDM4_ValueChanged);
+            this.nudHistCombatPointsTDM4.Enter += new System.EventHandler(this.NudHistCombatPointsTDM4_Enter);
             // 
             // label51
             // 
@@ -1965,7 +1965,7 @@
             this.cbHistCombatCompTDM3.TabIndex = 11;
             this.cbHistCombatCompTDM3.Text = "Complete";
             this.cbHistCombatCompTDM3.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTDM3.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTDM3_CheckedChanged);
+            this.cbHistCombatCompTDM3.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTDM3_CheckedChanged);
             // 
             // label52
             // 
@@ -1987,8 +1987,8 @@
             this.nudHistCombatPointsTDM3.Name = "nudHistCombatPointsTDM3";
             this.nudHistCombatPointsTDM3.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTDM3.TabIndex = 9;
-            this.nudHistCombatPointsTDM3.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTDM3_ValueChanged);
-            this.nudHistCombatPointsTDM3.Enter += new System.EventHandler(this.nudHistCombatPointsTDM3_Enter);
+            this.nudHistCombatPointsTDM3.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTDM3_ValueChanged);
+            this.nudHistCombatPointsTDM3.Enter += new System.EventHandler(this.NudHistCombatPointsTDM3_Enter);
             // 
             // label53
             // 
@@ -2008,7 +2008,7 @@
             this.cbHistCombatCompTDM2.TabIndex = 7;
             this.cbHistCombatCompTDM2.Text = "Complete";
             this.cbHistCombatCompTDM2.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTDM2.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTDM2_CheckedChanged);
+            this.cbHistCombatCompTDM2.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTDM2_CheckedChanged);
             // 
             // label54
             // 
@@ -2030,8 +2030,8 @@
             this.nudHistCombatPointsTDM2.Name = "nudHistCombatPointsTDM2";
             this.nudHistCombatPointsTDM2.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTDM2.TabIndex = 5;
-            this.nudHistCombatPointsTDM2.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTDM2_ValueChanged);
-            this.nudHistCombatPointsTDM2.Enter += new System.EventHandler(this.nudHistCombatPointsTDM2_Enter);
+            this.nudHistCombatPointsTDM2.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTDM2_ValueChanged);
+            this.nudHistCombatPointsTDM2.Enter += new System.EventHandler(this.NudHistCombatPointsTDM2_Enter);
             // 
             // label55
             // 
@@ -2051,7 +2051,7 @@
             this.cbHistCombatCompTDM1.TabIndex = 3;
             this.cbHistCombatCompTDM1.Text = "Complete";
             this.cbHistCombatCompTDM1.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompTDM1.CheckedChanged += new System.EventHandler(this.cbHistCombatCompTDM1_CheckedChanged);
+            this.cbHistCombatCompTDM1.CheckedChanged += new System.EventHandler(this.CbHistCombatCompTDM1_CheckedChanged);
             // 
             // label56
             // 
@@ -2073,8 +2073,8 @@
             this.nudHistCombatPointsTDM1.Name = "nudHistCombatPointsTDM1";
             this.nudHistCombatPointsTDM1.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsTDM1.TabIndex = 1;
-            this.nudHistCombatPointsTDM1.ValueChanged += new System.EventHandler(this.nudHistCombatPointsTDM1_ValueChanged);
-            this.nudHistCombatPointsTDM1.Enter += new System.EventHandler(this.nudHistCombatPointsTDM1_Enter);
+            this.nudHistCombatPointsTDM1.ValueChanged += new System.EventHandler(this.NudHistCombatPointsTDM1_ValueChanged);
+            this.nudHistCombatPointsTDM1.Enter += new System.EventHandler(this.NudHistCombatPointsTDM1_Enter);
             // 
             // label57
             // 
@@ -2127,7 +2127,7 @@
             this.cbHistCombatCompMBM4.TabIndex = 15;
             this.cbHistCombatCompMBM4.Text = "Complete";
             this.cbHistCombatCompMBM4.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompMBM4.CheckedChanged += new System.EventHandler(this.cbHistCombatCompMBM4_CheckedChanged);
+            this.cbHistCombatCompMBM4.CheckedChanged += new System.EventHandler(this.CbHistCombatCompMBM4_CheckedChanged);
             // 
             // label58
             // 
@@ -2149,8 +2149,8 @@
             this.nudHistCombatPointsMBM4.Name = "nudHistCombatPointsMBM4";
             this.nudHistCombatPointsMBM4.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsMBM4.TabIndex = 13;
-            this.nudHistCombatPointsMBM4.ValueChanged += new System.EventHandler(this.nudHistCombatPointsMBM4_ValueChanged);
-            this.nudHistCombatPointsMBM4.Enter += new System.EventHandler(this.nudHistCombatPointsMBM4_Enter);
+            this.nudHistCombatPointsMBM4.ValueChanged += new System.EventHandler(this.NudHistCombatPointsMBM4_ValueChanged);
+            this.nudHistCombatPointsMBM4.Enter += new System.EventHandler(this.NudHistCombatPointsMBM4_Enter);
             // 
             // label59
             // 
@@ -2170,7 +2170,7 @@
             this.cbHistCombatCompMBM3.TabIndex = 11;
             this.cbHistCombatCompMBM3.Text = "Complete";
             this.cbHistCombatCompMBM3.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompMBM3.CheckedChanged += new System.EventHandler(this.cbHistCombatCompMBM3_CheckedChanged);
+            this.cbHistCombatCompMBM3.CheckedChanged += new System.EventHandler(this.CbHistCombatCompMBM3_CheckedChanged);
             // 
             // label60
             // 
@@ -2192,8 +2192,8 @@
             this.nudHistCombatPointsMBM3.Name = "nudHistCombatPointsMBM3";
             this.nudHistCombatPointsMBM3.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsMBM3.TabIndex = 9;
-            this.nudHistCombatPointsMBM3.ValueChanged += new System.EventHandler(this.nudHistCombatPointsMBM3_ValueChanged);
-            this.nudHistCombatPointsMBM3.Enter += new System.EventHandler(this.nudHistCombatPointsMBM3_Enter);
+            this.nudHistCombatPointsMBM3.ValueChanged += new System.EventHandler(this.NudHistCombatPointsMBM3_ValueChanged);
+            this.nudHistCombatPointsMBM3.Enter += new System.EventHandler(this.NudHistCombatPointsMBM3_Enter);
             // 
             // label61
             // 
@@ -2213,7 +2213,7 @@
             this.cbHistCombatCompMBM2.TabIndex = 7;
             this.cbHistCombatCompMBM2.Text = "Complete";
             this.cbHistCombatCompMBM2.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompMBM2.CheckedChanged += new System.EventHandler(this.cbHistCombatCompMBM2_CheckedChanged);
+            this.cbHistCombatCompMBM2.CheckedChanged += new System.EventHandler(this.CbHistCombatCompMBM2_CheckedChanged);
             // 
             // label62
             // 
@@ -2235,8 +2235,8 @@
             this.nudHistCombatPointsMBM2.Name = "nudHistCombatPointsMBM2";
             this.nudHistCombatPointsMBM2.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsMBM2.TabIndex = 5;
-            this.nudHistCombatPointsMBM2.ValueChanged += new System.EventHandler(this.nudHistCombatPointsMBM2_ValueChanged);
-            this.nudHistCombatPointsMBM2.Enter += new System.EventHandler(this.nudHistCombatPointsMBM2_Enter);
+            this.nudHistCombatPointsMBM2.ValueChanged += new System.EventHandler(this.NudHistCombatPointsMBM2_ValueChanged);
+            this.nudHistCombatPointsMBM2.Enter += new System.EventHandler(this.NudHistCombatPointsMBM2_Enter);
             // 
             // label63
             // 
@@ -2256,7 +2256,7 @@
             this.cbHistCombatCompMBM1.TabIndex = 3;
             this.cbHistCombatCompMBM1.Text = "Complete";
             this.cbHistCombatCompMBM1.UseVisualStyleBackColor = true;
-            this.cbHistCombatCompMBM1.CheckedChanged += new System.EventHandler(this.cbHistCombatCompMBM1_CheckedChanged);
+            this.cbHistCombatCompMBM1.CheckedChanged += new System.EventHandler(this.CbHistCombatCompMBM1_CheckedChanged);
             // 
             // label64
             // 
@@ -2278,8 +2278,8 @@
             this.nudHistCombatPointsMBM1.Name = "nudHistCombatPointsMBM1";
             this.nudHistCombatPointsMBM1.Size = new System.Drawing.Size(83, 20);
             this.nudHistCombatPointsMBM1.TabIndex = 1;
-            this.nudHistCombatPointsMBM1.ValueChanged += new System.EventHandler(this.nudHistCombatPointsMBM1_ValueChanged);
-            this.nudHistCombatPointsMBM1.Enter += new System.EventHandler(this.nudHistCombatPointsMBM1_Enter);
+            this.nudHistCombatPointsMBM1.ValueChanged += new System.EventHandler(this.NudHistCombatPointsMBM1_ValueChanged);
+            this.nudHistCombatPointsMBM1.Enter += new System.EventHandler(this.NudHistCombatPointsMBM1_Enter);
             // 
             // label65
             // 
@@ -2326,8 +2326,8 @@
             this.gvTraining.Name = "gvTraining";
             this.gvTraining.Size = new System.Drawing.Size(441, 175);
             this.gvTraining.TabIndex = 0;
-            this.gvTraining.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTraining_CellEndEdit);
-            this.gvTraining.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvTraining_CellValidating);
+            this.gvTraining.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvTraining_CellEndEdit);
+            this.gvTraining.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvTraining_CellValidating);
             // 
             // trainingShipTypeDataGridViewTextBoxColumn
             // 
@@ -2395,8 +2395,8 @@
             this.nudCraftLost.Name = "nudCraftLost";
             this.nudCraftLost.Size = new System.Drawing.Size(80, 20);
             this.nudCraftLost.TabIndex = 18;
-            this.nudCraftLost.ValueChanged += new System.EventHandler(this.nudCraftLost_ValueChanged);
-            this.nudCraftLost.Enter += new System.EventHandler(this.nudCraftLost_Enter);
+            this.nudCraftLost.ValueChanged += new System.EventHandler(this.NudCraftLost_ValueChanged);
+            this.nudCraftLost.Enter += new System.EventHandler(this.NudCraftLost_Enter);
             // 
             // nudTotalCaptures
             // 
@@ -2409,8 +2409,8 @@
             this.nudTotalCaptures.Name = "nudTotalCaptures";
             this.nudTotalCaptures.Size = new System.Drawing.Size(80, 20);
             this.nudTotalCaptures.TabIndex = 17;
-            this.nudTotalCaptures.ValueChanged += new System.EventHandler(this.nudTotalCaptures_ValueChanged);
-            this.nudTotalCaptures.Enter += new System.EventHandler(this.nudTotalCaptures_Enter);
+            this.nudTotalCaptures.ValueChanged += new System.EventHandler(this.NudTotalCaptures_ValueChanged);
+            this.nudTotalCaptures.Enter += new System.EventHandler(this.NudTotalCaptures_Enter);
             // 
             // nudTotalKills
             // 
@@ -2423,8 +2423,8 @@
             this.nudTotalKills.Name = "nudTotalKills";
             this.nudTotalKills.Size = new System.Drawing.Size(80, 20);
             this.nudTotalKills.TabIndex = 16;
-            this.nudTotalKills.ValueChanged += new System.EventHandler(this.nudTotalKills_ValueChanged);
-            this.nudTotalKills.Enter += new System.EventHandler(this.nudTotalKills_Enter);
+            this.nudTotalKills.ValueChanged += new System.EventHandler(this.NudTotalKills_ValueChanged);
+            this.nudTotalKills.Enter += new System.EventHandler(this.NudTotalKills_Enter);
             // 
             // lblWarheadPercent
             // 
@@ -2446,8 +2446,8 @@
             this.nudWarheadFired.Name = "nudWarheadFired";
             this.nudWarheadFired.Size = new System.Drawing.Size(80, 20);
             this.nudWarheadFired.TabIndex = 14;
-            this.nudWarheadFired.ValueChanged += new System.EventHandler(this.nudWarheadFired_ValueChanged);
-            this.nudWarheadFired.Enter += new System.EventHandler(this.nudWarheadFired_Enter);
+            this.nudWarheadFired.ValueChanged += new System.EventHandler(this.NudWarheadFired_ValueChanged);
+            this.nudWarheadFired.Enter += new System.EventHandler(this.NudWarheadFired_Enter);
             // 
             // label73
             // 
@@ -2469,8 +2469,8 @@
             this.nudWarheadHits.Name = "nudWarheadHits";
             this.nudWarheadHits.Size = new System.Drawing.Size(80, 20);
             this.nudWarheadHits.TabIndex = 12;
-            this.nudWarheadHits.ValueChanged += new System.EventHandler(this.nudWarheadHits_ValueChanged);
-            this.nudWarheadHits.Enter += new System.EventHandler(this.nudWarheadHits_Enter);
+            this.nudWarheadHits.ValueChanged += new System.EventHandler(this.NudWarheadHits_ValueChanged);
+            this.nudWarheadHits.Enter += new System.EventHandler(this.NudWarheadHits_Enter);
             // 
             // lblLaserPercent
             // 
@@ -2492,8 +2492,8 @@
             this.nudLaserFired.Name = "nudLaserFired";
             this.nudLaserFired.Size = new System.Drawing.Size(80, 20);
             this.nudLaserFired.TabIndex = 10;
-            this.nudLaserFired.ValueChanged += new System.EventHandler(this.nudLaserFired_ValueChanged);
-            this.nudLaserFired.Enter += new System.EventHandler(this.nudLaserFired_Enter);
+            this.nudLaserFired.ValueChanged += new System.EventHandler(this.NudLaserFired_ValueChanged);
+            this.nudLaserFired.Enter += new System.EventHandler(this.NudLaserFired_Enter);
             // 
             // label71
             // 
@@ -2515,8 +2515,8 @@
             this.nudLaserHits.Name = "nudLaserHits";
             this.nudLaserHits.Size = new System.Drawing.Size(80, 20);
             this.nudLaserHits.TabIndex = 8;
-            this.nudLaserHits.ValueChanged += new System.EventHandler(this.nudLaserHits_ValueChanged);
-            this.nudLaserHits.Enter += new System.EventHandler(this.nudLaserHits_Enter);
+            this.nudLaserHits.ValueChanged += new System.EventHandler(this.NudLaserHits_ValueChanged);
+            this.nudLaserHits.Enter += new System.EventHandler(this.NudLaserHits_Enter);
             // 
             // label70
             // 
@@ -2633,7 +2633,7 @@
             this.clbBonusObjectiveB1.Name = "clbBonusObjectiveB1";
             this.clbBonusObjectiveB1.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB1.TabIndex = 10;
-            this.clbBonusObjectiveB1.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB1_SelectedIndexChanged);
+            this.clbBonusObjectiveB1.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB1_SelectedIndexChanged);
             // 
             // label86
             // 
@@ -2659,7 +2659,7 @@
             this.clbSecondaryObjectiveB1.Name = "clbSecondaryObjectiveB1";
             this.clbSecondaryObjectiveB1.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB1.TabIndex = 7;
-            this.clbSecondaryObjectiveB1.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB1_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB1.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB1_SelectedIndexChanged);
             // 
             // gvBattle1Scores
             // 
@@ -2671,9 +2671,9 @@
             this.gvBattle1Scores.Name = "gvBattle1Scores";
             this.gvBattle1Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle1Scores.TabIndex = 4;
-            this.gvBattle1Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle1Scores_CellEndEdit);
-            this.gvBattle1Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle1Scores_CellValidating);
-            this.gvBattle1Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle1Scores_CellValueChanged);
+            this.gvBattle1Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle1Scores_CellEndEdit);
+            this.gvBattle1Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle1Scores_CellValidating);
+            this.gvBattle1Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle1Scores_CellValueChanged);
             // 
             // nudLastMissionCompB1
             // 
@@ -2686,8 +2686,8 @@
             this.nudLastMissionCompB1.Name = "nudLastMissionCompB1";
             this.nudLastMissionCompB1.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB1.TabIndex = 1;
-            this.nudLastMissionCompB1.ValueChanged += new System.EventHandler(this.nudLastMissionCompB1_ValueChanged);
-            this.nudLastMissionCompB1.Enter += new System.EventHandler(this.nudLastMissionCompB1_Enter);
+            this.nudLastMissionCompB1.ValueChanged += new System.EventHandler(this.NudLastMissionCompB1_ValueChanged);
+            this.nudLastMissionCompB1.Enter += new System.EventHandler(this.NudLastMissionCompB1_Enter);
             // 
             // comStatusB1
             // 
@@ -2696,7 +2696,7 @@
             this.comStatusB1.Name = "comStatusB1";
             this.comStatusB1.Size = new System.Drawing.Size(121, 21);
             this.comStatusB1.TabIndex = 0;
-            this.comStatusB1.SelectedIndexChanged += new System.EventHandler(this.comStatusB1_SelectedIndexChanged);
+            this.comStatusB1.SelectedIndexChanged += new System.EventHandler(this.ComStatusB1_SelectedIndexChanged);
             // 
             // lblTotalScoreB1
             // 
@@ -2780,7 +2780,7 @@
             this.clbBonusObjectiveB2.Name = "clbBonusObjectiveB2";
             this.clbBonusObjectiveB2.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB2.TabIndex = 14;
-            this.clbBonusObjectiveB2.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB2_SelectedIndexChanged);
+            this.clbBonusObjectiveB2.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB2_SelectedIndexChanged);
             // 
             // label93
             // 
@@ -2806,7 +2806,7 @@
             this.clbSecondaryObjectiveB2.Name = "clbSecondaryObjectiveB2";
             this.clbSecondaryObjectiveB2.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB2.TabIndex = 11;
-            this.clbSecondaryObjectiveB2.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB2_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB2.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB2_SelectedIndexChanged);
             // 
             // gvBattle2Scores
             // 
@@ -2818,9 +2818,9 @@
             this.gvBattle2Scores.Name = "gvBattle2Scores";
             this.gvBattle2Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle2Scores.TabIndex = 4;
-            this.gvBattle2Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle2Scores_CellEndEdit);
-            this.gvBattle2Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle2Scores_CellValidating);
-            this.gvBattle2Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle2Scores_CellValueChanged);
+            this.gvBattle2Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle2Scores_CellEndEdit);
+            this.gvBattle2Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle2Scores_CellValidating);
+            this.gvBattle2Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle2Scores_CellValueChanged);
             // 
             // nudLastMissionCompB2
             // 
@@ -2833,8 +2833,8 @@
             this.nudLastMissionCompB2.Name = "nudLastMissionCompB2";
             this.nudLastMissionCompB2.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB2.TabIndex = 1;
-            this.nudLastMissionCompB2.ValueChanged += new System.EventHandler(this.nudLastMissionCompB2_ValueChanged);
-            this.nudLastMissionCompB2.Enter += new System.EventHandler(this.nudLastMissionCompB2_Enter);
+            this.nudLastMissionCompB2.ValueChanged += new System.EventHandler(this.NudLastMissionCompB2_ValueChanged);
+            this.nudLastMissionCompB2.Enter += new System.EventHandler(this.NudLastMissionCompB2_Enter);
             // 
             // comStatusB2
             // 
@@ -2843,7 +2843,7 @@
             this.comStatusB2.Name = "comStatusB2";
             this.comStatusB2.Size = new System.Drawing.Size(121, 21);
             this.comStatusB2.TabIndex = 0;
-            this.comStatusB2.SelectedIndexChanged += new System.EventHandler(this.comStatusB2_SelectedIndexChanged);
+            this.comStatusB2.SelectedIndexChanged += new System.EventHandler(this.ComStatusB2_SelectedIndexChanged);
             // 
             // lblTotalScoreB2
             // 
@@ -2927,7 +2927,7 @@
             this.clbBonusObjectiveB3.Name = "clbBonusObjectiveB3";
             this.clbBonusObjectiveB3.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB3.TabIndex = 14;
-            this.clbBonusObjectiveB3.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB3_SelectedIndexChanged);
+            this.clbBonusObjectiveB3.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB3_SelectedIndexChanged);
             // 
             // label107
             // 
@@ -2953,7 +2953,7 @@
             this.clbSecondaryObjectiveB3.Name = "clbSecondaryObjectiveB3";
             this.clbSecondaryObjectiveB3.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB3.TabIndex = 11;
-            this.clbSecondaryObjectiveB3.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB3_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB3.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB3_SelectedIndexChanged);
             // 
             // gvBattle3Scores
             // 
@@ -2965,9 +2965,9 @@
             this.gvBattle3Scores.Name = "gvBattle3Scores";
             this.gvBattle3Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle3Scores.TabIndex = 4;
-            this.gvBattle3Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle3Scores_CellEndEdit);
-            this.gvBattle3Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle3Scores_CellValidating);
-            this.gvBattle3Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle3Scores_CellValueChanged);
+            this.gvBattle3Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle3Scores_CellEndEdit);
+            this.gvBattle3Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle3Scores_CellValidating);
+            this.gvBattle3Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle3Scores_CellValueChanged);
             // 
             // nudLastMissionCompB3
             // 
@@ -2980,8 +2980,8 @@
             this.nudLastMissionCompB3.Name = "nudLastMissionCompB3";
             this.nudLastMissionCompB3.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB3.TabIndex = 1;
-            this.nudLastMissionCompB3.ValueChanged += new System.EventHandler(this.nudLastMissionCompB3_ValueChanged);
-            this.nudLastMissionCompB3.Enter += new System.EventHandler(this.nudLastMissionCompB3_Enter);
+            this.nudLastMissionCompB3.ValueChanged += new System.EventHandler(this.NudLastMissionCompB3_ValueChanged);
+            this.nudLastMissionCompB3.Enter += new System.EventHandler(this.NudLastMissionCompB3_Enter);
             // 
             // comStatusB3
             // 
@@ -2990,7 +2990,7 @@
             this.comStatusB3.Name = "comStatusB3";
             this.comStatusB3.Size = new System.Drawing.Size(121, 21);
             this.comStatusB3.TabIndex = 0;
-            this.comStatusB3.SelectedIndexChanged += new System.EventHandler(this.comStatusB3_SelectedIndexChanged);
+            this.comStatusB3.SelectedIndexChanged += new System.EventHandler(this.ComStatusB3_SelectedIndexChanged);
             // 
             // lblTotalScoreB3
             // 
@@ -3074,7 +3074,7 @@
             this.clbBonusObjectiveB4.Name = "clbBonusObjectiveB4";
             this.clbBonusObjectiveB4.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB4.TabIndex = 14;
-            this.clbBonusObjectiveB4.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB4_SelectedIndexChanged);
+            this.clbBonusObjectiveB4.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB4_SelectedIndexChanged);
             // 
             // label121
             // 
@@ -3100,7 +3100,7 @@
             this.clbSecondaryObjectiveB4.Name = "clbSecondaryObjectiveB4";
             this.clbSecondaryObjectiveB4.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB4.TabIndex = 11;
-            this.clbSecondaryObjectiveB4.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB4_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB4.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB4_SelectedIndexChanged);
             // 
             // gvBattle4Scores
             // 
@@ -3112,9 +3112,9 @@
             this.gvBattle4Scores.Name = "gvBattle4Scores";
             this.gvBattle4Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle4Scores.TabIndex = 4;
-            this.gvBattle4Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle4Scores_CellEndEdit);
-            this.gvBattle4Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle4Scores_CellValidating);
-            this.gvBattle4Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle4Scores_CellValueChanged);
+            this.gvBattle4Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle4Scores_CellEndEdit);
+            this.gvBattle4Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle4Scores_CellValidating);
+            this.gvBattle4Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle4Scores_CellValueChanged);
             // 
             // nudLastMissionCompB4
             // 
@@ -3127,8 +3127,8 @@
             this.nudLastMissionCompB4.Name = "nudLastMissionCompB4";
             this.nudLastMissionCompB4.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB4.TabIndex = 1;
-            this.nudLastMissionCompB4.ValueChanged += new System.EventHandler(this.nudLastMissionCompB4_ValueChanged);
-            this.nudLastMissionCompB4.Enter += new System.EventHandler(this.nudLastMissionCompB4_Enter);
+            this.nudLastMissionCompB4.ValueChanged += new System.EventHandler(this.NudLastMissionCompB4_ValueChanged);
+            this.nudLastMissionCompB4.Enter += new System.EventHandler(this.NudLastMissionCompB4_Enter);
             // 
             // comStatusB4
             // 
@@ -3137,7 +3137,7 @@
             this.comStatusB4.Name = "comStatusB4";
             this.comStatusB4.Size = new System.Drawing.Size(121, 21);
             this.comStatusB4.TabIndex = 0;
-            this.comStatusB4.SelectedIndexChanged += new System.EventHandler(this.comStatusB4_SelectedIndexChanged);
+            this.comStatusB4.SelectedIndexChanged += new System.EventHandler(this.ComStatusB4_SelectedIndexChanged);
             // 
             // lblTotalScoreB4
             // 
@@ -3221,7 +3221,7 @@
             this.clbBonusObjectiveB5.Name = "clbBonusObjectiveB5";
             this.clbBonusObjectiveB5.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB5.TabIndex = 14;
-            this.clbBonusObjectiveB5.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB5_SelectedIndexChanged);
+            this.clbBonusObjectiveB5.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB5_SelectedIndexChanged);
             // 
             // label135
             // 
@@ -3247,7 +3247,7 @@
             this.clbSecondaryObjectiveB5.Name = "clbSecondaryObjectiveB5";
             this.clbSecondaryObjectiveB5.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB5.TabIndex = 11;
-            this.clbSecondaryObjectiveB5.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB5_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB5.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB5_SelectedIndexChanged);
             // 
             // gvBattle5Scores
             // 
@@ -3259,9 +3259,9 @@
             this.gvBattle5Scores.Name = "gvBattle5Scores";
             this.gvBattle5Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle5Scores.TabIndex = 4;
-            this.gvBattle5Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle5Scores_CellEndEdit);
-            this.gvBattle5Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle5Scores_CellValidating);
-            this.gvBattle5Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle5Scores_CellValueChanged);
+            this.gvBattle5Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle5Scores_CellEndEdit);
+            this.gvBattle5Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle5Scores_CellValidating);
+            this.gvBattle5Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle5Scores_CellValueChanged);
             // 
             // nudLastMissionCompB5
             // 
@@ -3274,8 +3274,8 @@
             this.nudLastMissionCompB5.Name = "nudLastMissionCompB5";
             this.nudLastMissionCompB5.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB5.TabIndex = 1;
-            this.nudLastMissionCompB5.ValueChanged += new System.EventHandler(this.nudLastMissionCompB5_ValueChanged);
-            this.nudLastMissionCompB5.Enter += new System.EventHandler(this.nudLastMissionCompB5_Enter);
+            this.nudLastMissionCompB5.ValueChanged += new System.EventHandler(this.NudLastMissionCompB5_ValueChanged);
+            this.nudLastMissionCompB5.Enter += new System.EventHandler(this.NudLastMissionCompB5_Enter);
             // 
             // comStatusB5
             // 
@@ -3284,7 +3284,7 @@
             this.comStatusB5.Name = "comStatusB5";
             this.comStatusB5.Size = new System.Drawing.Size(121, 21);
             this.comStatusB5.TabIndex = 0;
-            this.comStatusB5.SelectedIndexChanged += new System.EventHandler(this.comStatusB5_SelectedIndexChanged);
+            this.comStatusB5.SelectedIndexChanged += new System.EventHandler(this.ComStatusB5_SelectedIndexChanged);
             // 
             // lblTotalScoreB5
             // 
@@ -3368,7 +3368,7 @@
             this.clbBonusObjectiveB6.Name = "clbBonusObjectiveB6";
             this.clbBonusObjectiveB6.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB6.TabIndex = 14;
-            this.clbBonusObjectiveB6.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB6_SelectedIndexChanged);
+            this.clbBonusObjectiveB6.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB6_SelectedIndexChanged);
             // 
             // label149
             // 
@@ -3394,7 +3394,7 @@
             this.clbSecondaryObjectiveB6.Name = "clbSecondaryObjectiveB6";
             this.clbSecondaryObjectiveB6.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB6.TabIndex = 11;
-            this.clbSecondaryObjectiveB6.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB6_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB6.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB6_SelectedIndexChanged);
             // 
             // gvBattle6Scores
             // 
@@ -3406,9 +3406,9 @@
             this.gvBattle6Scores.Name = "gvBattle6Scores";
             this.gvBattle6Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle6Scores.TabIndex = 4;
-            this.gvBattle6Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle6Scores_CellEndEdit);
-            this.gvBattle6Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle6Scores_CellValidating);
-            this.gvBattle6Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle6Scores_CellValueChanged);
+            this.gvBattle6Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle6Scores_CellEndEdit);
+            this.gvBattle6Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle6Scores_CellValidating);
+            this.gvBattle6Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle6Scores_CellValueChanged);
             // 
             // nudLastMissionCompB6
             // 
@@ -3421,8 +3421,8 @@
             this.nudLastMissionCompB6.Name = "nudLastMissionCompB6";
             this.nudLastMissionCompB6.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB6.TabIndex = 1;
-            this.nudLastMissionCompB6.ValueChanged += new System.EventHandler(this.nudLastMissionCompB6_ValueChanged);
-            this.nudLastMissionCompB6.Enter += new System.EventHandler(this.nudLastMissionCompB6_Enter);
+            this.nudLastMissionCompB6.ValueChanged += new System.EventHandler(this.NudLastMissionCompB6_ValueChanged);
+            this.nudLastMissionCompB6.Enter += new System.EventHandler(this.NudLastMissionCompB6_Enter);
             // 
             // comStatusB6
             // 
@@ -3431,7 +3431,7 @@
             this.comStatusB6.Name = "comStatusB6";
             this.comStatusB6.Size = new System.Drawing.Size(121, 21);
             this.comStatusB6.TabIndex = 0;
-            this.comStatusB6.SelectedIndexChanged += new System.EventHandler(this.comStatusB6_SelectedIndexChanged);
+            this.comStatusB6.SelectedIndexChanged += new System.EventHandler(this.ComStatusB6_SelectedIndexChanged);
             // 
             // lblTotalScoreB6
             // 
@@ -3515,7 +3515,7 @@
             this.clbBonusObjectiveB7.Name = "clbBonusObjectiveB7";
             this.clbBonusObjectiveB7.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB7.TabIndex = 14;
-            this.clbBonusObjectiveB7.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB7_SelectedIndexChanged);
+            this.clbBonusObjectiveB7.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB7_SelectedIndexChanged);
             // 
             // label163
             // 
@@ -3541,7 +3541,7 @@
             this.clbSecondaryObjectiveB7.Name = "clbSecondaryObjectiveB7";
             this.clbSecondaryObjectiveB7.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB7.TabIndex = 11;
-            this.clbSecondaryObjectiveB7.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB7_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB7.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB7_SelectedIndexChanged);
             // 
             // gvBattle7Scores
             // 
@@ -3553,9 +3553,9 @@
             this.gvBattle7Scores.Name = "gvBattle7Scores";
             this.gvBattle7Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle7Scores.TabIndex = 4;
-            this.gvBattle7Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle7Scores_CellEndEdit);
-            this.gvBattle7Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle7Scores_CellValidating);
-            this.gvBattle7Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle7Scores_CellValueChanged);
+            this.gvBattle7Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle7Scores_CellEndEdit);
+            this.gvBattle7Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle7Scores_CellValidating);
+            this.gvBattle7Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle7Scores_CellValueChanged);
             // 
             // nudLastMissionCompB7
             // 
@@ -3568,8 +3568,8 @@
             this.nudLastMissionCompB7.Name = "nudLastMissionCompB7";
             this.nudLastMissionCompB7.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB7.TabIndex = 1;
-            this.nudLastMissionCompB7.ValueChanged += new System.EventHandler(this.nudLastMissionCompB7_ValueChanged);
-            this.nudLastMissionCompB7.Enter += new System.EventHandler(this.nudLastMissionCompB7_Enter);
+            this.nudLastMissionCompB7.ValueChanged += new System.EventHandler(this.NudLastMissionCompB7_ValueChanged);
+            this.nudLastMissionCompB7.Enter += new System.EventHandler(this.NudLastMissionCompB7_Enter);
             // 
             // comStatusB7
             // 
@@ -3578,7 +3578,7 @@
             this.comStatusB7.Name = "comStatusB7";
             this.comStatusB7.Size = new System.Drawing.Size(121, 21);
             this.comStatusB7.TabIndex = 0;
-            this.comStatusB7.SelectedIndexChanged += new System.EventHandler(this.comStatusB7_SelectedIndexChanged);
+            this.comStatusB7.SelectedIndexChanged += new System.EventHandler(this.ComStatusB7_SelectedIndexChanged);
             // 
             // lblTotalScoreB7
             // 
@@ -3662,7 +3662,7 @@
             this.clbBonusObjectiveB8.Name = "clbBonusObjectiveB8";
             this.clbBonusObjectiveB8.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB8.TabIndex = 14;
-            this.clbBonusObjectiveB8.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB8_SelectedIndexChanged);
+            this.clbBonusObjectiveB8.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB8_SelectedIndexChanged);
             // 
             // label165
             // 
@@ -3688,7 +3688,7 @@
             this.clbSecondaryObjectiveB8.Name = "clbSecondaryObjectiveB8";
             this.clbSecondaryObjectiveB8.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB8.TabIndex = 11;
-            this.clbSecondaryObjectiveB8.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB8_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB8.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB8_SelectedIndexChanged);
             // 
             // gvBattle8Scores
             // 
@@ -3700,9 +3700,9 @@
             this.gvBattle8Scores.Name = "gvBattle8Scores";
             this.gvBattle8Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle8Scores.TabIndex = 4;
-            this.gvBattle8Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle8Scores_CellEndEdit);
-            this.gvBattle8Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle8Scores_CellValidating);
-            this.gvBattle8Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle8Scores_CellValueChanged);
+            this.gvBattle8Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle8Scores_CellEndEdit);
+            this.gvBattle8Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle8Scores_CellValidating);
+            this.gvBattle8Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle8Scores_CellValueChanged);
             // 
             // nudLastMissionCompB8
             // 
@@ -3715,8 +3715,8 @@
             this.nudLastMissionCompB8.Name = "nudLastMissionCompB8";
             this.nudLastMissionCompB8.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB8.TabIndex = 1;
-            this.nudLastMissionCompB8.ValueChanged += new System.EventHandler(this.nudLastMissionCompB8_ValueChanged);
-            this.nudLastMissionCompB8.Enter += new System.EventHandler(this.nudLastMissionCompB8_Enter);
+            this.nudLastMissionCompB8.ValueChanged += new System.EventHandler(this.NudLastMissionCompB8_ValueChanged);
+            this.nudLastMissionCompB8.Enter += new System.EventHandler(this.NudLastMissionCompB8_Enter);
             // 
             // comStatusB8
             // 
@@ -3725,7 +3725,7 @@
             this.comStatusB8.Name = "comStatusB8";
             this.comStatusB8.Size = new System.Drawing.Size(121, 21);
             this.comStatusB8.TabIndex = 0;
-            this.comStatusB8.SelectedIndexChanged += new System.EventHandler(this.comStatusB8_SelectedIndexChanged);
+            this.comStatusB8.SelectedIndexChanged += new System.EventHandler(this.ComStatusB8_SelectedIndexChanged);
             // 
             // lblTotalScoreB8
             // 
@@ -3809,7 +3809,7 @@
             this.clbBonusObjectiveB9.Name = "clbBonusObjectiveB9";
             this.clbBonusObjectiveB9.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB9.TabIndex = 14;
-            this.clbBonusObjectiveB9.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB9_SelectedIndexChanged);
+            this.clbBonusObjectiveB9.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB9_SelectedIndexChanged);
             // 
             // label167
             // 
@@ -3835,7 +3835,7 @@
             this.clbSecondaryObjectiveB9.Name = "clbSecondaryObjectiveB9";
             this.clbSecondaryObjectiveB9.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB9.TabIndex = 11;
-            this.clbSecondaryObjectiveB9.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB9_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB9.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB9_SelectedIndexChanged);
             // 
             // gvBattle9Scores
             // 
@@ -3847,9 +3847,9 @@
             this.gvBattle9Scores.Name = "gvBattle9Scores";
             this.gvBattle9Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle9Scores.TabIndex = 4;
-            this.gvBattle9Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle9Scores_CellEndEdit);
-            this.gvBattle9Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle9Scores_CellValidating);
-            this.gvBattle9Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle9Scores_CellValueChanged);
+            this.gvBattle9Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle9Scores_CellEndEdit);
+            this.gvBattle9Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle9Scores_CellValidating);
+            this.gvBattle9Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle9Scores_CellValueChanged);
             // 
             // nudLastMissionCompB9
             // 
@@ -3862,8 +3862,8 @@
             this.nudLastMissionCompB9.Name = "nudLastMissionCompB9";
             this.nudLastMissionCompB9.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB9.TabIndex = 1;
-            this.nudLastMissionCompB9.ValueChanged += new System.EventHandler(this.nudLastMissionCompB9_ValueChanged);
-            this.nudLastMissionCompB9.Enter += new System.EventHandler(this.nudLastMissionCompB9_Enter);
+            this.nudLastMissionCompB9.ValueChanged += new System.EventHandler(this.NudLastMissionCompB9_ValueChanged);
+            this.nudLastMissionCompB9.Enter += new System.EventHandler(this.NudLastMissionCompB9_Enter);
             // 
             // comStatusB9
             // 
@@ -3872,7 +3872,7 @@
             this.comStatusB9.Name = "comStatusB9";
             this.comStatusB9.Size = new System.Drawing.Size(121, 21);
             this.comStatusB9.TabIndex = 0;
-            this.comStatusB9.SelectedIndexChanged += new System.EventHandler(this.comStatusB9_SelectedIndexChanged);
+            this.comStatusB9.SelectedIndexChanged += new System.EventHandler(this.ComStatusB9_SelectedIndexChanged);
             // 
             // lblTotalScoreB9
             // 
@@ -3956,7 +3956,7 @@
             this.clbBonusObjectiveB10.Name = "clbBonusObjectiveB10";
             this.clbBonusObjectiveB10.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB10.TabIndex = 14;
-            this.clbBonusObjectiveB10.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB10_SelectedIndexChanged);
+            this.clbBonusObjectiveB10.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB10_SelectedIndexChanged);
             // 
             // label169
             // 
@@ -3982,7 +3982,7 @@
             this.clbSecondaryObjectiveB10.Name = "clbSecondaryObjectiveB10";
             this.clbSecondaryObjectiveB10.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB10.TabIndex = 11;
-            this.clbSecondaryObjectiveB10.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB10_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB10.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB10_SelectedIndexChanged);
             // 
             // gvBattle10Scores
             // 
@@ -3994,9 +3994,9 @@
             this.gvBattle10Scores.Name = "gvBattle10Scores";
             this.gvBattle10Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle10Scores.TabIndex = 4;
-            this.gvBattle10Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle10Scores_CellEndEdit);
-            this.gvBattle10Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle10Scores_CellValidating);
-            this.gvBattle10Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle10Scores_CellValueChanged);
+            this.gvBattle10Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle10Scores_CellEndEdit);
+            this.gvBattle10Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle10Scores_CellValidating);
+            this.gvBattle10Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle10Scores_CellValueChanged);
             // 
             // nudLastMissionCompB10
             // 
@@ -4009,8 +4009,8 @@
             this.nudLastMissionCompB10.Name = "nudLastMissionCompB10";
             this.nudLastMissionCompB10.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB10.TabIndex = 1;
-            this.nudLastMissionCompB10.ValueChanged += new System.EventHandler(this.nudLastMissionCompB10_ValueChanged);
-            this.nudLastMissionCompB10.Enter += new System.EventHandler(this.nudLastMissionCompB10_Enter);
+            this.nudLastMissionCompB10.ValueChanged += new System.EventHandler(this.NudLastMissionCompB10_ValueChanged);
+            this.nudLastMissionCompB10.Enter += new System.EventHandler(this.NudLastMissionCompB10_Enter);
             // 
             // comStatusB10
             // 
@@ -4019,7 +4019,7 @@
             this.comStatusB10.Name = "comStatusB10";
             this.comStatusB10.Size = new System.Drawing.Size(121, 21);
             this.comStatusB10.TabIndex = 0;
-            this.comStatusB10.SelectedIndexChanged += new System.EventHandler(this.comStatusB10_SelectedIndexChanged);
+            this.comStatusB10.SelectedIndexChanged += new System.EventHandler(this.ComStatusB10_SelectedIndexChanged);
             // 
             // lblTotalScoreB10
             // 
@@ -4103,7 +4103,7 @@
             this.clbBonusObjectiveB11.Name = "clbBonusObjectiveB11";
             this.clbBonusObjectiveB11.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB11.TabIndex = 14;
-            this.clbBonusObjectiveB11.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB11_SelectedIndexChanged);
+            this.clbBonusObjectiveB11.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB11_SelectedIndexChanged);
             // 
             // label171
             // 
@@ -4129,7 +4129,7 @@
             this.clbSecondaryObjectiveB11.Name = "clbSecondaryObjectiveB11";
             this.clbSecondaryObjectiveB11.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB11.TabIndex = 11;
-            this.clbSecondaryObjectiveB11.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB11_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB11.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB11_SelectedIndexChanged);
             // 
             // gvBattle11Scores
             // 
@@ -4141,9 +4141,9 @@
             this.gvBattle11Scores.Name = "gvBattle11Scores";
             this.gvBattle11Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle11Scores.TabIndex = 4;
-            this.gvBattle11Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle11Scores_CellEndEdit);
-            this.gvBattle11Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle11Scores_CellValidating);
-            this.gvBattle11Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle11Scores_CellValueChanged);
+            this.gvBattle11Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle11Scores_CellEndEdit);
+            this.gvBattle11Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle11Scores_CellValidating);
+            this.gvBattle11Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle11Scores_CellValueChanged);
             // 
             // nudLastMissionCompB11
             // 
@@ -4156,8 +4156,8 @@
             this.nudLastMissionCompB11.Name = "nudLastMissionCompB11";
             this.nudLastMissionCompB11.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB11.TabIndex = 1;
-            this.nudLastMissionCompB11.ValueChanged += new System.EventHandler(this.nudLastMissionCompB11_ValueChanged);
-            this.nudLastMissionCompB11.Enter += new System.EventHandler(this.nudLastMissionCompB11_Enter);
+            this.nudLastMissionCompB11.ValueChanged += new System.EventHandler(this.NudLastMissionCompB11_ValueChanged);
+            this.nudLastMissionCompB11.Enter += new System.EventHandler(this.NudLastMissionCompB11_Enter);
             // 
             // comStatusB11
             // 
@@ -4166,7 +4166,7 @@
             this.comStatusB11.Name = "comStatusB11";
             this.comStatusB11.Size = new System.Drawing.Size(121, 21);
             this.comStatusB11.TabIndex = 0;
-            this.comStatusB11.SelectedIndexChanged += new System.EventHandler(this.comStatusB11_SelectedIndexChanged);
+            this.comStatusB11.SelectedIndexChanged += new System.EventHandler(this.ComStatusB11_SelectedIndexChanged);
             // 
             // lblTotalScoreB11
             // 
@@ -4250,7 +4250,7 @@
             this.clbBonusObjectiveB12.Name = "clbBonusObjectiveB12";
             this.clbBonusObjectiveB12.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB12.TabIndex = 14;
-            this.clbBonusObjectiveB12.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB12_SelectedIndexChanged);
+            this.clbBonusObjectiveB12.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB12_SelectedIndexChanged);
             // 
             // label173
             // 
@@ -4276,7 +4276,7 @@
             this.clbSecondaryObjectiveB12.Name = "clbSecondaryObjectiveB12";
             this.clbSecondaryObjectiveB12.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB12.TabIndex = 11;
-            this.clbSecondaryObjectiveB12.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB12_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB12.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB12_SelectedIndexChanged);
             // 
             // gvBattle12Scores
             // 
@@ -4288,9 +4288,9 @@
             this.gvBattle12Scores.Name = "gvBattle12Scores";
             this.gvBattle12Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle12Scores.TabIndex = 4;
-            this.gvBattle12Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle12Scores_CellEndEdit);
-            this.gvBattle12Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle12Scores_CellValidating);
-            this.gvBattle12Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle12Scores_CellValueChanged);
+            this.gvBattle12Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle12Scores_CellEndEdit);
+            this.gvBattle12Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle12Scores_CellValidating);
+            this.gvBattle12Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle12Scores_CellValueChanged);
             // 
             // nudLastMissionCompB12
             // 
@@ -4303,8 +4303,8 @@
             this.nudLastMissionCompB12.Name = "nudLastMissionCompB12";
             this.nudLastMissionCompB12.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB12.TabIndex = 1;
-            this.nudLastMissionCompB12.ValueChanged += new System.EventHandler(this.nudLastMissionCompB12_ValueChanged);
-            this.nudLastMissionCompB12.Enter += new System.EventHandler(this.nudLastMissionCompB12_Enter);
+            this.nudLastMissionCompB12.ValueChanged += new System.EventHandler(this.NudLastMissionCompB12_ValueChanged);
+            this.nudLastMissionCompB12.Enter += new System.EventHandler(this.NudLastMissionCompB12_Enter);
             // 
             // comStatusB12
             // 
@@ -4313,7 +4313,7 @@
             this.comStatusB12.Name = "comStatusB12";
             this.comStatusB12.Size = new System.Drawing.Size(121, 21);
             this.comStatusB12.TabIndex = 0;
-            this.comStatusB12.SelectedIndexChanged += new System.EventHandler(this.comStatusB12_SelectedIndexChanged);
+            this.comStatusB12.SelectedIndexChanged += new System.EventHandler(this.ComStatusB12_SelectedIndexChanged);
             // 
             // lblTotalScoreB12
             // 
@@ -4397,7 +4397,7 @@
             this.clbBonusObjectiveB13.Name = "clbBonusObjectiveB13";
             this.clbBonusObjectiveB13.Size = new System.Drawing.Size(120, 124);
             this.clbBonusObjectiveB13.TabIndex = 14;
-            this.clbBonusObjectiveB13.SelectedIndexChanged += new System.EventHandler(this.clbBonusObjectiveB13_SelectedIndexChanged);
+            this.clbBonusObjectiveB13.SelectedIndexChanged += new System.EventHandler(this.ClbBonusObjectiveB13_SelectedIndexChanged);
             // 
             // label175
             // 
@@ -4423,7 +4423,7 @@
             this.clbSecondaryObjectiveB13.Name = "clbSecondaryObjectiveB13";
             this.clbSecondaryObjectiveB13.Size = new System.Drawing.Size(120, 124);
             this.clbSecondaryObjectiveB13.TabIndex = 11;
-            this.clbSecondaryObjectiveB13.SelectedIndexChanged += new System.EventHandler(this.clbSecondaryObjectiveB13_SelectedIndexChanged);
+            this.clbSecondaryObjectiveB13.SelectedIndexChanged += new System.EventHandler(this.ClbSecondaryObjectiveB13_SelectedIndexChanged);
             // 
             // gvBattle13Scores
             // 
@@ -4435,9 +4435,9 @@
             this.gvBattle13Scores.Name = "gvBattle13Scores";
             this.gvBattle13Scores.Size = new System.Drawing.Size(192, 234);
             this.gvBattle13Scores.TabIndex = 4;
-            this.gvBattle13Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle13Scores_CellEndEdit);
-            this.gvBattle13Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.gvBattle13Scores_CellValidating);
-            this.gvBattle13Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBattle13Scores_CellValueChanged);
+            this.gvBattle13Scores.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle13Scores_CellEndEdit);
+            this.gvBattle13Scores.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.GvBattle13Scores_CellValidating);
+            this.gvBattle13Scores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GvBattle13Scores_CellValueChanged);
             // 
             // nudLastMissionCompB13
             // 
@@ -4450,8 +4450,8 @@
             this.nudLastMissionCompB13.Name = "nudLastMissionCompB13";
             this.nudLastMissionCompB13.Size = new System.Drawing.Size(120, 20);
             this.nudLastMissionCompB13.TabIndex = 1;
-            this.nudLastMissionCompB13.ValueChanged += new System.EventHandler(this.nudLastMissionCompB13_ValueChanged);
-            this.nudLastMissionCompB13.Enter += new System.EventHandler(this.nudLastMissionCompB13_Enter);
+            this.nudLastMissionCompB13.ValueChanged += new System.EventHandler(this.NudLastMissionCompB13_ValueChanged);
+            this.nudLastMissionCompB13.Enter += new System.EventHandler(this.NudLastMissionCompB13_Enter);
             // 
             // comStatusB13
             // 
@@ -4460,7 +4460,7 @@
             this.comStatusB13.Name = "comStatusB13";
             this.comStatusB13.Size = new System.Drawing.Size(121, 21);
             this.comStatusB13.TabIndex = 0;
-            this.comStatusB13.SelectedIndexChanged += new System.EventHandler(this.comStatusB13_SelectedIndexChanged);
+            this.comStatusB13.SelectedIndexChanged += new System.EventHandler(this.ComStatusB13_SelectedIndexChanged);
             // 
             // lblTotalScoreB13
             // 
